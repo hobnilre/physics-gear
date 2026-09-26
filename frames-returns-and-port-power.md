@@ -45,6 +45,10 @@ urlcolor: MidnightBlue
 citecolor: MidnightBlue
 ---
 
+Latest PDF on GitHub:
+
+<https://github.com/hobnilre/physics-gear/blob/main/frames-returns-and-port-power.pdf>
+
 # Observations and energy boundaries
 
 A planet gear can turn relative to its carrier while an observer on the housing
