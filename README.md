@@ -2,8 +2,6 @@
 
 Exact work balances for epicyclic gears and transformer readouts
 
-Hob Nilre & Bo C. Herlin · 26 September 2026
-
 ## What this article adds, and why it matters
 
 The article connects epicyclic gears, physical shaft readouts and transformer circuits through exact work integrals and independently evaluated energy stores. Stored energy changes during preparation, loading and relaxation; changing the observation frame or the physical return opens further questions about which work and energy an instrument reveals.
@@ -25,9 +23,3 @@ Each result follows from explicit port integrals and endpoint states. Together t
 ## Article
 
 [Read the article (PDF)](frames-returns-and-port-power.pdf) · [Manuscript](frames-returns-and-port-power.md)
-
-Build with `make pdf` using Pandoc, XeLaTeX, TeX Gyre fonts, TikZ, PGFPlots, and Circuitikz. `make -B pdf` rebuilds every figure and the article. `make clean` removes only the ignored build directory and retains the deliverable PDFs.
-
-[Conventions](notes/conventions.md) records notation and fixed values. [Coverage audit](notes/coverage-audit.md) accounts for both assigned chapters, including corrections and replacement treatments. [Verification](notes/verification.md) records the exact checks and final build inspection.
-
-The repository is local, with no remote and no commit. The user's `doodles.md` is untouched and unstaged.
