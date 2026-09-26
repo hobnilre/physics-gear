@@ -1,0 +1,19 @@
+\documentclass[border=4pt]{standalone}
+\input{figure-style}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[width=12cm,height=6cm,xmin=0,xmax=360,ymin=0,ymax=2.6,
+ xlabel={Carrier-relative angle $x$},ylabel={$q_\beta(x)$},
+ xtick={0,90,180,270,360},xticklabels={$0$,$\pi/2$,$\pi$,$3\pi/2$,$2\pi$},
+ ytick={0,1,2},axis lines=left,grid=major,grid style={gray!15},
+ legend style={at={(.5,1.02)},anchor=south,draw=none,font=\small}]
+\addplot[elemB,very thick,domain=0:360,samples=241]
+ {(14400/33169)/((14400/33169)^2*cos(x)^2+sin(x)^2)};
+\addlegendentry{Exact transmission factor}
+\addplot[elemC,dashed,domain=0:360] {1};
+\node[anchor=south west,font=\small,fill=white] at (axis cs:200,2.3) {$\max q_\beta=33169/14400$};
+\node[anchor=north,font=\small,fill=white] at (axis cs:105,.40) {$\min q_\beta=14400/33169$};
+\node[anchor=south,font=\small,fill=white] at (axis cs:265,1.03) {mean $=1$};
+\end{axis}
+\end{tikzpicture}
+\end{document}
