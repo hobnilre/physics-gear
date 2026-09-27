@@ -4,27 +4,25 @@ subtitle: "Changing stores and open energy transfers in gears and transformer re
 author: "Hob Nilre & Bo C. Herlin"
 date: "2026-09-27"
 abstract: |
-  Changing a mechanical reference or a transformer's receiving connection
-  changes the reported work and can change the stored-energy state. The open
-  questions concern the complete preparation and reset cycle, energy transferred
-  during physical return changes, loaded linkage reactions, and imperfect
-  reference supplies. We derive signed port integrals and independent endpoint
-  stores for these investigations. Spin-up raises the ground kinetic energy
-  while lowering the carrier effective energy. A held-ring example gives sun
-  works of $987\pi/8$ and $705\pi/8$ joules in the two frames; omitting an
-  electrical return gives a positive energy-balance residual of $21/4$ joules.
-  Compound maximum-power ratios range from $100/441$ to $2950/21$ for the
-  stated observations. Exact finite models retain leakage, loading, switching,
-  preparation, and final stores. In a joint constitutive limit, winding
-  currents approaching zero can retain $3/50$ joule of magnetic energy;
-  a vanishing voltage mismatch can leave $25/12$ joules under a different
-  explicit drive. Active references realize relative kinetic energy through
-  physical supplies, while finite actuation changes individual works and
-  stored energy. Constrained events and separate supply integrals determine
-  the transfers in the stated models. The signed physical remainders of the
-  complete-cycle, reactive-switching, and loaded-linkage experiments remain
-  unmeasured. Their magnitudes and signs are open, and an unexplained gain or
-  deficit remains a result to investigate.
+  Physical changes of stator mounting, receiver return, and reference actuation
+  change measurable signed transfers. The open questions concern loaded
+  reaction work, energized commutation, material endpoint states, and the
+  energy remaining after preparation and reset. We derive finite comparisons
+  using separate port integrals and independently evaluated stores. Two stator
+  mountings under the same prescribed motion differ in dissipation by
+  $7\pi/50$ joule over $7/2$ seconds. A finite reference actuator leaves
+  $(9+e^{-10})^2/50$ joule in a capacitor after one second, against the ideal
+  2 joules. Torque and angle, voltage and current, and temperature observations
+  give direct routes to these investigations; explicit uncertainty bounds
+  separate resolution of a transfer from resolution of a complete energy
+  remainder. A loaded train, two receiver branches during commutation, and
+  a finite winding preparation supply further exact controls. Thermal stores
+  and magnetic internal states enter the physical endpoint question alongside
+  controller and supply work. Rotating-frame stores, constrained events, and
+  constitutive limits retain their distinct conditions. The physical
+  discrepancies remain unmeasured. Any surviving positive or negative energy
+  remainder is retained with its interval, magnitude, uncertainty, and
+  completed checks.
 keywords:
   - epicyclic gearing
   - signed port work
@@ -57,13 +55,27 @@ Latest PDF on GitHub:
 
 # Open energy questions and signed transfers
 
-The central question is what accompanies a change in reported work or stored
-energy when the physical receiver, its return, or its moving reference changes.
-The complete preparation and reset cycle, the energy transferred during an
-energized connection change, and the reaction work of an attached readout remain
-open physical investigations. Their unexplained signed remainders have not
-been measured. A closing ideal-model balance supplies a quantitative comparison
-for each investigation; it does not determine those remainders.
+Physical changes of stator mounting, receiver return, and reference actuation
+change measurable signed transfers. How does remounting a loaded readout change
+its work? What energy crosses the boundary during an energized return change,
+and what remains after preparation and reset? How closely does a finite
+reference supply reproduce the predicted work and store changes? These are
+open physical investigations. The unresolved quantities are reaction and supply
+works, endpoint material states, and any signed remainder after their
+independent measurement.
+
+Two finite targets put their scale in view. For the prescribed Oldham motion,
+moving the stator from ground to carrier changes the integrated drag
+dissipation by $7\pi/50$ J (approximately $0.440$ J) in $7/2$ s.
+The motion must actually be maintained in both mountings, with the changed
+drive and support works recorded. For the one-second reference control,
+a finite actuator gives capacitor voltage $-(9+e^{-10})/5$ V and energy
+$(9+e^{-10})^2/50$ J. Its departure from the ideal 2 J is
+$[(9+e^{-10})^2-100]/50$ J (approximately $-0.380$ J).
+The derivations below specify these comparisons and conditional error bounds
+for ordinary synchronized measurements. Each comparison has a further
+whole-boundary question: how do all measured transfers compare with the
+independently observed endpoint stores?
 
 Several exact results make the question sharp. The same spin-up raises the
 ground kinetic energy and lowers the carrier effective energy. Different
@@ -140,6 +152,44 @@ It uses the current state energy, not a presumption that the initial energy
 persists. Extra conserved linear functionals restrict the admissible set only
 when actually derived. Neither a gear turn count nor a raw winding-linkage sum
 is automatically eligible for a conserved-sum growth claim.
+
+## Resolving a transfer and resolving a remainder
+
+Let measured effort and flow be $\widehat e,\widehat f$, with independently
+established pointwise errors $|e-\widehat e|\leq u_e$ and
+$|f-\widehat f|\leq u_f$ on the declared interval. Expanding their product,
+then integrating its three error terms, gives the exact bound
+\begin{equation}
+ |W-\widehat W|\leq
+ \int_{t_0}^{t_1}
+ (|\widehat e|u_f+|\widehat f|u_e+u_eu_f)\,dt,
+ \qquad \widehat W=\int_{t_0}^{t_1}\widehat e\widehat f\,dt.
+ \label{eq:product-uncertainty}
+\end{equation}
+The errors must refer to the actual conjugate port quantities at common times.
+Additional bounds cover channel timing, finite bandwidth, integration of
+recorded signals, and interval endpoints. For example, if a time displacement
+is at most $u_t$ and the displaced flow satisfies $|\dot f|\leq L_f$, the
+additional product error with an aligned effort bounded by $E_*$ is at most
+$E_*L_fu_t(t_1-t_0)$. This follows by integrating
+$|f(t+\delta t)-f(t)|\leq L_fu_t$; it does not bound an unobserved fast
+transient without such a derivative bound. Endpoint-time errors also need
+bounds on the omitted terminal intervals. Count a timing contribution only
+once if it is already included in the pointwise errors.
+
+For a complete measured balance, a conservative enclosure is
+\begin{equation}
+ u_r=u_{E,0}+u_{E,1}+\sum_j u_{W,j}+\sum_e u_{{\rm imp},e},
+ \qquad r_E\in[\widehat r_E-u_r,\widehat r_E+u_r].
+ \label{eq:residual-uncertainty}
+\end{equation}
+Here each work bound includes its justified observation errors; resolved
+finite edges and ideal impulses describe disjoint transfers. Endpoint
+correlation can reduce this enclosure only when established independently.
+An unknown thermal state, magnetic state, or missing port is an undetermined
+physical contribution, not an uncertainty allowance. All evaluated model
+integrals in this article are exact, so their numerical integration residual
+is zero. This says nothing about the uncertainty of physical observations.
 
 # Rolling constraints and three kinds of count
 
@@ -678,7 +728,41 @@ Oldham path, $d_0=1/50\,\mathrm{N\,m}$ and $[0,7/2]\,\mathrm s$ give
  \label{eq:drag}
 \end{equation}
 These are different physical mountings. A change of coordinates on either
-fixed mounting leaves its relative drag dissipation unchanged. A prescribed
+fixed mounting leaves its relative drag dissipation unchanged. Separately
+integrating the two drag-torque and relative-rate products gives the finite
+comparison
+\begin{equation}
+ Q_c-Q_0=\frac{7\pi}{15}-\frac{49\pi}{150}
+        =\frac{7\pi}{50}\,\mathrm J.
+ \label{eq:mounting-difference}
+\end{equation}
+Hold the stated motion in both mountings and observe the actual drag torque,
+relative angle, and the drive and support works. A changed trajectory calls
+for its own integrals. Dissipation is internal conversion when the frictional
+bodies lie inside the apparatus; heat exported across that larger boundary
+and their thermal endpoint stores are determined separately.
+
+One conditional measurement budget makes the scale explicit. Suppose each
+recorded drag torque is bounded by $21/1000\,\mathrm{N\,m}$, each relative
+rate by $21\,\mathrm{rad/s}$, and calibrated pointwise errors are at most
+$1/1000\,\mathrm{N\,m}$ and $1/100\,\mathrm{rad/s}$. These envelopes
+contain both prescribed rates. Equation \eqref{eq:product-uncertainty} gives
+the following bound for the difference of the two $7/2$ s integrals:
+\begin{equation}
+ u_{Q_c-Q_0}^{\rm product}\leq
+ 7\left(\frac{21}{1000}\frac1{100}
+       +21\frac1{1000}+\frac1{1000}\frac1{100}\right)\mathrm J
+ =\frac{7427}{50000}\,\mathrm J.
+ \label{eq:drag-uncertainty}
+\end{equation}
+The proposed total bound $1/5$ J leaves $2573/50000$ J for timing and other
+observation errors. If independently met, it separates the predicted
+$7\pi/50$ J from zero using torque and encoder observations. These are
+calibration requirements, not specifications of an unnamed instrument.
+Resolving the full apparatus remainder additionally needs all other ports
+and endpoint stores in \eqref{eq:residual-uncertainty}.
+
+A prescribed
 $\tau_L=-47/40\,\mathrm{N\,m}$ is not necessarily a passive load:
 when $\omega_o<0$ its ground-frame power is positive. Describing a torque as
 a brake therefore requires its relative velocity as well as its sign.
@@ -776,6 +860,69 @@ an impact requires an additional stated event law. Unspecified physical
 transverse or phase-drive works are not supplied by
 \eqref{eq:loaded-axial-balance}.
 
+For a complete finite axial control, use the reference train
+$(Z_s,Z_p,Z_r)=(24,18,60)$, $q=3$, module $1/500$ m, and hence
+$(r_s,r_p,r_r,a)=(3/125,9/500,3/50,21/500)$ m.
+Prescribe $(\omega_s,\omega_c,\omega_r,\omega_p)
+=(7\pi,2\pi,0,-14\pi/3)\,\mathrm{rad/s}$ throughout
+$[t_0,t_1]=[2/5,19/10]$ s. Attach three ideal Oldham paths with ground
+stators and $d_0=1/50\,\mathrm{N\,m}$. Choose the new receiver torque
+$\tau_L=+47/40\,\mathrm{N\,m}$ on each negative-speed output, making
+each receiver passive on this interval. With $\chi=1$ and
+$\tau_s=47/4\,\mathrm{N\,m}$, the output and loaded free bodies give
+independently
+\begin{equation}
+ \tau_d=-\frac{239}{200},\qquad \tau_u=0,\qquad
+ \tau_r=\frac{697}{40},\qquad \tau_c=-\frac{819}{25}
+ \quad\mathrm{N\,m}.
+ \label{eq:loaded-control-torques}
+\end{equation}
+The boundary is the train and all three lead-outs, with the receiver and
+heat reservoirs external. Under the immediate-export thermal idealization,
+each signed effort–flow product integrates separately over $3/2$ s:
+
+| Port into the combined axial system | Power product | Work, J |
+|------------------------------------|--------------------------------------|----------------|
+| Sun | $\tau_s\omega_s$ | $987\pi/8$ |
+| Held ring | $\tau_r\omega_r$ | $0$ |
+| Carrier | $\tau_c\omega_c$ | $-2457\pi/25$ |
+| Receiver $j$, each $j=1,2,3$ | $\tau_L\omega_o$ | $-329\pi/40$ |
+| Drag heat $j$, each $j=1,2,3$ | $-T_j\dot S_j=-d_0\lvert\omega_o\rvert$ | $-7\pi/50$ |
+
+: Separately integrated transfers for the loaded constant-rate control. The receiver and heat entries each occur three times.
+
+For finite added-body parameters $I_R,I_o,m_R$, evaluation from each specified
+endpoint state gives
+\begin{equation}
+ E(t_0)=E(t_1)=K_*^0+
+ 3\left[\frac{I_R+I_o}{2}\left(\frac{14\pi}{3}\right)^2
+       +\frac{m_Ra^2}{2}(2\pi)^2\right].
+ \label{eq:loaded-control-stores}
+\end{equation}
+Here $K_*^0$ is the reference train's ground kinetic store at these rates;
+the added rotor masses and inertias are counted only in the bracket.
+The external works independently sum to
+$987\pi/8-2457\pi/25-987\pi/40-21\pi/50=0$ J, so the residual is zero.
+The common axle transfers
+$\int_{t_0}^{t_1}\tau_d\omega_pdt=1673\pi/200$ J into each lead-out
+and its negative into its planet. Each support and orbital-pin integral is
+zero at these constant rates. These internal sides cancel after integration.
+There are no events within this operation interval; preparation and reset
+are additional intervals. Numerical integration error is zero, while the
+physical thermal and unresolved reaction contributions remain undetermined.
+
+The unloaded reference carrier work is $-987\pi/8$ J. Thus attachment changes
+that signed carrier work by $5019\pi/200$ J while the three passive receivers
+collect $987\pi/40$ J and the drag dissipates $21\pi/50$ J. This is a
+substantial torque-and-angle target at the stated speeds. For example,
+conditional measured envelopes $|\widehat\tau_c|\leq45\,\mathrm{N\,m}$,
+$|\widehat\omega_c|\leq7\,\mathrm{rad/s}$ and pointwise errors
+$u_\tau=1/10\,\mathrm{N\,m}$, $u_\omega=1/100\,\mathrm{rad/s}$ bound
+the two carrier-work product errors together by $3453/1000$ J. A total
+comparison bound of 5 J leaves $1547/1000$ J for timing and other observation
+errors, well below the predicted difference. Actual calibration determines
+whether this target is met; it does not close the full physical balance.
+
 For such a reaction at its stated application point, use
 \begin{equation}
  W_{\mathrm{reaction}}=
@@ -790,8 +937,8 @@ model supplies too few constraints for all transverse reactions, leaving
 their physical works open.
 
 A low-speed experiment with synchronized shaft torque and encoder readings
-at the input, receiver, and moving support can resolve the cycle integrals
-without exceptional sensitivity. Use a small controlled load and record the
+at the input, receiver, and moving support can investigate these finite
+transfers under the stated uncertainty requirements. Record the
 actual trajectory and both endpoint speeds. Determining the remaining joint
 and phase-actuator contributions requires explicit support constraints and
 their corresponding force or supply observations. The gross axial comparison
@@ -1059,8 +1206,11 @@ preparation, operation, switching, relaxation, and reset. Define
 \end{align}
 The continuous integrals and ideal impulse terms represent disjoint transfers.
 A resolved finite switching path needs no duplicate impulse. Both endpoint
-energies include magnetic, capacitive, and controller states evaluated from
-their constitutive laws. If a supply rail is brought inside an enlarged
+energies include magnetic, capacitive, controller, and material thermal states
+evaluated from independently established constitutive laws and observations.
+The resistors and windings lie inside this physical boundary: their Joule
+conversion is internal, and only heat actually crossing the boundary enters
+as $-T\dot S$. If a supply rail is brought inside an enlarged
 boundary, add its endpoint store and cancel its two already integrated port
 sides; do not retain its output as an additional external input.
 
@@ -1068,8 +1218,11 @@ The finite models below specify some of these paths exactly. A physical
 experiment can record source and controller voltage–current products, both
 winding currents, and capacitor voltages throughout all five stages. The
 low-voltage drive and a deliberately slow preparation and reset permit ordinary
-differential voltage and current observations; independently calibrated
-inductances, mutual coupling, and capacitances determine the declared stores.
+differential voltage and current observations. Independently calibrated
+capacitances and a constant inductance matrix determine the corresponding
+linear-model stores. The physical comparison additionally needs temperatures,
+a caloric law for the enclosed dissipative bodies, actual external heat
+transfer, and the magnetic-state qualification developed next.
 The resistor-reset control below gives a resolvable half-voltage endpoint.
 It is a part of this comparison, not a preparation of the winding states.
 
@@ -1081,6 +1234,108 @@ none is assigned the remainder by definition. The delivered-work difference
 $-W_{L,\mathrm{cycle}}^{(a)}+W_{L,\mathrm{cycle}}^{(c)}$ is reported separately
 from the two residuals. Return of the visible capacitor voltage alone does not
 establish return of every state.
+
+## Thermal endpoints and magnetic material states
+
+How much of a finite departure from the linear winding prediction is resolved
+by observed thermal and magnetic material states [OP-TRF-03]? A useful first
+comparison repeats a specified low-voltage preparation at two independently
+recorded initial temperatures, recording winding voltages and currents,
+capacitor voltages, and temperature changes on each path. The finite winding
+preparation below supplies a $93/1600$ J linear magnetic target. Compare its
+separately measured input work, actual heat export, and independent endpoint
+observations with that target. A departure may remain after the thermal
+contribution is determined; it retains its signed value and uncertainty.
+Neither the current readings nor that remainder determine an unobserved
+magnetic internal state.
+
+For the first whole-apparatus comparison, enclose the windings, resistors,
+capacitor, and controller; keep supplies, receiver, and heat reservoirs
+external. Define a nonoverlapping physical endpoint model
+\begin{equation}
+ E_{\rm phys}=E_C+E_{\rm mag}(i,\zeta,\vartheta)
+       +E_{\rm controller}+U_{\rm thermal}+E_{\rm other}.
+ \label{eq:physical-endpoints}
+\end{equation}
+The calibrated capacitor contribution is $E_C$; $\vartheta$ denotes the
+observed material temperatures and $\zeta$ the declared magnetic internal
+state. The constitutive partition assigns the caloric material energy to
+$U_{\rm thermal}$ and any remaining magnetic state dependence to
+$E_{\rm mag}$. It must specify their coupling without counting the same
+energy twice. Controller electrical stores are separate from the controller
+body's contribution to $U_{\rm thermal}$. Mechanical or other stores, if
+present, enter $E_{\rm other}$ with their own states. A nonuniform temperature
+field requires its own caloric evaluation or a justified enclosure.
+
+The reciprocal expression $i^T\mathsf Li/2$ determines the magnetic store
+of the declared constant linear model. Magnetic linearity is also the stated
+condition for the inductance-matrix terminal relation in
+[Haus and Melcher (1989)][hm]. Calibrating that matrix alone does not determine
+$E_{\rm mag}(i,\zeta,\vartheta)$ for a core with remanence or hysteresis.
+Record which material states are independently observed and which remain
+undetermined. With the same measured ports define separately
+\begin{equation}
+ \widehat r_{E,\rm lin}=\Delta\!\left(
+ \widehat E_C+\tfrac12\widehat i^T\mathsf L\widehat i
+ +\widehat E_{\rm controller}+\widehat U_{\rm thermal}
+ +\widehat E_{\rm other}\right)
+ -\sum_j\widehat W_j-\sum_e\widehat W_e^{\rm imp}.
+ \label{eq:linear-material-residual}
+\end{equation}
+This is an observed discrepancy against a specified model, with calibration
+uncertainty included. A complete physical residual instead needs both values
+of \eqref{eq:physical-endpoints}. An unknown magnetic contribution stays
+unknown; it is not set equal to \eqref{eq:linear-material-residual}.
+
+An exact caloric control shows why thermal endpoints matter even without
+a magnetic core. Enclose a resistor with $R=1/10\,\Omega$ and prescribe
+$i=1$ A over $[0,1]$ s, with an adiabatic boundary on that interval. Declare
+a constant $C_{\rm th}>0$ and initial $\vartheta(0)=\vartheta_{\rm ref}$.
+The independent caloric law and its endpoint evaluation are
+\begin{align}
+ C_{\rm th}\dot\vartheta&=Ri^2,&
+ U_{\rm th}&=C_{\rm th}(\vartheta-\vartheta_{\rm ref}),\\
+ \vartheta(1\,\mathrm s)&=\vartheta_{\rm ref}
+                   +\frac{1\,\mathrm J}{10C_{\rm th}},&
+ (U_{\rm th}(0),U_{\rm th}(1\,\mathrm s))&=(0,1/10)\,\mathrm J.
+ \label{eq:thermal-control-state}
+\end{align}
+The external ports integrate independently as
+\begin{equation}
+ W_{\rm el}=\int_0^{1\,\mathrm s}(Ri)i\,dt=\frac1{10}\,\mathrm J,
+ \qquad W_h=-\int_0^{1\,\mathrm s}T\dot S_{\rm out}\,dt=0.
+ \label{eq:thermal-control-work}
+\end{equation}
+There are no electrical energy coordinates in this ideal resistor and no
+impulsive transfers. Thus $r_E=0$ with the independently evaluated thermal
+store and exact integrals. Omitting $U_{\rm th}$ gives $r_E=-1/10$ J.
+Entering another $-1/10$ J as heat export would artificially close that
+incomplete account while changing the stipulated adiabatic boundary.
+An electrical subboundary may export $Ri^2$ into a separate thermal
+subsystem; its receiving side then integrates to $+1/10$ J. Those two sides
+cancel only when the subsystem boundaries are combined.
+
+For illustrative $C_{\rm th}=1\,\mathrm{J/K}$, the predicted temperature
+rise is $1/10$ K. Temperature observations with each endpoint error at most
+$1/100$ K, a calibrated heat-capacity error at most
+$1/100\,\mathrm{J/K}$, and observed rise at most $11/100$ K would bound
+the inferred thermal change error by
+\begin{equation}
+ u_{\Delta U}\leq
+ u_{C_{\rm th}}|\Delta\widehat\vartheta|
+ +(\widehat C_{\rm th}+u_{C_{\rm th}})(u_{\vartheta,0}+u_{\vartheta,1})
+ \leq\frac{213}{10000}\,\mathrm J.
+ \label{eq:thermal-uncertainty}
+\end{equation}
+To resolve the omitted $1/10$ J at total uncertainty $1/20$ J, the measured
+electrical work, actual external heat, timing, and remaining caloric errors
+must together contribute at most $287/10000$ J. In a physical apparatus
+the heat transfer is observed or bounded, rather than declared zero by
+insulation alone. These finite requirements give voltage, current, and
+temperature observations a specific task. The core comparison needs its
+additional magnetic-state information before it can claim a complete
+physical remainder. The numerical integration residual of the caloric control
+is zero; no value is assigned to an unmeasured material discrepancy.
 
 ## The regular coupled-winding model
 
@@ -1193,12 +1448,15 @@ complete effort–flow products. For a resolved finite edge $[t_e,t_e+\delta]$,
  \label{eq:physical-commutation}
 \end{equation}
 The physical remainder has unknown sign and magnitude. Winding currents,
-capacitor voltages, clamp state, and controller state are required at both
+capacitor voltages, clamp state, controller state, and material thermal and
+magnetic states in \eqref{eq:physical-endpoints} are required at both
 endpoints; a change of tap must retain the individual winding branches rather
 than merely change a ratio in an energy formula.
 
-Low-voltage differential voltage and current observations over a deliberately
-slow finite edge can resolve the separate transfers with ordinary instruments.
+The explicit two-branch path in \eqref{eq:commutation-path} below selects a
+finite overlap and an energized preparation, with a separate open-gap control.
+Its voltage–current envelopes and $1/50$ J proposed whole-event uncertainty
+give ordinary synchronized observations a definite resolution target.
 Record each supply and receiver product and the event-side states; faster
 opening introduces an additional bandwidth requirement. The prepared-clamp
 calculation below supplies an exact single-capacitor comparison with separately
@@ -1391,6 +1649,126 @@ equations independently yields
 The linkage endpoints are obtained from the state, while each copper integral
 has its own linear primitive. A nonzero $D_\Psi$ is a finite-model voltage
 observation, not an energy residual. Its sign depends on state and interval.
+
+## An energized return change with two receiver branches
+
+Keep the capacitor at $b$–$c$. Connect a separately controlled receiver
+conductance $G_a(t)$ between $b$ and $a$, and another $G_o(t)$ between
+$b$ and $c$, as in Figure \ref{fig:commutation}. The winding and source
+connections remain those of the tapped circuit. Core-loss conductance retains
+the symbol $G_c$. Direct current conservation now gives
+\begin{align}
+ I_s&=i_1-i_2+G_cv_a-G_a(v_b-v_a),\\
+ v_a&=\frac{u-R_s(i_1-i_2)+R_sG_av_b}{1+R_s(G_c+G_a)},\\
+ \mathsf L\dot i&=\begin{pmatrix}v_a\\v_b-v_a\end{pmatrix}
+               -\operatorname{diag}(R_1,R_2)i,\\
+ C\dot v_b&=-i_2-G_a(v_b-v_a)-G_ov_b.
+ \label{eq:commutation-path}
+\end{align}
+These equations retain both actual returns during overlap. The old binary
+$h$ is not interpolated. An interval with $G_a=G_o=0$ is an open receiver
+gap with the declared source and winding paths still connected.
+
+![Schematic receiver connections during commutation. Both controlled branches remain distinct; $G_a$ returns to $a$, while $G_o$ and the fixed capacitor return to $c$. The source and tapped windings connect to these same terminals as in Figure \ref{fig:circuit}. The lower plot gives the exact bounded overlap history in equation \eqref{eq:commutation-history}.](figures/return-commutation.pdf){#fig:commutation width=78%}
+
+\FloatBarrier
+
+Choose $t_e=0$, $\delta=1/10$ s, $G=1/10$ S, and the bounded history
+\begin{equation}
+ z=\frac{t}{\delta},\qquad
+ G_a=G(1-z),\qquad G_o=Gz,\qquad 0\leq t\leq\delta.
+ \label{eq:commutation-history}
+\end{equation}
+Before the edge take $(G_a,G_o)=(G,0)$ and afterwards $(0,G)$.
+Both receivers conduct in the interior. Equal endpoint conductances isolate
+the return change from the simultaneous conductance increase in the later
+compound example. A distinct gap control is
+$G_a=G\max(1-3z,0)$, $G_o=G\max(3z-2,0)$: the middle third has both
+branches open. It needs its own trajectory and work integrals.
+
+For a finite energized initial state set $u=1$ V during the edge,
+$R_s=1/5\,\Omega$, $R_1=R_2=1/10\,\Omega$, $G_c=1/100$ S,
+$C=1/100$ F, and
+\begin{equation}
+ \mathsf L=\begin{pmatrix}1/25&-19/125\\-19/125&16/25\end{pmatrix}
+ \mathrm H,\qquad
+ i(0)=\begin{pmatrix}1/5\\0\end{pmatrix}\mathrm A,
+ \quad v_b(0)=4\,\mathrm V,
+ \quad E(0)=\frac{101}{1250}\,\mathrm J.
+ \label{eq:commutation-initial}
+\end{equation}
+This is the finite $n=-4$, $k=19/20$ winding pair. Its preparation can be
+specified independently: on $[-1/10,0]$ s, isolate the two windings and
+capacitor from the operating connections, and let
+$f=(t+1/10\,\mathrm s)/(1/10\,\mathrm s)$,
+$i=f(1/5,0)^T$ A, and $v_b=4f$ V. Two winding sources impose
+$u_1=2/25+f/50$ V and $u_2=-38/125$ V; a capacitor source supplies
+$(4f\,\mathrm V,,2/5\,\mathrm A)$.
+For the winding/capacitor boundary with immediate resistive heat export,
+the separately integrated products are
+\begin{align}
+ W_{s,1}^{\rm prep}&=\int_{-1/10\,\mathrm s}^0u_1i_1dt
+                      =\frac7{7500}\,\mathrm J,&
+ W_{s,2}^{\rm prep}&=\int_{-1/10\,\mathrm s}^0u_2i_2dt=0,\\
+ W_{h,1}^{\rm prep}&=-\int_{-1/10\,\mathrm s}^0R_1i_1^2dt
+                      =-\frac1{7500}\,\mathrm J,&
+ W_{h,2}^{\rm prep}&=-\int_{-1/10\,\mathrm s}^0R_2i_2^2dt=0,\\
+ W_C^{\rm prep}&=\int_{-1/10\,\mathrm s}^0v_b(C\dot v_b)dt
+                      =\frac2{25}\,\mathrm J.
+ \label{eq:commutation-preparation}
+\end{align}
+The independent initial store is zero; the final magnetic store is $1/1250$ J
+and capacitor store is $2/25$ J. Their sum agrees with the five integrated
+works. Reconnection to the declared operating circuit retains both winding
+currents and capacitor voltage; the algebraic $v_a$ may change finitely.
+There is no impulse for this ideal event. Physical preparation and selector
+supplies require their own observed works.
+
+On the edge, enclose the windings, capacitor, source resistor and copper/core
+loss elements, keeping the source, two receivers, and heat reservoirs outside.
+For this immediate-export model the seven works are individually
+\begin{align}
+ W_s&=\int_0^\delta uI_sdt,& W_{h,s}&=-\int_0^\delta R_sI_s^2dt,\\
+ W_{h,1}&=-\int_0^\delta R_1i_1^2dt,&
+ W_{h,2}&=-\int_0^\delta R_2i_2^2dt,\\
+ W_{h,c}&=-\int_0^\delta G_cv_a^2dt,&
+ W_{L,a}&=-\int_0^\delta(v_b-v_a)\,G_a(v_b-v_a)dt,\\
+ W_{L,o}&=-\int_0^\delta v_b(G_ov_b)dt.
+ \label{eq:commutation-works}
+\end{align}
+Each heat integrand is $-T_j\dot S_j$ under the declared thermal law.
+Evaluate the endpoint stores from
+$E(t)=i(t)^T\mathsf Li(t)/2+Cv_b(t)^2/2$ at $0$ and $\delta$.
+Multiplying the independently specified current and capacitor equations gives
+$\dot E=uI_s-R_sI_s^2-R_1i_1^2-R_2i_2^2-G_cv_a^2
+-G_a(v_b-v_a)^2-G_ov_b^2$.
+Consequently the exact model residual from these integrals and endpoint
+evaluations is zero, without an additional impulse. The matrix in
+\eqref{eq:commutation-path} varies with time; the constant-matrix work formula
+cannot be substituted here. The path integrals and $E(\delta)$ are retained
+as exact conditional expressions, not assigned unevaluated numerical values.
+No numerical integration has been performed.
+
+For the physical selector enlarge the boundary to include its stores and
+material thermal states. Its control supply has the separately measured
+work $\int_0^\delta v_{\rm ctrl}i_{\rm ctrl}dt$; any mechanical actuation
+has its conjugate work as well. Specifying $G_a,G_o$ does not determine those
+transfers. Use actual heat crossing this enlarged boundary and
+\eqref{eq:physical-endpoints}, rather than exporting its internal Joule
+conversion again. Reactive reattachment and winding interruption require
+their own connection and event laws.
+
+This $1$ V source, initially $4$ V capacitor, and $1/10$ s edge give a
+concrete voltage–current investigation. Conditional observed envelopes
+$|\widehat v|\leq5$ V, $|\widehat i|\leq1$ A and calibrated errors
+$u_v=1/100$ V, $u_i=1/1000$ A bound one port's product error by
+$1501/1000000$ J on the edge. A proposed whole-event bound of $1/50$ J
+must include every channel, timing, endpoint, thermal, and controller
+contribution in \eqref{eq:residual-uncertainty}; it is not guaranteed by the
+single-port bound. If a waveform exceeds these envelopes, recalculate its
+bound. Report both receiver works and the physical signed remainder.
+Agreement or a surviving discrepancy becomes a result of that specified
+commutation, with preparation and reset still recorded separately.
 
 ## Parameter distinctions and constrained limits
 
@@ -1937,8 +2315,9 @@ Whether a physical reference circuit reproduces these individual works and
 stores remains open [OP-TRF-12]. The reference-only control offers a direct
 observation: prescribe the finite ramp, record $w$, $I_d$, $I_e$, the driver
 voltage and current, and evaluate both capacitor endpoints. Its 2 J receiver
-change and ordinary voltages and currents make the gross correspondence
-accessible without exceptional energy sensitivity. The individual products
+change specifies the gross correspondence. The finite-actuator prediction
+and endpoint bound in \eqref{eq:lag-endpoint-uncertainty} give a smaller
+comparison with explicit calibration requirements. The individual products
 must be integrated over the same ramp and its preparation. Supply endpoints
 are additionally needed when the supply lies inside the chosen boundary.
 The measured work and store differences, and any unexplained energy remainder,
@@ -2266,10 +2645,42 @@ $Ca^2T^2/2$. Consequently the signed electrical-minus-mechanical difference is
 The strict inequality follows from
 $0<\tau(1-e^{-T/\tau})<T$ for $T>0$. With illustrative
 $C=1$ F, $a=2\,\mathrm{V/s}$, $\tau=1/10$ s, and $T=1$ s,
+the final voltage is $w(1\,\mathrm s)=-(9+e^{-10})/5$ V, and
 the receiver finishes with $(9+e^{-10})^2/50$ J instead of 2 J.
-Its signed deficit relative to the ideal counterpart is
-$[(9+e^{-10})^2-100]/50$ J. The separately supplied reference driver still
+Its signed departure from the ideal counterpart is
+$[(9+e^{-10})^2-100]/50$ J (approximately $-0.380$ J).
+The separately supplied reference driver still
 has its own earlier works and store; it is not included a second time here.
+
+Capacitor voltage and calibrated capacitance therefore provide a direct
+first observation of finite actuation. If
+$|C-\widehat C|\leq u_C$ and $|w-\widehat w|\leq u_w$, the exact
+single-endpoint bound is
+\begin{equation}
+ u_{E_C}\leq\frac{u_C}{2}(|\widehat w|+u_w)^2
+       +\widehat C\left(|\widehat w|u_w+\frac{u_w^2}{2}\right).
+ \label{eq:lag-endpoint-uncertainty}
+\end{equation}
+For illustrative $\widehat C=1$ F, $u_C=1/100$ F,
+$|\widehat w|\leq2$ V and $u_w=1/100$ V, this gives
+$80501/2000000$ J per endpoint. Two such observations of the finite and
+ideal final states have combined bound $80501/1000000$ J. A proposed
+$1/10$ J total comparison bound leaves $19499/1000000$ J for reference
+setting, timing, and other errors; it separates the finite departure from
+zero if those requirements are met. The ideal comparator can alternatively
+be calculated from independently bounded $C,a,T$ rather than observed as a
+second capacitor state. Initial states require their own bounds if the
+comparison uses changes instead of final stores.
+
+For the complete energy observation, integrate each actuator source product,
+the separately supplied reference driver, and actual external heat, then
+evaluate actuator, capacitor, controller, and thermal endpoints. This
+full-boundary residual has its own uncertainty and may agree with zero or
+retain either sign. The finite-minus-ideal store difference above is a
+determined comparison, not that residual. Keeping the supply external and
+measuring its complete voltage–current product avoids subtracting two large
+rail stores to obtain its delivered work. Bringing the rail inside instead
+retains both endpoints and its preparation, as specified earlier.
 
 For the complete finite-reference model, define on each matching interval
 \begin{equation}
@@ -2458,6 +2869,57 @@ current continuously and introduces no impulse. Subsequent reconnection needs
 its own compatible state and port treatment. The physical core discrepancy
 has unknown sign and magnitude; the exact integration residual here is zero.
 
+For $p=1/2$, the same preparation specifies the supply effort explicitly:
+\begin{equation}
+ u_2=\frac{a_Ls_0(2-\epsilon^2)}{2T_p\sqrt\epsilon}
+       +\frac{b_Rs_0}{2}\epsilon^{5/2}f,
+ \qquad u_1=hu_2.
+ \label{eq:common-mode-preparation-voltage}
+\end{equation}
+At fixed $T_p$ the required voltage increases without bound as
+$\epsilon\to0$, even while the prepared currents vanish and their store
+tends to $3/50$ J for $s_0=1$ A. The limit includes this supply requirement.
+It does not claim that a fixed voltage source prepares every member.
+
+One finite member is a more direct electrical investigation. Choose
+$\epsilon=1/4$, $s_0=1$ A, $T_p=1/10$ s, and $h=-3/4$, the first
+winding ratio of configuration I. Then the constitutive parameters and
+prepared state are
+\begin{align}
+ \mathsf L&=\begin{pmatrix}27/100&-27/80\\-27/80&12/25\end{pmatrix}
+              \mathrm H,&
+ \mathsf R&=\operatorname{diag}(9/3200,1/200)\,\Omega,\\
+ i_*&=\begin{pmatrix}-1/3\\1/4\end{pmatrix}\mathrm A,&
+ E_{m,*}&=\frac{93}{1600}\,\mathrm J,\\
+ u_1&=-\frac{279}{160}-\frac{3f}{3200}\quad\mathrm V,&
+ u_2&=\frac{93}{40}+\frac{f}{800}\quad\mathrm V.
+ \label{eq:finite-mode-control}
+\end{align}
+For each winding $j=1,2$, independently integrating its source and heat
+products on $[-1/10,0]$ s gives
+\begin{equation}
+ W_{s,j}=\frac{2791}{96000}\,\mathrm J,\qquad
+ W_{h,j}=-\frac1{96000}\,\mathrm J,
+ \qquad E_m(-T_p)=0,
+ \quad E_m(0)=\frac{93}{1600}\,\mathrm J.
+ \label{eq:finite-mode-works}
+\end{equation}
+The four works sum to the independently evaluated magnetic increase, with
+zero model and numerical integration residuals and continuous currents.
+These finite voltages and currents specify a two-channel preparation with
+a measurable store target. Conditional measured envelopes $|\widehat u_j|
+\leq5$ V and $|\widehat i_j|\leq1$ A, with voltage and current errors
+$1/100$ V and $1/1000$ A, give the same $1501/1000000$ J per-source
+product bound as the commutation control. To compare the net input with
+the $93/1600$ J target at uncertainty $1/100$ J, the sum of the two source
+bounds leaves $3499/500000$ J for timing, actual external heat, endpoint
+and calibration errors. Whether that budget holds is an independent
+measurement question. A physical winding pair needs calibrated finite
+coefficients; if they differ from the illustrative matrix, recompute the
+prediction. Thermal endpoints and the magnetic-state qualification in
+\eqref{eq:physical-endpoints} remain part of that comparison. Later
+reconnection is another interval with its own ports and compatible states.
+
 The corresponding changing-drive result follows without an expansion. Set
 $S(t)=u_1/h+u_2$, $D(t)=u_1/h-u_2$, and
 $\beta_\pm=r_\epsilon/\ell_\pm$. The exact modal solutions are
@@ -2623,28 +3085,45 @@ All five stated geometries meet the winding-ratio condition. A zero receiver
 and zero probe before reset need a separate damping check; they are not
 included by this sufficient condition.
 
-Consequently there are positive constants $M,\gamma$ and a sufficiently small
+For a dimensionally specified norm, choose fixed positive scales $V_*,I_*$
+and set
+\begin{equation}
+ \mathsf S=\operatorname{diag}(V_*I_3,I_*I_2),\qquad
+ \widetilde x=\mathsf S^{-1}(v,d)^T,\qquad
+ \widetilde s=s/I_*,\qquad
+ \widetilde{\mathsf A}_\epsilon=\mathsf S^{-1}\mathsf A_\epsilon\mathsf S.
+ \label{eq:passive-normalization}
+\end{equation}
+All following vector norms are Euclidean norms of these dimensionless
+coordinates and matrix norms are their induced norms. Similarity preserves
+the preceding spectral result. Consequently there are positive constants
+$M,\gamma$ and a sufficiently small
 $\epsilon_0$ such that
-$\|e^{\mathsf A_\epsilon t/\epsilon}\|\leq
+$\|e^{\widetilde{\mathsf A}_\epsilon t/\epsilon}\|\leq
 M e^{-\gamma t/\epsilon}$ for $0<\epsilon\leq\epsilon_0$.
 This follows by continuity of the finite matrices and their stable spectral
 separation. Let $x_*=(\bar v,\bar d)$ solve the constrained source/load
 equations with zero common mode, on a smooth interval. Variation of constants
-gives the exact inequality
+gives the exact inequality for $\widetilde x_*=\mathsf S^{-1}x_*$,
+with $\widetilde{\bar d}=\bar d/I_*$:
 \begin{align}
- \|x(t)-x_*(t)\|\leq{}&M e^{-\gamma(t-t_0)/\epsilon}
-                       \|x(t_0)-x_*(t_0)\|\\
+ \|\widetilde x(t)-\widetilde x_*(t)\|
+ \leq{}&M e^{-\gamma(t-t_0)/\epsilon}
+                       \|\widetilde x(t_0)-\widetilde x_*(t_0)\|\\
  &+\frac M\gamma\left(
- \|\mathsf C_0^{-1}B_+\|\sup\|s\|
- +\frac{b_R}{a_L}\epsilon^2\sup\|\bar d\|
- +\epsilon\sup\|\dot x_*\|\right).
+ \frac{I_*}{V_*}\|\mathsf C_0^{-1}B_+\|\sup\|\widetilde s\|
+ +\frac{b_R}{a_L}\epsilon^2\sup\|\widetilde{\bar d}\|
+ +\epsilon\sup\|\dot{\widetilde x}_*\|\right).
  \label{eq:passive-bound}
 \end{align}
-All suprema are over that interval. The common-mode convolution separately
-bounds $s$ by its initial value plus
-$2T\|B_+^T\|\sup\|v\|/\ell_+$.
+Here $M$ is dimensionless and $\gamma$ has units of inverse time.
+All suprema are over that interval. Writing $\widetilde v=v/V_*$,
+the common-mode convolution separately gives
+$\sup\|\widetilde s\|\leq\|\widetilde s(t_0)\|
++2TV_*\|B_+^T\|\sup\|\widetilde v\|/(\ell_+I_*)$.
 For bounded drive, derivative, and initial fast states, substitution into
-\eqref{eq:passive-bound} has a coefficient multiplying $\sup\|x-x_*\|$
+\eqref{eq:passive-bound} has a coefficient multiplying
+$\sup\|\widetilde x-\widetilde x_*\|$
 that tends to zero. Taking it below one gives a finite uniform bound.
 If the initial common currents tend to zero, the right-hand side then tends
 to zero away from the initial endpoint. Each connection change begins another
@@ -3082,6 +3561,24 @@ integral barely changes. Both endpoint states and each port work require
 independent accuracy statements. Improving one calculation does not erase
 the earlier signed discrepancy or certify a physical model error.
 
+For the illustrative $C_s=1$ F rail, $V_s=100$ V and a positive voltage
+error $\delta V_s=1/100$ V give the single-endpoint error
+\begin{equation}
+ \delta E_s=100\frac1{100}
+             +\frac12\left(\frac1{100}\right)^2
+          =\frac{20001}{20000}\,\mathrm J.
+ \label{eq:rail-endpoint-error}
+\end{equation}
+It exceeds the finite-actuator departure in \eqref{eq:lag-discrepancy}.
+Cancellation between initial and final rail errors requires established
+correlation; it cannot be inferred from similar displayed voltages.
+The complete supply voltage–current product at an external port and the
+difference of two internal rail stores are different measurement choices.
+Each retains its actual boundary and all preparation work. The finite
+budgets in \eqref{eq:drag-uncertainty}, \eqref{eq:thermal-uncertainty},
+and \eqref{eq:lag-endpoint-uncertainty} connect specific signals to required
+error scales; the general remainder uses \eqref{eq:residual-uncertainty}.
+
 Finite-circuit work uncertainty, finite voltage-integral uncertainty, and
 finite compound ratio uncertainty remain separate. As explicit illustrative
 engineering decision limits, one may declare
@@ -3155,6 +3652,20 @@ reaction, switch, and controller powers against independently evaluated
 endpoint stores. A surviving gain or deficit is retained with its conditions
 and uncertainty; the exact controls do not determine that physical outcome.
 
+The first finite targets are directly stated in measurable quantities.
+Two stator mountings under the same motion differ by $7\pi/50$ J in drag
+dissipation over $7/2$ s. Finite reference actuation ends at
+$-(9+e^{-10})/5$ V, giving a capacitor-store departure of
+$[(9+e^{-10})^2-100]/50$ J from the ideal 2 J. Conditional torque, angle,
+voltage, and capacitance error budgets resolve these comparisons; they do
+not establish an arbitrarily small full-boundary remainder. The loaded axial
+control supplies the carrier and receiver works, while two explicit receiver
+branches specify the energized return change and its overlap. A finite
+$93/1600$ J winding preparation exposes both source voltages and heat works.
+Actual thermal endpoints and magnetic material states remain central to the
+physical comparison. Their unknown contributions are neither hidden in an
+acceptance threshold nor assigned from the balance remainder.
+
 The controls do expose substantial changes. Spin-up raises ground kinetic
 energy while lowering carrier effective energy. The sun's
 $987\pi/8\,\mathrm J$ ground work becomes $705\pi/8\,\mathrm J$ in
@@ -3192,12 +3703,14 @@ their respective event-completeness scopes. Neither replaces the work
 integrals or the independent endpoint check: a brief same-sign transfer and
 a small change in a large store each demand their own accuracy assessment.
 
+\clearpage
+
 # References {-}
 
 1. Martin L. Culpepper (2002), *2.000 Planetary Gear Application & Derivation*,
    MIT OpenCourseWare, *How and Why Machines Work*, Spring 2002, pp. 1–5.
    [Course notes][gears].
-2. Massachusetts Institute of Technology (2022), “Non-Inertial Rotating
+2. Massachusetts Institute of Technology (2022), “Non-Inertial Linear and Rotating
    Reference Frames,” Chapter 31 of *8.01 Classical Mechanics*, Spring 2022
    chapter edition, especially Section 31.4, pp. 7–15. [Published chapter][frames].
 3. Hermann A. Haus and James R. Melcher (1989), *Electromagnetic Fields and
