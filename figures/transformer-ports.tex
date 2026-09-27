@@ -3,26 +3,35 @@
 \usepackage[american]{circuitikz}
 \begin{document}
 \begin{circuitikz}[font=\small,>=Latex]
-\draw (-2,0) to[V,invert,l=$u$] (-2,2) to[R,l=$R_s$,i=$I_s$] (1,2);
-\draw[elemA,thick] (1,2) to[L,l=$L_1$,i=$i_1$] (1,0);
-\draw[elemB,thick] (1,4) to[L,l_=$L_2$,i=$i_2$] (1,2);
-\draw (-2,0)--(6,0);
-\draw (1,4)--(6,4);
-\draw (3.5,4) to[C,l=$C$] (3.5,0);
-\draw (6,4) to[R,l=$G_L+G_P$] (6,1.45);
-\draw (1,2)--(2.25,2) to[R,l=$G_c$] (2.25,0);
-\fill[elemA] (1,2) circle (.06);
-\fill[elemB] (1,4) circle (.06);
+\draw (-2,0) to[V,invert,l=$u$] (-2,3) to[R,l=$R_s$,i=$I_s$] (1,3);
+\draw[elemA,thick] (1,3) to[L,l=$L_1$,i=$i_1$] (1,1.5)
+ to[R,l=$R_1$] (1,0);
+\draw[elemB,thick] (1,6) to[R,l=$R_2$,i=$i_2$] (1,4.5)
+ to[L,l=$L_2$] (1,3);
+\draw (-2,0)--(7.7,0);
+\draw (1,6)--(7,6);
+\draw (4,6) to[C,l=$C$] (4,4)--(4,0);
+\draw (7,6) to[R,l=$1/(G_L+G_P)$] (7,2.8);
+\draw (1,3)--(2.5,3) to[R,l=$1/G_c$] (2.5,0);
+\fill (2.5,3) circle (.04);
+\draw[elemA] (2.5,3)--(3.8,3) arc[start angle=180,end angle=0,radius=.2]
+ --(5.2,3)--(5.2,1.7)--(6.3,1.7);
+\draw[elemC] (7.7,1.7)--(7.7,0);
+\draw[thick] (7,2.8)--(6.3,1.7);
+\fill (7,2.8) circle (.04);
+\draw[fill=white,elemA] (6.3,1.7) circle (.055);
+\draw[fill=white,elemC] (7.7,1.7) circle (.055);
+\node[below,elemA] at (6.25,1.55) {$h=1:a$};
+\node[right,elemC] at (7.85,1.55) {$h=0:c$};
+\node[align=center] at (6.25,.65) {Receiver return};
+\fill[elemA] (1,3) circle (.06);
+\fill[elemB] (1,6) circle (.06);
 \fill[elemC] (1,0) circle (.06);
-\node[elemA,above left] at (1,2) {$a$};
-\node[elemB,above left] at (1,4) {$b$};
+\node[elemA,right] at (1.25,3.25) {$a$};
+\node[elemB,above left] at (1,6) {$b$};
 \node[elemC,below] at (1,0) {$c$};
-\draw[elemB,dotted,thick,<->] (.1,.6) to[bend left=35] (.1,3.4);
-\node[fill=white,inner sep=1pt] at (3,4.6) {$M=sk\rho L_1$};
-\node[draw,rounded corners,fill=white,align=center,minimum width=2cm] (sel) at (6,.85) {Return selector\\$h=1:a$, $h=0:c$};
-\draw (6,1.45)--(sel.north);
-\draw[dashed,elemC] (sel.south)--(6,0);
-\node[align=center] at (6,-.55) {Capacitor return stays at $c$.};
-\node[align=center] at (0,-.65) {$v_1=V_a-V_c$\qquad $v_2=V_b-V_a$};
+\draw[frameline,dotted,thick,<->,preaction={draw=white,line width=3pt}] (.6,2.1) to[bend left=45] (.6,3.9);
+\node[above] at (4,6.2) {$M=sk\rho L_1$};
+\node at (4,-.65) {Capacitor return stays at $c$; bridge crossing is unconnected.};
 \end{circuitikz}
 \end{document}

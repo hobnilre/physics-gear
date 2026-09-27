@@ -1,10 +1,12 @@
 # Frames, Returns, and Port Power
 
-Exact work balances for epicyclic gears and transformer readouts
+Changing stores and open energy transfers in gears and transformer readouts
 
 ## What this article adds, and why it matters
 
-The article connects epicyclic gears, physical shaft readouts and transformer circuits through exact work integrals and independently evaluated energy stores. Stored energy changes during preparation, loading and relaxation; changing the observation frame or the physical return opens further questions about which work and energy an instrument reveals.
+The article investigates open energy questions in epicyclic gears, physical shaft readouts, and transformer circuits. The complete preparation and reset cycle, physical return commutation, loaded linkage reactions, and imperfect reference supplies remain physical investigations with unknown signed remainders. Exact work integrals and independently evaluated stores give quantitative comparisons for those investigations.
+
+The revision following `REVIEW_2.md` brings these questions into the abstract, introduction, and local derivations. It adds a coupled axial train/readout model, complete-cycle and switching definitions, finite sensors and actuators with conversion losses, and exact examples where vanishing currents or voltage mismatches retain energy. A negative finite-actuation energy difference is derived with every source and heat work retained. Any unexplained physical gain or deficit remains open with its conditions and uncertainty.
 
 - **A spin-up that raises one energy expression and lowers another.** Accelerating the reference gear train from rest increases its ground-frame kinetic energy while decreasing its carrier-frame effective energy. Exact ramp integrals expose the shaft work, Euler contribution and centrifugal-potential change separately. The split between shaft-work and effective-field contributions changes with the preparation history and can give the two shares opposite signs.
 
@@ -16,10 +18,18 @@ The article connects epicyclic gears, physical shaft readouts and transformer ci
 
 - **A return path worth $21/4$ J.** Omitting one terminal contribution after a common voltage shift leaves an exact signed energy discrepancy of $21/4$ J. Physical ground bonds, probes and chassis paths introduce further transfers and stores. The article identifies the voltage and current observations needed to resolve their contributions individually.
 
-- **An exact energy correspondence with a moving-reference challenge.** The finite electrical and mechanical models match magnetic energy to elastic energy and capacitor energy to rotational kinetic energy. An accelerating mechanical reference introduces an additional store difference of $-\Omega H+J\Omega^2/2$. Physically driven capacitor returns and their supplies become the next concrete targets for establishing the corresponding work.
+- **An active realization of moving-reference energy.** Magnetic energy maps to elastic energy and capacitor energy to rotational kinetic energy. Floating sources and driven capacitor returns reproduce the shaft and Euler powers separately. The reference driver, finite supply rail, controller demand, and preparation have their own work integrals. A nonzero instantaneous reference change requires divergent driver dissipation at fixed resistance; real bandwidth and conversion losses remain unmeasured.
 
-Each result follows from explicit port integrals and endpoint states. Together they make changing stores, preparation history and reference motion central to the energy investigation.
+- **Finite models with explicit rigid limits and switching work.** A joint constitutive limit with compatible preparation and matched drives recovers the rigid compound works. Constrained equations retain magnetizing storage at unity coupling, while prepared shorts and energized locks retain their event heat. Finite lossless reversal histories return to zero endpoint stores and zero signed interval works after nonzero intermediate transfers.
+
+- **Small currents with finite stores.** A common winding current approaching zero retains a limiting magnetic store of $3/50$ J in the stated preparation. A different drive with vanishing voltage mismatch produces a limiting store of $25/12$ J and growing current. Selected port works can converge while winding states and stored energy remain different. The passive-load limit has its own effort selection and preparation-dependent initial layers.
+
+- **A determined departure from an ideal active reference.** With finite actuator response, the reference-only receiver finishes at $(9+e^{-10})^2/50$ J instead of 2 J under the stated one-second control. Each source and heat product is integrated separately. The wider model includes sensor, actuator, command, driver, and rail stores, with hardware discrepancies still unmeasured.
+
+Polynomial event sets and a bounded analytic completeness criterion retain their distinct scopes. Work accuracy and endpoint accuracy remain separate: a short transfer can have no sign-changing power zero, and a small energy change can depend on the accuracy of two large stores.
 
 ## Article
 
 [Read the article (PDF)](frames-returns-and-port-power.pdf) · [Manuscript](frames-returns-and-port-power.md)
+
+Build the figures and PDF with `make pdf`. Exact conventions, coverage, and verification are recorded in `notes/`.
