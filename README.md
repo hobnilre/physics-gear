@@ -27,3 +27,5 @@ The proposed measurements include explicit uncertainty budgets for these finite 
 [Read the article (PDF)](frames-returns-and-port-power.pdf) · [Manuscript](frames-returns-and-port-power.md)
 
 Build the seven standalone figures and article with `make pdf`. Exact conventions, coverage, and verification are recorded in `notes/`.
+
+`make pdf` records the UTC build time on the first page, followed by this repository’s GitHub link. The timestamp updates when the PDF is rebuilt; an up-to-date PDF keeps its existing value.

@@ -49,9 +49,7 @@ urlcolor: MidnightBlue
 citecolor: MidnightBlue
 ---
 
-Latest PDF on GitHub:
-
-<https://github.com/hobnilre/physics-gear/blob/main/frames-returns-and-port-power.pdf>
+\begingroup\scriptsize\noindent PDF created: \pdfbuildtimestamp\par\noindent Latest on GitHub: \url{https://github.com/hobnilre/physics-gear}\par\endgroup
 
 # Open energy questions and signed transfers
 
