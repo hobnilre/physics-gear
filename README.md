@@ -22,10 +22,17 @@ Exact work integrals and independently evaluated stores give each comparison a d
 
 The proposed measurements include explicit uncertainty budgets for these finite signals. Each port work and each endpoint state receives its own accuracy requirement. Any positive or negative remainder that survives the complete account stays open with its magnitude, conditions, and uncertainty. Rotating-frame analysis, compound power ratios, active supplies, and exact switching and limiting arguments provide the mathematical framework for pursuing it.
 
-## Article
+## Article and build
 
-[Read the article (PDF)](frames-returns-and-port-power.pdf) · [Manuscript](frames-returns-and-port-power.md)
+[Read the article (PDF)](frames-returns-and-port-power.pdf) · [Manuscript source](frames-returns-and-port-power.md)
 
-Build the seven standalone figures and article with `make pdf`. Exact conventions, coverage, and verification are recorded in `notes/`.
+Install GNU Make, Pandoc, XeLaTeX and the TeX Gyre fonts, including the LaTeX
+packages used by `preamble.tex` and the standalone TikZ/PGFPlots figures. Run `make pdf`
+from this repository. The build uses only files in this checkout; no sibling
+repository or private working files are needed.
 
-`make pdf` records the UTC build time on the first page, followed by this repository’s GitHub link. The timestamp updates when the PDF is rebuilt; an up-to-date PDF keeps its existing value.
+The first page gives the PDF creation time in UTC, followed by this repository's
+GitHub link. An up-to-date PDF keeps its timestamp; `make -B pdf` forces a rebuild.
+Intermediates go to ignored `build/` by default; `BUILD_DIR=/absolute/path`
+selects another location. `make clean` removes that build directory and keeps
+the published PDF and figure assets.
