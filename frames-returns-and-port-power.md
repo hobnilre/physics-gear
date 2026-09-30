@@ -4,25 +4,22 @@ subtitle: "Four central shafts, loaded reactions, and electrical counterparts"
 author: "Hob Nilre & Bo C. Herlin"
 date: "2026-09-30"
 abstract: |
-  A planet's rotating stub is brought to a separate central output through two
-  correctly phased universal joints. Together with sun, carrier and ring,
-  this gives four accessible shafts with two independent speeds. Contact
-  constraints and attached free bodies determine the two-coordinate steady
-  load family and every signed port work. One loaded-planet control delivers
-  7/3 joule in one second and changes carrier work by the same amount, while
-  a held ring retains a nonzero reaction. Two ideal transformer pairs and one
-  four-tap common-flux winding independently reproduce the complete terminal
-  relations, including the planet receiver. A specified initialized compliant
-  extension maps inertial and elastic stores to capacitive and magnetic
-  states. Coin and spoke controls distinguish counts from physical loads;
-  switched returns and prepared capacitor states expose the additional laws
-  needed for finite connections. Shared output windings impose compatibility
-  conditions, while an insulated timing drive obstructs full-state repetition.
-  Frame-dependent effective stores, compound
-  ratios, supplied references and prepared limits delimit the correspondence.
-  A companion develops joint, switching, material and observation questions,
-  with independent uncertainties for work and endpoint stores. All worked
-  results are exact or explicitly conditional within declared models.
+  A specified ideal layout brings a planet's rotating stub to a separate
+  central output through two correctly phased universal joints. Sun, carrier,
+  ring and planet output have two independent speeds and two independent
+  steady load coordinates. Contact constraints and attached free bodies
+  determine their signed works: one receiver takes 7/3 joule in one second
+  and changes carrier work by the same amount, while a held ring carries
+  a changed reaction. Two ideal transformer pairs and a four-tap common-flux
+  winding realize the complete terminal relations, including the receiver
+  and its physical return. An initialized compliant extension additionally
+  maps independent inertial, elastic, capacitive and magnetic states.
+  Count, frame, switching and preparation controls delimit these distinct
+  correspondences. A shared-output example separates a prepared transition
+  from full-state repetition under insulation. The companion develops
+  physical identification and finite measurement decisions. Exact identities,
+  evaluated examples and conditional finite histories are distinguished;
+  no apparatus measurements are reported.
 keywords:
   - epicyclic gearing
   - signed port work
@@ -54,9 +51,10 @@ citecolor: MidnightBlue
 # Four shafts and a loaded planet
 \label{sec:construction}
 
-Bring the rotation of a planet gear to the centre of a planetary train through
-two correctly phased universal joints. The sun, carrier, ring and planet
-output then have four separately accessible shafts. Which motions and loads
+In the specified ideal layout, bring the rotation of a planet gear to the
+centre of a planetary train through two correctly phased universal joints.
+The sun, carrier, ring and planet output have four separately accessible
+shafts. Which motions and loads
 can those shafts sustain, and which electrical connections reproduce their
 signed powers? This construction organizes the article. The two meshes leave
 two independent speeds; attached free bodies determine two independent steady
@@ -105,8 +103,19 @@ observations of each transfer. It includes a separate switched tapped-secondary
 apparatus motivated by SERPS. The main derivations below establish the
 four-shaft construction and its electrical realization; finite state models
 and exact controls state what extends beyond the ideal terminal relation.
-The later sections and appendix retain the detailed compound, reference,
-preparation and event arguments needed to delimit those claims.
+Section \ref{sec:core-correspondence} gives the pitch constraints, loaded free
+bodies, both electrical constructions and an initialized finite extension in
+one sequence. The later count, frame, compound, reference and preparation
+treatments state where those correspondences change.
+
+Planet-axis takeoffs using universal joints have earlier mechanical designs
+[Nakagawa et al. (2018)][planet-takeoff], and the role of relative phasing in
+double-Cardan kinematics is established [Fischer and Paul (1991)][cardan].
+The contribution here is the explicit four-port speed/load family, its two
+constructed electrical realizations and the independent work/store accounts
+that distinguish terminal matching from a dynamic state correspondence.
+The mathematical construction leaves the orbiting installation's clearances
+and spatial joint forces to identification.
 
 
 ## Ports, states, and signed observations
@@ -210,6 +219,338 @@ physical contribution, not an uncertainty allowance. All evaluated model
 integrals in this article are exact, so their numerical integration residual
 is zero. This says nothing about the uncertainty of physical observations.
 
+# The four-shaft correspondence
+\label{sec:core-correspondence}
+
+The first model uses rigid pitch constraints and a correctly phased massless
+axial lead-out. Its finite extension has additional elastic states. The
+following map fixes which comparison each construction establishes.
+
+| Models or observations | Correspondence and domain |
+|--------------------------------|--------------------------------------------------------|
+| Four shafts and either ideal winding realization | Two speed and two steady load coordinates; all four signed port products; no internal ideal winding store |
+| Initialized compliant and finite electrical models | Inverse state map, independent stores and matching drives; positive finite matrices and continuous event states |
+| Axial U-joint and spatial Oldham lead-outs | Distinct apparatus; their equal-ratio kinematics do not identify the same reaction forces |
+| Switched return, cell bank and shared output | Separate graphs, preparations, supplies and observations; each has its own finite laws |
+| Full state and terminal observation | An observation can lose information about stored energy; equal scalar endpoints do not establish state/history reset |
+
+: Model relations. The local equations define the maps; the table transfers no result between different physical graphs.
+
+## A parallel-axis train
+
+Expressing mesh motion relative to the carrier is the standard kinematic
+construction illustrated by [Culpepper (2002)][gears]. Here the two contact
+constraints are retained separately before deriving the train relation.
+
+Let $Z_s,Z_p,Z_r$ be positive integer tooth counts of the sun, each planet,
+and the internal ring. For common module $m_0$, the pitch radii are
+$r_j=m_0Z_j/2$. The planet centre is at radius $a$. The simple train requires
+\begin{equation}
+ a=r_s+r_p=r_r-r_p,\qquad Z_r=Z_s+2Z_p.
+ \label{eq:assembly}
+\end{equation}
+Pure rolling at the two pitch points gives two independently defined planet
+rates:
+\begin{align}
+ \omega_p&=\omega_c-\frac{Z_s}{Z_p}(\omega_s-\omega_c),\\
+ \omega_p&=\omega_c+\frac{Z_r}{Z_p}(\omega_r-\omega_c).
+ \label{eq:meshes}
+\end{align}
+Eliminating $\omega_p$ yields the division-free Willis relation
+\begin{equation}
+ Z_s(\omega_s-\omega_c)+Z_r(\omega_r-\omega_c)=0.
+ \label{eq:willis}
+\end{equation}
+The ratio form is valid only when its denominator is nonzero. Equation
+\eqref{eq:willis} also covers the locked train.
+
+![Schematic pitch geometry and forces on one planet. Blue identifies the sun, orange the planet, green the carrier, and purple the ring. Tangential mesh forces on the planet have signed components $F_s,F_r$; its pin force is $R_t\mathbf e_\theta+R_r\mathbf e_r$. Only one of the three planets is drawn.](figures/gear-ports.pdf){#fig:gear width=87%}
+
+\FloatBarrier
+
+The geometry of Figure \ref{fig:gear} permits scalar subtraction of rates
+because all rotation axes are parallel. Helical thrust, bevel geometry, and
+frames rotating about other axes require vector kinematics and additional
+force components. Positive pitch radii alone do not establish manufacturability:
+equally spaced multiple planets also require compatible tooth phasing and
+clearance. For the simple train with $q$ equally spaced planets, a familiar
+phase condition follows by advancing adjacent mesh phases through $2\pi/q$:
+$(Z_s+Z_r)/q$ must be an integer. All algebra below can instead describe a
+single planet or a stipulated equal-load assembly; it is not proof that every
+integer pair admits three equally spaced, noninterfering planets.
+
+## The four-shaft operating family
+\label{sec:four-shaft}
+
+For the correctly phased axial model, write $u=\omega_c$ and
+$d=\omega_s-\omega_c$. The two pitch constraints give
+\begin{equation}
+ \boldsymbol\omega=
+ \begin{pmatrix}\omega_s\\\omega_c\\\omega_r\\\omega_o\end{pmatrix}
+ =B\begin{pmatrix}u\\d\end{pmatrix},\qquad
+ B=\begin{pmatrix}1&1\\1&0\\1&-Z_s/Z_r\\1&-Z_s/Z_p\end{pmatrix}.
+ \label{eq:four-speed}
+\end{equation}
+The sun/carrier minor has determinant $-1$, so these four accessible shafts
+have exactly two independent speeds. This division-free form includes every
+held shaft. The four absolute-speed zero lines are
+$u+d=0$, $u=0$, $Z_ru-Z_sd=0$, and $Z_pu-Z_sd=0$.
+All six interbody relative rates vanish on the single line $d=0$.
+
+Let $F_{si},F_{ri}$ be tangential sun and ring forces on planet $i$, and
+$R_{ti}$ its carrier-pin force. Let $\tau_{oi}$ be the external torque
+transmitted from its output; the equal-angle massless linkage transmits this
+axial torque without a baseline carrier-support torque. The body equations are
+\begin{align}
+ r_s\sum_iF_{si}&=\tau_s-I_s\dot\omega_s,&
+ r_p(F_{ri}-F_{si})+\tau_{oi}&=I_{pi}\dot\omega_p,\\
+ R_{ti}+F_{si}+F_{ri}&=m_{pi}a\dot\omega_c,&
+ \tau_r&=I_r\dot\omega_r+r_r\sum_iF_{ri},\\
+ \tau_c&=I_c\dot\omega_c+a\sum_iR_{ti}.
+ \label{eq:four-freebody}
+\end{align}
+$I_c$ excludes planet orbit; added output inertia belongs in the relevant
+spin demand. The pin equation includes orbital acceleration once.
+Here $I_s,I_r,I_c,I_{pi}$ are the corresponding axial inertias and $m_{pi}$
+is planet mass. The equal-angle phase cancellation is derived in
+\eqref{eq:hooke-map}; transverse Cardan reactions are outside this axial model.
+For one steady loaded planet, these equations give
+$F_s=\tau_s/r_s$, $F_r=F_s-\tau_o/r_p$ and $R_t=-F_s-F_r$, hence
+\begin{align}
+ \tau_r&=\frac{Z_r}{Z_s}\tau_s-\frac{Z_r}{Z_p}\tau_o,\\
+ \tau_c&=-\left(1+\frac{Z_r}{Z_s}\right)\tau_s
+             +\left(\frac{Z_r}{Z_p}-1\right)\tau_o,\qquad B^T\boldsymbol\tau=0.
+ \label{eq:four-torque}
+\end{align}
+The orthogonality follows from forces and moment arms. Only afterward does
+$\boldsymbol\tau^T\boldsymbol\omega=0$ follow. The operating family has
+coordinates $(u,d,\tau_s,\tau_o)$ before source and load laws select a subset.
+A passive receiver must satisfy $\tau_o\omega_o\leq0$ at its actual reference.
+
+For $(24,18,60)$ teeth, the following exact controls use $[0,1]\,\mathrm s$.
+Each displayed work is its own constant torque--rate integral.
+
+\begingroup\small
+
+| State | $(\omega_s,\omega_c,\omega_r,\omega_o)$, rad/s | $(\tau_s,\tau_c,\tau_r,\tau_o)$, N m | $(W_s,W_c,W_r,W_o)$, J |
+|------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| Carrier held | $(1,0,-2/5,-4/3)$ | $(2,-14/3,5/3,1)$ | $(2,0,-2/3,-4/3)$ |
+| Ring held, $\tau_o=0$ | $(7/2,1,0,-7/3)$ | $(2,-7,5,0)$ | $(7,-7,0,0)$ |
+| Ring held, $\tau_o=1$ | $(7/2,1,0,-7/3)$ | $(2,-14/3,5/3,1)$ | $(7,-14/3,0,-7/3)$ |
+| Ring held, $\tau_o=3$ | $(7/2,1,0,-7/3)$ | $(2,0,-5,3)$ | $(7,0,0,-7)$ |
+| Sun held | $(0,1,7/5,7/3)$ | $(2,-14/3,5/3,1)$ | $(0,-14/3,7/3,7/3)$ |
+| Output held | $(7/4,1,7/10,0)$ | $(2,-14/3,5/3,1)$ | $(7/2,-14/3,7/6,0)$ |
+| Co-rotation | $(1,1,1,1)$ | $(2,-14/3,5/3,1)$ | $(2,-14/3,5/3,1)$ |
+| Opposed rates | $(-2,1,11/5,5)$ | $(2,-14/3,5/3,1)$ | $(-4,-14/3,11/3,5)$ |
+| Planet supplies work | $(7/2,1,0,-7/3)$ | $(2,-28/3,25/3,-1)$ | $(7,-28/3,0,7/3)$ |
+
+: Four complete external ports. Positive work enters the assembly; a held port can carry a nonzero reaction.
+
+\endgroup
+
+The zero-torque control at the ring-held speeds has four zero works.
+Reversing every speed reverses every work while preserving the torque
+solution. Zero speeds with the displayed reaction set give an all-held
+zero-work control. With $\tau_o=3\tau_s/4$, the ring torque vanishes;
+with $\tau_o=3\tau_s/2$, the carrier torque vanishes. These are ordinary
+load boundaries. A throughput ratio with
+$D=\sum_j\max(\tau_j\omega_j,0)=0$ is undefined, including moving
+zero-torque states.
+
+Choose four effective inertias of $1\,\mathrm{kg\,m^2}$, with the carrier
+entry including planet orbit and the last entry combining planet and output
+spin. At each endpoint of the ring-held controls,
+$K^0=\tfrac12\sum_j\omega_j^2=673/72\,\mathrm J$.
+For example a $1\,\mathrm{kg}$ planet permits bare carrier inertia
+$1-a^2>0$ in SI units, and the combined spin can be split into two
+$1/2\,\mathrm{kg\,m^2}$ inertias. No preparation work is assigned to these
+initialized states. The separately integrated works and independently
+evaluated endpoints give $r_E=0$ with no event or impulse.
+
+For $q$ planets the steady equations determine $\sum_iF_{si}$ and each
+$F_{ri}-F_{si}$, leaving $q-1$ force-sharing freedoms. A declared equal
+bilateral stiffness and equal total contact deflection give
+\begin{equation}
+ F_{si}=\frac{\tau_s}{qr_s}
+       +\frac{\tau_{oi}-\bar\tau_o}{2r_p},\quad
+ F_{ri}=F_{si}-\frac{\tau_{oi}}{r_p},\quad
+ \bar\tau_o=\frac1q\sum_i\tau_{oi}.
+ \label{eq:unequal-four}
+\end{equation}
+Indeed $F_{si}+F_{ri}$ is then common, and summing the first equation
+recovers the sun force. This is a bilateral or preloaded-contact selection,
+with zero tooth error. At $q=3,\tau_s=2$, loads $(3,0,0)\,\mathrm{N\,m}$
+give $F_s=(250/3,0,0)\,\mathrm N$ and $F_r=-F_s$.
+Loads $(1,1,1)$ give $F_s=(250/9,250/9,250/9)\,\mathrm N$.
+Both have $\tau_c=0,\tau_r=-5\,\mathrm{N\,m}$; their individual forces
+and takeoffs differ. A common output combining three takeoffs needs its own
+phase offsets, load sharing and support model.
+
+For acceleration the equation is
+$B^T\boldsymbol\tau=B^TMB(\dot u,\dot d)^T$.
+With $M=I$, $u=1+t$, $d=5/2+60t/11$, and zero constraint force,
+$\boldsymbol\tau=\dot{\boldsymbol\omega}=(71/11,1,-13/11,-69/11)$
+in SI units on $[0,1]\,\mathrm s$.
+Their sum vanishes although all four accelerations are nonzero.
+Each work is
+$\tau_j\omega_j(0)+\tau_j\dot\omega_j/2$; each endpoint is
+$\sum_j\omega_j(t)^2/2$. Substitution gives the same total increase.
+The steady torque law must therefore remain attached to its zero-acceleration
+assumption.
+
+
+## Four electrical connections and a loaded planet terminal
+\label{sec:four-terminal}
+
+Assign $(S,C,R,P)$ to the mechanical $(s,c,r,o)$.
+$P$ is the accessible planet connection; $O$ is a separate physical external
+reference conductor. With $\alpha$ in $\mathrm{V}/(\mathrm{rad/s})$, define
+\begin{equation}
+ V_j-V_O=\alpha\omega_j,\qquad I_j=\tau_j/\alpha,\qquad
+ (V_j-V_O)I_j=\tau_j\omega_j .
+ \label{eq:four-port-map}
+\end{equation}
+Currents enter the winding assembly at their named terminals; every external
+branch uses its actual return to $O$. Translating both potentials preserves a
+port voltage; physically moving a return changes the branch.
+
+![Two ideal realizations of the same four-terminal relation. Left: signed sun and ring transformer ratios with their secondary currents entering the planet node. Right: four taps on one common-flux winding; numbers are cumulative turns from P. Each external port is a terminal-to-O connection. P is loaded, and O is an external physical return separate from the winding.](figures/four-terminals.pdf){#fig:four-terminals width=100%}
+
+\FloatBarrier
+
+Set $h_s=-Z_p/Z_s$ and $h_r=Z_p/Z_r$. The two ideal transformers impose
+\begin{align}
+ V_S-V_C&=h_s(V_P-V_C),&
+ V_R-V_C&=h_r(V_P-V_C),\\
+ j_s&=-h_sI_S,&j_r&=-h_rI_R,\\
+ I_P&=j_s+j_r=\frac{Z_p}{Z_s}I_S-\frac{Z_p}{Z_r}I_R,&
+ I_C&=-(I_S+I_R+I_P).
+ \label{eq:four-pairs}
+\end{align}
+The signed current laws come from ideal ampere-turn cancellation; KCL
+retains the external $P$ branch. Secondary cancellation $j_s+j_r=0$
+would apply only to an unloaded planet node. Multiplying each winding voltage
+by its own current then verifies each pair's zero total power.
+Solving these equations independently gives the same voltage and current
+families as \eqref{eq:four-speed} and \eqref{eq:four-torque}.
+
+A single common flux supplies a second construction. For general positive
+teeth with $Z_r=Z_s+2Z_p$, choose cumulative tap positions
+\begin{equation}
+ (N_S,N_C,N_R,N_P)=
+ \bigl(Z_r(Z_s+Z_p),\,Z_sZ_r,\,Z_s(Z_r-Z_p),\,0\bigr)/g,
+ \label{eq:general-taps}
+\end{equation}
+where $g$ is their greatest common divisor. They are ordered
+$P<R<C<S$: the three positive section counts before reduction are
+$Z_s(Z_s+Z_p)$, $Z_sZ_p$, and $Z_rZ_p$.
+Multiplying all counts by a common positive integer preserves ideal ratios.
+For $(24,18,60)$ the taps are $(S,C,R,P)=(35,20,14,0)$.
+With $e=\dot\Phi$, the three voltages to $P$ are $(35,20,14)e$.
+Section currents directed from $S$ towards $P$ are
+$I_S$, $I_S+I_C$ and $I_S+I_C+I_R=-I_P$.
+The independent winding and node equations are therefore
+\begin{equation}
+ 15I_S+6(I_S+I_C)+14(I_S+I_C+I_R)=0,\qquad
+ I_S+I_C+I_R+I_P=0.
+ \label{eq:tap-currents}
+\end{equation}
+Subtracting tap voltages gives both ratios in \eqref{eq:four-pairs};
+substituting KCL into the general ampere-turn sum gives its $I_P$ law.
+Conversely those equations give both tap constraints. Their coefficient
+matrices have rank two, including zero-voltage states by the multiplied,
+division-free equations. This proves ideal terminal equivalence.
+
+At $\alpha=1$ the recurring one-second control is
+\begin{equation}
+ \begin{array}{c|rrrr}
+   &S&C&R&P\\ \hline
+ V_j-V_O\;(\mathrm V)&7/2&1&0&-7/3\\
+ I_j\;(\mathrm A)&2&-14/3&5/3&1\\
+ W_j\;(\mathrm J)&7&-14/3&0&-7/3
+ \end{array}
+ \label{eq:four-electric-control}
+\end{equation}
+Here $j_s=3/2\,\mathrm A$, $j_r=-1/2\,\mathrm A$, so $P-O$ is a
+receiver. The zero-voltage ring carries a nonzero reaction current.
+Unit capacitors to $O$ give $673/72\,\mathrm J$ at both endpoints,
+matching the effective unit inertias. Every work follows its own integral;
+ideal winding constraints add no magnetic state. Removing the planet load
+gives $(7,-7,0,0)\,\mathrm J$; setting $I_P=3\,\mathrm A$ gives
+$(7,0,0,-7)\,\mathrm J$. All operating controls in
+Section \ref{sec:four-shaft} map in the same way.
+
+The finite turn count, leakage, copper resistance and core law are additional
+parameters. Neither ideal realization establishes their equality, or sustained
+DC operation within a finite core's flux range. A phase-dependent joint ratio
+$\chi$ requires a specified variable electrical coupling and its control
+work. A voltage coordinate shift does not implement that coupling.
+
+## An initialized finite receiver at P
+\label{sec:finite-planet}
+
+A specified finite model retains three nodes $(S,C,P)$ relative to a ring
+clamped at $O=0$, three unit capacitors, and four winding currents. In order
+sun primary/secondary, ring primary/secondary, use
+\begin{align}
+ B_f&=\begin{pmatrix}1&0&0&0\\-1&-1&-1&-1\\0&1&0&1\end{pmatrix},\\
+ L_f&=\operatorname{diag}\left[
+ \begin{pmatrix}9/16&-3/8\\-3/8&1\end{pmatrix},
+ \begin{pmatrix}9/100&3/20\\3/20&1\end{pmatrix}\right]\mathrm H,\\
+ R_f&=\operatorname{diag}(9/160,1/10,9/1000,1/10)\,\Omega .
+ \label{eq:finite-planet-data}
+\end{align}
+Both inductance blocks are positive definite, with coupling magnitude $1/2$.
+A $1\,\Omega$ source resistance connects $U(t)$ to $S$; receivers
+$G_C=1/2\,\mathrm S$ and $G_P(t)>0$ connect $C,P$ to $O$.
+KCL and the winding laws give
+\begin{equation}
+ C_f\dot v=b-Gv-B_fi,\qquad L_f\dot i=B_f^Tv-R_fi,\quad
+ b=(U,0,0)^T,\quad G=\operatorname{diag}(1,1/2,G_P).
+ \label{eq:finite-planet-laws}
+\end{equation}
+Here and below matrix coefficients carry the indicated SI units.
+Start with $v=i=0$. On successive intervals $[0,1]$, $[1,2]$, $[2,3]$,
+and $[3,5]\,\mathrm s$, take $(U,G_P)=(1,1/4),(1,1/2),(1,1),(0,1)$
+in volts and siemens. Finite resistance preserves every current path;
+all constitutive states are continuous at the load and source steps.
+Power can jump, while store jumps and model impulses are zero.
+
+For the reactive boundary, separately integrate source
+$U(U-V_S)$, source-resistor export $-(U-V_S)^2$,
+each copper export $-R_{f,j}i_j^2$, carrier receipt
+$-V_C^2/2$, and planet receipt $-G_PV_P^2$.
+Their quadratic-form integrals are the exact matrix functions developed
+below. Evaluate $E=(v^TC_fv+i^TL_fi)/2$ directly at every endpoint.
+The winding/node terms cancel only after both sides are calculated, giving
+$r_E=0$. A thermally insulated boundary instead adds
+$\dot H=(U-V_S)^2+i^TR_fi$ and includes $H$ at the endpoints.
+It omits those two heat-export terms. The retained source resistance during
+relaxation permits asymptotic decay; finite relaxation is not an exact reset.
+
+A compliant mechanical counterpart has $J=\alpha^2 C_f$,
+$z=L_fi/\alpha$ and $K=\alpha^2L_f^{-1}$.
+At $\alpha=1$, its independent laws are
+$J\dot\omega=b-G\omega-B_fKz$ and
+$\dot z=B_f^T\omega-R_fKz$.
+For each signed ratio $h=-3/4,3/10$, the positive elastic energy
+$(z_1/h+z_2)^2/6+(z_1/h-z_2)^2/2$ has the corresponding inverse-inductance
+Hessian. A speed source connected through a unit viscous element supplies
+$\Omega_d(\Omega_d-\omega_s)$ and exports
+$-(\Omega_d-\omega_s)^2$; its source rotor is outside the boundary.
+The carrier and planet dashpots are separate receivers.
+This construction maps actual elastic and inertial states as well as
+port powers. It adds compliant coordinates to the rigid four-shaft relation.
+For constant $\alpha\ne0$, the inverse is
+$\omega=v/\alpha$, $i=\alpha L_f^{-1}z$; thus
+$i^TL_fi/2=z^TKz/2$ and $v^TC_fv/2=\omega^TJ\omega/2$.
+Use those maps also at initialization and on both sides of each event.
+Taking a singular leakage limit or commanding a changing $\alpha$ requires
+new consistency conditions and, for modulation, an actuator power law.
+The companion develops finite winding, material and support observations
+needed to identify a physical realization [Nilre and Herlin (2026)][companion].
+
+
 # Rolling constraints and three kinds of count
 
 ## A coin, a spoke, and an independently loaded output
@@ -289,49 +630,6 @@ $W_d=63/10\,\mathrm J$. Direct endpoint evaluation gives orbital
 $9/2\,\mathrm J$ and spin $9/5\,\mathrm J$. Preparation and steady receipt
 are separate histories.
 
-
-## A parallel-axis train
-
-Expressing mesh motion relative to the carrier is the standard kinematic
-construction illustrated by [Culpepper (2002)][gears]. Here the two contact
-constraints are retained separately before deriving the train relation.
-
-Let $Z_s,Z_p,Z_r$ be positive integer tooth counts of the sun, each planet,
-and the internal ring. For common module $m_0$, the pitch radii are
-$r_j=m_0Z_j/2$. The planet centre is at radius $a$. The simple train requires
-\begin{equation}
- a=r_s+r_p=r_r-r_p,\qquad Z_r=Z_s+2Z_p.
- \label{eq:assembly}
-\end{equation}
-Pure rolling at the two pitch points gives two independently defined planet
-rates:
-\begin{align}
- \omega_p&=\omega_c-\frac{Z_s}{Z_p}(\omega_s-\omega_c),\\
- \omega_p&=\omega_c+\frac{Z_r}{Z_p}(\omega_r-\omega_c).
- \label{eq:meshes}
-\end{align}
-Eliminating $\omega_p$ yields the division-free Willis relation
-\begin{equation}
- Z_s(\omega_s-\omega_c)+Z_r(\omega_r-\omega_c)=0.
- \label{eq:willis}
-\end{equation}
-The ratio form is valid only when its denominator is nonzero. Equation
-\eqref{eq:willis} also covers the locked train.
-
-![Schematic pitch geometry and forces on one planet. Blue identifies the sun, orange the planet, green the carrier, and purple the ring. Tangential mesh forces on the planet have signed components $F_s,F_r$; its pin force is $R_t\mathbf e_\theta+R_r\mathbf e_r$. Only one of the three planets is drawn.](figures/gear-ports.pdf){#fig:gear width=87%}
-
-\FloatBarrier
-
-The geometry of Figure \ref{fig:gear} permits scalar subtraction of rates
-because all rotation axes are parallel. Helical thrust, bevel geometry, and
-frames rotating about other axes require vector kinematics and additional
-force components. Positive pitch radii alone do not establish manufacturability:
-equally spaced multiple planets also require compatible tooth phasing and
-clearance. For the simple train with $q$ equally spaced planets, a familiar
-phase condition follows by advancing adjacent mesh phases through $2\pi/q$:
-$(Z_s+Z_r)/q$ must be an integer. All algebra below can instead describe a
-single planet or a stipulated equal-load assembly; it is not proof that every
-integer pair admits three equally spaced, noninterfering planets.
 
 ## Signed displacement, tooth passage, and a shaft readout
 
@@ -454,123 +752,6 @@ and tooth ratios $Z_s/Z_r=2/5$, $Z_s/Z_p=4/3$. Then $J=4$, $B=-11/15$
 in the corresponding units. Taking $\dot\omega_c=1\,\mathrm{rad/s^2}$ and
 $\dot d=60/11\,\mathrm{rad/s^2}$ accelerates every body while $\dot H=0$.
 The torque ratios in \eqref{eq:statics} cannot be inferred in this case.
-
-## The four-shaft operating family
-\label{sec:four-shaft}
-
-For the correctly phased axial model, write $u=\omega_c$ and
-$d=\omega_s-\omega_c$. The two pitch constraints give
-\begin{equation}
- \boldsymbol\omega=
- \begin{pmatrix}\omega_s\\\omega_c\\\omega_r\\\omega_o\end{pmatrix}
- =B\begin{pmatrix}u\\d\end{pmatrix},\qquad
- B=\begin{pmatrix}1&1\\1&0\\1&-Z_s/Z_r\\1&-Z_s/Z_p\end{pmatrix}.
- \label{eq:four-speed}
-\end{equation}
-The sun/carrier minor has determinant $-1$, so these four accessible shafts
-have exactly two independent speeds. This division-free form includes every
-held shaft. The four absolute-speed zero lines are
-$u+d=0$, $u=0$, $Z_ru-Z_sd=0$, and $Z_pu-Z_sd=0$.
-All six interbody relative rates vanish on the single line $d=0$.
-
-Let $F_{si},F_{ri}$ be tangential sun and ring forces on planet $i$, and
-$R_{ti}$ its carrier-pin force. Let $\tau_{oi}$ be the external torque
-transmitted from its output; the equal-angle massless linkage transmits this
-axial torque without a baseline carrier-support torque. The body equations are
-\begin{align}
- r_s\sum_iF_{si}&=\tau_s-I_s\dot\omega_s,&
- r_p(F_{ri}-F_{si})+\tau_{oi}&=I_{pi}\dot\omega_p,\\
- R_{ti}+F_{si}+F_{ri}&=m_{pi}a\dot\omega_c,&
- \tau_r&=I_r\dot\omega_r+r_r\sum_iF_{ri},\\
- \tau_c&=I_c\dot\omega_c+a\sum_iR_{ti}.
- \label{eq:four-freebody}
-\end{align}
-$I_c$ excludes planet orbit; added output inertia belongs in the relevant
-spin demand. The pin equation includes orbital acceleration once.
-For one steady loaded planet, these equations give
-$F_s=\tau_s/r_s$, $F_r=F_s-\tau_o/r_p$ and $R_t=-F_s-F_r$, hence
-\begin{align}
- \tau_r&=\frac{Z_r}{Z_s}\tau_s-\frac{Z_r}{Z_p}\tau_o,\\
- \tau_c&=-\left(1+\frac{Z_r}{Z_s}\right)\tau_s
-             +\left(\frac{Z_r}{Z_p}-1\right)\tau_o,\qquad B^T\boldsymbol\tau=0.
- \label{eq:four-torque}
-\end{align}
-The orthogonality follows from forces and moment arms. Only afterward does
-$\boldsymbol\tau^T\boldsymbol\omega=0$ follow. The operating family has
-coordinates $(u,d,\tau_s,\tau_o)$ before source and load laws select a subset.
-A passive receiver must satisfy $\tau_o\omega_o\leq0$ at its actual reference.
-
-For $(24,18,60)$ teeth, the following exact controls use $[0,1]\,\mathrm s$.
-Each displayed work is its own constant torque--rate integral.
-
-\begingroup\small
-
-| State | $(\omega_s,\omega_c,\omega_r,\omega_o)$, rad/s | $(\tau_s,\tau_c,\tau_r,\tau_o)$, N m | $(W_s,W_c,W_r,W_o)$, J |
-|------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| Carrier held | $(1,0,-2/5,-4/3)$ | $(2,-14/3,5/3,1)$ | $(2,0,-2/3,-4/3)$ |
-| Ring held, $\tau_o=0$ | $(7/2,1,0,-7/3)$ | $(2,-7,5,0)$ | $(7,-7,0,0)$ |
-| Ring held, $\tau_o=1$ | $(7/2,1,0,-7/3)$ | $(2,-14/3,5/3,1)$ | $(7,-14/3,0,-7/3)$ |
-| Ring held, $\tau_o=3$ | $(7/2,1,0,-7/3)$ | $(2,0,-5,3)$ | $(7,0,0,-7)$ |
-| Sun held | $(0,1,7/5,7/3)$ | $(2,-14/3,5/3,1)$ | $(0,-14/3,7/3,7/3)$ |
-| Output held | $(7/4,1,7/10,0)$ | $(2,-14/3,5/3,1)$ | $(7/2,-14/3,7/6,0)$ |
-| Co-rotation | $(1,1,1,1)$ | $(2,-14/3,5/3,1)$ | $(2,-14/3,5/3,1)$ |
-| Opposed rates | $(-2,1,11/5,5)$ | $(2,-14/3,5/3,1)$ | $(-4,-14/3,11/3,5)$ |
-| Planet supplies work | $(7/2,1,0,-7/3)$ | $(2,-28/3,25/3,-1)$ | $(7,-28/3,0,7/3)$ |
-
-: Four complete external ports. Positive work enters the assembly; a held port can carry a nonzero reaction.
-
-\endgroup
-
-The zero-torque control at the ring-held speeds has four zero works.
-Reversing every speed reverses every work while preserving the torque
-solution. Zero speeds with the displayed reaction set give an all-held
-zero-work control. With $\tau_o=3\tau_s/4$, the ring torque vanishes;
-with $\tau_o=3\tau_s/2$, the carrier torque vanishes. These are ordinary
-load boundaries. A throughput ratio with
-$D=\sum_j\max(\tau_j\omega_j,0)=0$ is undefined, including moving
-zero-torque states.
-
-Choose four effective inertias of $1\,\mathrm{kg\,m^2}$, with the carrier
-entry including planet orbit and the last entry combining planet and output
-spin. At each endpoint of the ring-held controls,
-$K^0=\tfrac12\sum_j\omega_j^2=673/72\,\mathrm J$.
-For example a $1\,\mathrm{kg}$ planet permits bare carrier inertia
-$1-a^2>0$ in SI units, and the combined spin can be split into two
-$1/2\,\mathrm{kg\,m^2}$ inertias. No preparation work is assigned to these
-initialized states. The separately integrated works and independently
-evaluated endpoints give $r_E=0$ with no event or impulse.
-
-For $q$ planets the steady equations determine $\sum_iF_{si}$ and each
-$F_{ri}-F_{si}$, leaving $q-1$ force-sharing freedoms. A declared equal
-bilateral stiffness and equal total contact deflection give
-\begin{equation}
- F_{si}=\frac{\tau_s}{qr_s}
-       +\frac{\tau_{oi}-\bar\tau_o}{2r_p},\quad
- F_{ri}=F_{si}-\frac{\tau_{oi}}{r_p},\quad
- \bar\tau_o=\frac1q\sum_i\tau_{oi}.
- \label{eq:unequal-four}
-\end{equation}
-Indeed $F_{si}+F_{ri}$ is then common, and summing the first equation
-recovers the sun force. This is a bilateral or preloaded-contact selection,
-with zero tooth error. At $q=3,\tau_s=2$, loads $(3,0,0)\,\mathrm{N\,m}$
-give $F_s=(250/3,0,0)\,\mathrm N$ and $F_r=-F_s$.
-Loads $(1,1,1)$ give $F_s=(250/9,250/9,250/9)\,\mathrm N$.
-Both have $\tau_c=0,\tau_r=-5\,\mathrm{N\,m}$; their individual forces
-and takeoffs differ. A common output combining three takeoffs needs its own
-phase offsets, load sharing and support model.
-
-For acceleration the equation is
-$B^T\boldsymbol\tau=B^TMB(\dot u,\dot d)^T$.
-With $M=I$, $u=1+t$, $d=5/2+60t/11$, and zero constraint force,
-$\boldsymbol\tau=\dot{\boldsymbol\omega}=(71/11,1,-13/11,-69/11)$
-in SI units on $[0,1]\,\mathrm s$.
-Their sum vanishes although all four accelerations are nonzero.
-Each work is
-$\tau_j\omega_j(0)+\tau_j\dot\omega_j/2$; each endpoint is
-$\sum_j\omega_j(t)^2/2$. Substitution gives the same total increase.
-The steady torque law must therefore remain attached to its zero-acceleration
-assumption.
-
 
 ## The actual port sides
 
@@ -1166,152 +1347,6 @@ adds its separately integrated effective terms to its own evaluated stores;
 it does not add them to the ground physical balance.
 
 # Windings, returns, and the electrical observation
-
-## Four electrical connections and a loaded planet terminal
-\label{sec:four-terminal}
-
-Assign $(S,C,R,P)$ to the mechanical $(s,c,r,o)$.
-$P$ is the accessible planet connection; $O$ is a separate physical external
-reference conductor. With $\alpha$ in $\mathrm{V}/(\mathrm{rad/s})$, define
-\begin{equation}
- V_j-V_O=\alpha\omega_j,\qquad I_j=\tau_j/\alpha,\qquad
- (V_j-V_O)I_j=\tau_j\omega_j .
- \label{eq:four-port-map}
-\end{equation}
-Currents enter the winding assembly at their named terminals; every external
-branch uses its actual return to $O$. Translating both potentials preserves a
-port voltage; physically moving a return changes the branch.
-
-![Two ideal realizations of the same four-terminal relation. Left: signed sun and ring transformer ratios with their secondary currents entering the planet node. Right: four taps on one common-flux winding; numbers are cumulative turns from P. Each external port is a terminal-to-O connection. P is loaded, and O is an external physical return separate from the winding.](figures/four-terminals.pdf){#fig:four-terminals width=100%}
-
-\FloatBarrier
-
-Set $h_s=-Z_p/Z_s$ and $h_r=Z_p/Z_r$. The two ideal transformers impose
-\begin{align}
- V_S-V_C&=h_s(V_P-V_C),&
- V_R-V_C&=h_r(V_P-V_C),\\
- j_s&=-h_sI_S,&j_r&=-h_rI_R,\\
- I_P&=j_s+j_r=\frac{Z_p}{Z_s}I_S-\frac{Z_p}{Z_r}I_R,&
- I_C&=-(I_S+I_R+I_P).
- \label{eq:four-pairs}
-\end{align}
-The signed current laws come from ideal ampere-turn cancellation; KCL
-retains the external $P$ branch. Secondary cancellation $j_s+j_r=0$
-would apply only to an unloaded planet node. Multiplying each winding voltage
-by its own current then verifies each pair's zero total power.
-Solving these equations independently gives the same voltage and current
-families as \eqref{eq:four-speed} and \eqref{eq:four-torque}.
-
-A single common flux supplies a second construction. For general positive
-teeth with $Z_r=Z_s+2Z_p$, choose cumulative tap positions
-\begin{equation}
- (N_S,N_C,N_R,N_P)=
- \bigl(Z_r(Z_s+Z_p),\,Z_sZ_r,\,Z_s(Z_r-Z_p),\,0\bigr)/g,
- \label{eq:general-taps}
-\end{equation}
-where $g$ is their greatest common divisor. They are ordered
-$P<R<C<S$: the three positive section counts before reduction are
-$Z_s(Z_s+Z_p)$, $Z_sZ_p$, and $Z_rZ_p$.
-Multiplying all counts by a common positive integer preserves ideal ratios.
-For $(24,18,60)$ the taps are $(S,C,R,P)=(35,20,14,0)$.
-With $e=\dot\Phi$, the three voltages to $P$ are $(35,20,14)e$.
-Section currents directed from $S$ towards $P$ are
-$I_S$, $I_S+I_C$ and $I_S+I_C+I_R=-I_P$.
-The independent winding and node equations are therefore
-\begin{equation}
- 15I_S+6(I_S+I_C)+14(I_S+I_C+I_R)=0,\qquad
- I_S+I_C+I_R+I_P=0.
- \label{eq:tap-currents}
-\end{equation}
-Subtracting tap voltages gives both ratios in \eqref{eq:four-pairs};
-substituting KCL into the general ampere-turn sum gives its $I_P$ law.
-Conversely those equations give both tap constraints. Their coefficient
-matrices have rank two, including zero-voltage states by the multiplied,
-division-free equations. This proves ideal terminal equivalence.
-
-At $\alpha=1$ the recurring one-second control is
-\begin{equation}
- \begin{array}{c|rrrr}
-   &S&C&R&P\\ \hline
- V_j-V_O\;(\mathrm V)&7/2&1&0&-7/3\\
- I_j\;(\mathrm A)&2&-14/3&5/3&1\\
- W_j\;(\mathrm J)&7&-14/3&0&-7/3
- \end{array}
- \label{eq:four-electric-control}
-\end{equation}
-Here $j_s=3/2\,\mathrm A$, $j_r=-1/2\,\mathrm A$, so $P-O$ is a
-receiver. The zero-voltage ring carries a nonzero reaction current.
-Unit capacitors to $O$ give $673/72\,\mathrm J$ at both endpoints,
-matching the effective unit inertias. Every work follows its own integral;
-ideal winding constraints add no magnetic state. Removing the planet load
-gives $(7,-7,0,0)\,\mathrm J$; setting $I_P=3\,\mathrm A$ gives
-$(7,0,0,-7)\,\mathrm J$. All operating controls in
-Section \ref{sec:four-shaft} map in the same way.
-
-The finite turn count, leakage, copper resistance and core law are additional
-parameters. Neither ideal realization establishes their equality, or sustained
-DC operation within a finite core's flux range. A phase-dependent joint ratio
-$\chi$ requires a specified variable electrical coupling and its control
-work. A voltage coordinate shift does not implement that coupling.
-
-## An initialized finite receiver at P
-\label{sec:finite-planet}
-
-A specified finite model retains three nodes $(S,C,P)$ relative to a ring
-clamped at $O=0$, three unit capacitors, and four winding currents. In order
-sun primary/secondary, ring primary/secondary, use
-\begin{align}
- B_f&=\begin{pmatrix}1&0&0&0\\-1&-1&-1&-1\\0&1&0&1\end{pmatrix},\\
- L_f&=\operatorname{diag}\left[
- \begin{pmatrix}9/16&-3/8\\-3/8&1\end{pmatrix},
- \begin{pmatrix}9/100&3/20\\3/20&1\end{pmatrix}\right]\mathrm H,\\
- R_f&=\operatorname{diag}(9/160,1/10,9/1000,1/10)\,\Omega .
- \label{eq:finite-planet-data}
-\end{align}
-Both inductance blocks are positive definite, with coupling magnitude $1/2$.
-A $1\,\Omega$ source resistance connects $U(t)$ to $S$; receivers
-$G_C=1/2\,\mathrm S$ and $G_P(t)>0$ connect $C,P$ to $O$.
-KCL and the winding laws give
-\begin{equation}
- C_f\dot v=b-Gv-B_fi,\qquad L_f\dot i=B_f^Tv-R_fi,\quad
- b=(U,0,0)^T,\quad G=\operatorname{diag}(1,1/2,G_P).
- \label{eq:finite-planet-laws}
-\end{equation}
-Here and below matrix coefficients carry the indicated SI units.
-Start with $v=i=0$. On successive intervals $[0,1]$, $[1,2]$, $[2,3]$,
-and $[3,5]\,\mathrm s$, take $(U,G_P)=(1,1/4),(1,1/2),(1,1),(0,1)$
-in volts and siemens. Finite resistance preserves every current path;
-all constitutive states are continuous at the load and source steps.
-Power can jump, while store jumps and model impulses are zero.
-
-For the reactive boundary, separately integrate source
-$U(U-V_S)$, source-resistor export $-(U-V_S)^2$,
-each copper export $-R_{f,j}i_j^2$, carrier receipt
-$-V_C^2/2$, and planet receipt $-G_PV_P^2$.
-Their quadratic-form integrals are the exact matrix functions developed
-below. Evaluate $E=(v^TC_fv+i^TL_fi)/2$ directly at every endpoint.
-The winding/node terms cancel only after both sides are calculated, giving
-$r_E=0$. A thermally insulated boundary instead adds
-$\dot H=(U-V_S)^2+i^TR_fi$ and includes $H$ at the endpoints.
-It omits those two heat-export terms. The retained source resistance during
-relaxation permits asymptotic decay; finite relaxation is not an exact reset.
-
-A compliant mechanical counterpart has $J=\alpha^2 C_f$,
-$z=L_fi/\alpha$ and $K=\alpha^2L_f^{-1}$.
-At $\alpha=1$, its independent laws are
-$J\dot\omega=b-G\omega-B_fKz$ and
-$\dot z=B_f^T\omega-R_fKz$.
-For each signed ratio $h=-3/4,3/10$, the positive elastic energy
-$(z_1/h+z_2)^2/6+(z_1/h-z_2)^2/2$ has the corresponding inverse-inductance
-Hessian. A speed source connected through a unit viscous element supplies
-$\Omega_d(\Omega_d-\omega_s)$ and exports
-$-(\Omega_d-\omega_s)^2$; its source rotor is outside the boundary.
-The carrier and planet dashpots are separate receivers.
-This construction maps actual elastic and inertial states as well as
-port powers. It adds compliant coordinates to the rigid four-shaft relation.
-The companion develops finite winding, material and support observations
-needed to identify a physical realization [Nilre and Herlin (2026)][companion].
-
 
 ## The tapped and isolated connections
 
@@ -2815,7 +2850,7 @@ interval of width $d_E$, every scalar estimate has worst-case error at
 least $d_E/2$, since its two endpoint errors cannot both be smaller. The
 interval midpoint attains that bound. The companion's finite loaded-probe
 example applies this criterion to complete electrical-port histories;
-its finite-error obstruction and the earlier successful cell-probe
+its finite-error obstruction and the conditional finite cell-probe
 experiment have different preparations and observation laws.
 
 
@@ -2844,12 +2879,16 @@ A finite resistive receiver selector does not settle these reactive events.
 
 ## Exact residuals and unresolved accuracy questions
 
-All polynomial, trigonometric cycle, and matrix-function integrals reported
-here are exact in their declared models. The numerical integration residual
-is **exactly zero**, because no numerical integration is used. The
-instantaneous equation residual is zero by the independent constitutive
-substitution shown for each model, and the exact energy residual is zero
-only for the complete boundaries and effective-frame conventions specified.
+The evaluated polynomial and trigonometric controls and the stated
+matrix-function primitives are exact in their declared models. For
+symbolically evaluated work accounts the numerical integration residual is
+**exactly zero**. A proved identity or bound is distinguished from an
+unevaluated finite-history integral, a sufficient condition with unchecked
+hypotheses, and an unmeasured physical quantity. The constitutive substitutions
+prove equation and energy identities only for their specified complete
+boundaries, initial conditions and effective-frame conventions. Independent
+evaluation of works and endpoints under those common laws establishes model
+consistency, not independent physical validation.
 The physical model residual remains unquantified: it comprises omitted mesh,
 bearing, windage, churning, joint, magnetic, dielectric, switch, controller,
 and thermal physics. No apparatus measurements are reported.
@@ -2989,6 +3028,12 @@ coefficient for a fixed prescribed trajectory, and quasistatic terms scale
 linearly with applied torque; a loaded trajectory need not retain either
 scaling when those parameters change.
 
+A first physical lead-out comparison should establish clearance and phase over
+a full low-speed carrier revolution, with sleeves, finite yokes and bearings
+in their actual positions. Observe output and carrier angle, support motion
+and the changed reactions under one declared receiver load. Equal-angle
+kinematics alone supplies neither the spatial joint forces nor their work.
+
 For the windings, physical ground paths, nonlinear core and thermal behavior,
 reactive switching supplies, and the complete preparation and reset cycle
 retain their local open energy questions. The finite-reference equations add
@@ -2998,6 +3043,12 @@ the signed physical model discrepancy is unmeasured. The passive limit and
 the clamped limit retain their distinct drives and preparation conditions.
 A calibrated comparison includes the source, receiver, probe, all returns,
 each energy store, and instrument loading on the same event-split interval.
+The terminal voltage/current reference planes must enclose the same nearby
+fields and return paths as the declared stores. Field flux and terminal
+power describing one interface are alternative accounts of that transfer.
+Unresolved displacement, propagation, radiation or common-mode coupling
+requires identification using apparatus dimensions and switching-edge
+bandwidth; nominal cycle frequency alone does not bound those omissions.
 Any unexplained positive or negative remainder remains an open result with its
 magnitude, conditions, uncertainty, and completed checks. An expected balance
 does not determine the outcome of that investigation.
@@ -4326,6 +4377,15 @@ and independent stores.
 8. Hob Nilre and Bo C. Herlin (2026), *Finite Transfers and Open Energy
    Balances: Physical tests of loaded gears, switched returns, and prepared states*.
    [Companion article][companion].
+9. Masao Nakagawa, Dai Nishida, Toshiki Hirogaki and Eiichi Aoyama (2018),
+   “Investigation of Reducing Noise and Wide Geared for a Planetary Gear
+   Train Using Universal Joint (Basic Investigation of Novel Component and
+   Its Evaluation under Driving Tests),” *Journal of the Japan Society for
+   Precision Engineering* **84**(1), 89–96. In Japanese, with English abstract.
+   DOI: [10.2493/jjspe.84.89][planet-takeoff].
+10. I. S. Fischer and R. N. Paul (1991), “Kinematic Displacement Analysis of
+    a Double-Cardan-Joint Driveline,” *Journal of Mechanical Design*
+    **113**(3), 263–271. DOI: [10.1115/1.2912778][cardan].
 
 [hm]: https://web.mit.edu/6.013_book/www/chapter9/9.7.html
 [gears]: https://ocw.mit.edu/courses/2-000-how-and-why-machines-work-spring-2002/432880e8fab4781d81ef88470751b397_PlanetaryGearTrains.pdf
@@ -4336,3 +4396,5 @@ and independent stores.
 [tesla]: https://worldradiohistory.com/Archive-Electrical-Experimenter/EE-1919-06.pdf
 [serps]: https://patents.google.com/patent/US20170169941A1/en
 [companion]: https://github.com/hobnilre/physics-gear-op
+[planet-takeoff]: https://www.jstage.jst.go.jp/article/jjspe/84/1/84_89/_article/-char/en
+[cardan]: https://doi.org/10.1115/1.2912778

@@ -4,10 +4,11 @@ Four central shafts, loaded reactions, and electrical counterparts
 
 ## What this article adds, and why it matters
 
-Bring a planet gear's rotation through two correctly phased universal joints
-to a separate central shaft. The sun, carrier, ring and planet output are now
-four accessible ports. The article derives which motions and loads they can
-sustain, then builds two ideal electrical realizations of the same relations.
+In a specified ideal layout, a planet gear's rotation passes through two
+correctly phased universal joints to a separate central shaft. The sun,
+carrier, ring and planet output supply four accessible ports. The article
+derives their speed and load freedoms, then builds two ideal electrical
+realizations of the complete terminal relations in one continuous argument.
 
 - **A loaded fourth shaft changes the other reactions.** In the recurring
   one-second control, one planet receiver takes $7/3$ J and carrier work
@@ -32,7 +33,12 @@ sustain, then builds two ideal electrical realizations of the same relations.
   A separate insulated timing model has a positive thermal increment on every
   admitted revolution, preventing full-state repetition under that boundary.
 
-Coin and spoke controls introduce the count distinction. Rotating-frame
+Earlier universal-joint planet takeoffs and double-Cardan kinematics provide
+mechanical context. This treatment develops the explicit four-port load family,
+both electrical constructions and their independent work/store comparisons.
+Actual yoke clearance, spatial reactions and material laws need identification.
+
+Coin and spoke controls develop the count distinction. Rotating-frame
 stores, compound gearing, supplied references, finite controllers and prepared
 limits develop its consequences. Every worked result is exact or explicitly
 conditional within its declared model.
