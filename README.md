@@ -27,6 +27,10 @@ sustain, then builds two ideal electrical realizations of the same relations.
   series-cell preparations have the same entire terminal history but stores
   of 1 and 5 J. Switched full-to-tap returns, cell reconnection and complete
   source draw/return accounts show why delivered work needs its own integral.
+- **A shared magnetic output changes the connected problem.** Common-flux
+  compatibility and finite leakage determine which channel drives can coexist.
+  A separate insulated timing model has a positive thermal increment on every
+  admitted revolution, preventing full-state repetition under that boundary.
 
 Coin and spoke controls introduce the count distinction. Rotating-frame
 stores, compound gearing, supplied references, finite controllers and prepared

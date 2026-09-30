@@ -2,7 +2,7 @@
 title: "Frames, Returns, and Port Power"
 subtitle: "Four central shafts, loaded reactions, and electrical counterparts"
 author: "Hob Nilre & Bo C. Herlin"
-date: "2026-09-29"
+date: "2026-09-30"
 abstract: |
   A planet's rotating stub is brought to a separate central output through two
   correctly phased universal joints. Together with sun, carrier and ring,
@@ -16,7 +16,9 @@ abstract: |
   extension maps inertial and elastic stores to capacitive and magnetic
   states. Coin and spoke controls distinguish counts from physical loads;
   switched returns and prepared capacitor states expose the additional laws
-  needed for finite connections. Frame-dependent effective stores, compound
+  needed for finite connections. Shared output windings impose compatibility
+  conditions, while an insulated timing drive obstructs full-state repetition.
+  Frame-dependent effective stores, compound
   ratios, supplied references and prepared limits delimit the correspondence.
   A companion develops joint, switching, material and observation questions,
   with independent uncertainties for work and endpoint stores. All worked
@@ -2589,7 +2591,9 @@ Murray's SERPS patent illustrates an isolated primary and a tapped secondary
 with two switched capacitor--resistor branches [Murray (2017)][serps].
 The positive branch charges from the full secondary and returns through its
 lower section; the negative branch uses the opposite full and tapped
-connections. The companion develops that graph, both polarities, finite
+connections. If the lower fraction is $f$, the upper return fraction is
+$1-f$; they coincide only at a central tap.
+The companion develops that graph, both polarities, finite
 commutation, controller and material states. It is a separate apparatus from
 the conductive common-flux four-tap realization.
 
@@ -2660,6 +2664,159 @@ reconnection observation and work contracts. Those results clarify which
 states the selected terminal sees and which paths receive work. Preparation,
 operation and reset still require separate histories for a complete
 performance comparison.
+
+## Shared output windings and loaded combination
+\label{sec:shared-output}
+
+Replacing each receiving resistor by a winding on a shared output core
+changes the connected equations. Consider first one ideal common flux
+$\Phi$, constant positive reluctance $\mathcal R$, signed input turns
+$N_j\ne0$ and output turns $N_o\ne0$. Input currents enter dotted
+terminals; output current $i_o$ leaves its dotted terminal. Neglect copper
+and leakage in this control. Faraday's and magnetic-circuit laws give
+\begin{equation}
+ v_j=N_j\dot\Phi,\qquad v_o=N_o\dot\Phi,\qquad
+ \sum_jN_ji_j-N_oi_o=\mathcal R\Phi .
+ \label{eq:shared-flux}
+\end{equation}
+All $v_j/N_j$ must therefore agree. Prescribing incompatible pulse voltages
+at two ideal coupled windings gives no solution under these assumptions.
+Multiplying the last equation by $\dot\Phi$ and integrating each actual
+terminal product separately on $[t_a,t_b]$ proves
+\begin{equation}
+ \sum_j W_j-W_o=\frac{\mathcal R}{2}
+       [\Phi(t_b)^2-\Phi(t_a)^2],\qquad
+ W_j=\int_{t_a}^{t_b}v_ji_jdt,\quad W_o=\int_{t_a}^{t_b}v_oi_odt.
+ \label{eq:shared-flux-work}
+\end{equation}
+The endpoint expression follows independently from the declared magnetic
+law. For $N=(1,2)$, $N_o=1$, $\mathcal R=1\,\mathrm{A/Wb}$,
+$\Phi=t\,\mathrm{Wb/s}$, $i_1=(1+t/(1\,\mathrm s))\,\mathrm A$,
+$i_2=0$ and $i_o=1\,\mathrm A$ on $[0,1]\,\mathrm s$, the two input
+works are $3/2$ and $0\,\mathrm J$, output work is $1\,\mathrm J$,
+and the stores are $0$ and $1/2\,\mathrm J$. There is no switching event.
+
+Finite leakage permits additional modes. With every winding current now
+oriented inward, including the output, take
+\begin{equation}
+ L=\operatorname{diag}(\ell_j)+\frac{NN^T}{\mathcal R},\quad
+ \ell_j>0,\qquad v_j=R_ji_j+\ell_j\dot i_j+N_j\dot\Phi,
+ \quad E_m=\tfrac12i^TLi.
+ \label{eq:shared-leakage}
+\end{equation}
+Here $\Phi=N^Ti/\mathcal R$; the mutual terms belong to the joint store.
+For two equal-turn branches with equal $\ell,R>0$, subtraction gives
+$\ell\,d(i_1-i_2)/dt+R(i_1-i_2)=v_1-v_2$.
+In the exact control $\ell=1\,\mathrm H$, $R=1\,\Omega$,
+$v_1=-v_2=1/2\,\mathrm V$, zero currents initially and an open output,
+write $u=t/(1\,\mathrm s)$ and $\vartheta=T/(1\,\mathrm s)$.
+Then $i_1=-i_2=(1-e^{-u})/2\,\mathrm A$ and the common flux is zero.
+Separate integration on $[0,T]$ gives
+\begin{align}
+ W_1=W_2&=\tfrac14(\vartheta-1+e^{-\vartheta})\,\mathrm J,\\
+ Q_R&=\tfrac12[\vartheta-2(1-e^{-\vartheta})
+                      +(1-e^{-2\vartheta})/2]\,\mathrm J,\\
+ E_m(0)&=0,\qquad E_m(T)=\tfrac14(1-e^{-\vartheta})^2\,\mathrm J.
+ \label{eq:leakage-control}
+\end{align}
+Thus $E_m(T)-E_m(0)-W_1-W_2+Q_R=0$ exactly. The forced difference
+current occupies leakage storage even though the common flux vanishes.
+
+Separate transformers with additive series secondaries are a different
+connection. For ideal ratios $r_j$, source voltages $U_j$ and resistor
+$R_L$, their component and connection laws give
+$v_L=\sum_jr_jU_j$, $i_L=v_L/R_L$ and $i_{pj}=r_ji_L$.
+Each input work is $\int U_jr_ji_Ldt$. Two unit ratios with constant
+$(U_1,U_2)=(1,2)\,\mathrm V$, $R_L=1\,\Omega$ and duration
+$1\,\mathrm s$ give source works $(3,6)\,\mathrm J$ and receiver
+work $9\,\mathrm J$. An open receiver retains the $3\,\mathrm V$
+terminal difference with zero currents and works. Both endpoint stores
+are zero by this ideal element's stated law. Six maintained equal
+secondary voltages $V(t)$ instead give $i_L=6V/R_L$; each source's
+reflected current contributes to the resulting $36V^2/R_L$ receiver
+power. Maintaining those voltages under load is part of the drive model.
+Parallel ideal secondaries require equal voltages and a separate sharing
+law; unequal imposed voltages are incompatible. None of these connections
+inherits a single isolated channel's current history unchanged.
+
+## What a finite transition certificate establishes
+
+A useful finite assertion concerns a declared graph, initial-state family
+and interval. Normalize its currents and voltages with specified positive
+scales and suppose that, while all clamps are inactive,
+$\dot x=A(t)x+b(t)$, $\|A(t)\|_\infty\leq K$ and
+$\|b(t)\|_\infty\leq\beta$. Both bounds include the entire finite
+selector edge. Let $\|x(0)-x_0\|_\infty\leq\rho$.
+For $KT<1$, the integral equation and Gronwall's inequality give
+\begin{equation}
+ \|x(t)-x_0\|_\infty\leq
+ \rho+\frac{[K(\|x_0\|_\infty+\rho)+\beta]T}{1-KT},
+ \qquad 0\leq t\leq T .
+ \label{eq:finite-transition-box}
+\end{equation}
+Indeed, the displacement from $x(0)$ is at most
+$(K\|x(0)\|_\infty+\beta)\int_0^t e^{Ks}ds$, and
+$\int_0^t e^{Ks}ds\leq T/(1-KT)$. These are inequalities for the exact
+solution, with no small-parameter approximation. If the resulting box
+excludes a first clamp crossing, continuation verifies its assumed domain.
+It can certify current signs and, when $v_o\geq v_*>0$, the independently
+defined receiver work $\int_0^T v_o^2/R_L\,dt\geq Tv_*^2/R_L$.
+Capacitor-current limits additionally require derivative bounds from KCL.
+
+[*Finite Transfers and Open Energy Balances*][companion] supplies a complete
+six-input graph with twelve branch windings and one receiver winding on a
+shared output core, and proves such a finite prepared return certificate.
+That circuit has independent winding, cell, probe and gate states. Its
+supplied gate transition and energized initial receiver are part of the
+boundary account. A feasible interval does not supply a preparation cost,
+reset, attracting cycle or complete-service input ordering.
+
+## Insulated timing and full-state return
+\label{sec:insulated-return}
+
+A physical timing shaft adds a state and a supply absent from a prescribed
+clock. Take an insulated assembly with thermal state $H$, timing rate
+$\Omega$, viscous bearing coefficient $b_t>0$, and the independently
+declared caloric law $\dot H=b_t\Omega^2+D_{\rm other}$, where
+$D_{\rm other}\geq0$ contains the other specified internal dissipations.
+Receiver heat lies outside this boundary. A timing-shaft revolution obeys
+$\int_0^T\Omega dt=2\pi$.
+
+\begin{lemma}[Insulated return obstruction]
+No full-state cycle containing that revolution can return $H$ to its
+initial value in finite $T>0$.
+\end{lemma}
+\noindent\textit{Proof.}
+Integrating the bearing's torque--rate product separately and applying
+Cauchy--Schwarz gives
+\begin{equation}
+ H(T)-H(0)\geq\int_0^T b_t\Omega^2dt
+ \geq\frac{b_t}{T}\left(\int_0^T\Omega dt\right)^2
+ =\frac{4\pi^2b_t}{T}>0.
+ \label{eq:insulated-return}
+\end{equation}
+This contradicts the full-state endpoint requirement. $\square$
+
+For $b_t=1/10\,\mathrm{N\,m\,s/rad}$ and
+$T\in[1/2,2]\,\mathrm s$, the lower bound is $\pi^2/5\,\mathrm J$.
+The theorem concerns the caloric law and thermal endpoint, not the stability
+of electrical or shaft coordinates alone. A heat-rejecting law
+$\dot H=D-H/\tau_h$ instead gives
+$H(T)=e^{-T/\tau_h}H(0)+\int_0^T e^{-(T-t)/\tau_h}D(t)dt$ and needs
+its own return analysis. Neither result changes the earlier fixed-clock
+electrical contraction theorem's hypotheses.
+
+With generators enclosed, capacitor return is internal and the external
+inputs are prime-mover, field, timing, gate and sensor supplies. Each has
+its own signed integral; rotor, field, cam, controller and thermal states
+are independent endpoints. Equal observed output does not establish equality
+of those stores. If a measurement record admits initial energies in an
+interval of width $d_E$, every scalar estimate has worst-case error at
+least $d_E/2$, since its two endpoint errors cannot both be smaller. The
+interval midpoint attains that bound. The companion's finite loaded-probe
+example applies this criterion to complete electrical-port histories;
+its finite-error obstruction and the earlier successful cell-probe
+experiment have different preparations and observation laws.
 
 
 # Events, uncertainty, and limits of the conclusions
@@ -2871,6 +3028,11 @@ connections expose a further distinction: the same terminal history can hide
 different prepared stores, and equal endpoints need not fix individual work
 destinations. Receiver work follows the actual path and its source, switch,
 probe and controller products.
+
+Shared output windings add voltage compatibility and finite leakage modes.
+The companion distinguishes prepared source return from full-state repetition
+and energy identification. Retained timing-bearing heat excludes a full-state
+cycle under insulation; cooled operation requires its own analysis.
 
 The appendices retain the compound ratios, supplied references, singular
 preparations and complete event arguments that establish the scope of these
