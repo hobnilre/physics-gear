@@ -2,7 +2,7 @@
 title: "Frames, Returns, and Port Power"
 subtitle: "Four central shafts, loaded reactions, and electrical counterparts"
 author: "Hob Nilre & Bo C. Herlin"
-date: "2026-09-30"
+date: "2026-09-26"
 abstract: |
   A specified ideal layout brings a planet's rotating stub to a separate
   central output through two correctly phased universal joints. Sun, carrier,

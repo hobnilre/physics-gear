@@ -62,3 +62,7 @@ GitHub link. An up-to-date PDF keeps its timestamp; `make -B pdf` forces a rebui
 Intermediates go to ignored `build/` by default; `BUILD_DIR=/absolute/path`
 selects another location. `make clean` removes that build directory and keeps
 the published PDF and figure assets.
+
+The title date records the first version. Keep `ARTICLE_DATE` in the Makefile
+and the manuscript's `date` fixed across revisions. The separate `PDF created`
+timestamp continues to record each PDF rebuild in UTC.
