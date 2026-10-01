@@ -2,6 +2,19 @@
 
 Four central shafts, loaded reactions, and electrical counterparts
 
+## Main argument and technical appendices
+
+When a changed frame, connection or load changes an apparent energy account,
+which physical transfers and stored states decide the result? The short main
+text follows this question through one loaded four-shaft mechanism, both ideal
+electrical constructions and the first physical measurements. Each work and
+endpoint store is determined independently before the residual is formed.
+
+Nine appendices retain the complete operating and frame families, support
+models, finite windings and switching, compound correspondence, supplied
+references, preparation examples, shared output and uncertainty proofs.
+The full technical treatment is part of this same article and PDF.
+
 ## What this article adds, and why it matters
 
 In a specified ideal layout, a planet gear's rotation passes through two

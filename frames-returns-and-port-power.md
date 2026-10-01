@@ -4,22 +4,20 @@ subtitle: "Four central shafts, loaded reactions, and electrical counterparts"
 author: "Hob Nilre & Bo C. Herlin"
 date: "2026-09-26"
 abstract: |
-  A specified ideal layout brings a planet's rotating stub to a separate
-  central output through two correctly phased universal joints. Sun, carrier,
-  ring and planet output have two independent speeds and two independent
-  steady load coordinates. Contact constraints and attached free bodies
-  determine their signed works: one receiver takes 7/3 joule in one second
-  and changes carrier work by the same amount, while a held ring carries
-  a changed reaction. Two ideal transformer pairs and a four-tap common-flux
-  winding realize the complete terminal relations, including the receiver
-  and its physical return. An initialized compliant extension additionally
-  maps independent inertial, elastic, capacitive and magnetic states.
-  Count, frame, switching and preparation controls delimit these distinct
-  correspondences. A shared-output example separates a prepared transition
-  from full-state repetition under insulation. The companion develops
-  physical identification and finite measurement decisions. Exact identities,
-  evaluated examples and conditional finite histories are distinguished;
-  no apparatus measurements are reported.
+  When changing a frame, connection or load changes an apparent energy
+  account, which physical transfers and stored states decide the result?
+  A planet's rotating stub, brought through two correctly phased universal
+  joints to a separate central shaft, gives a four-port test. Contact
+  constraints and attached free bodies yield two speed freedoms and two
+  steady load freedoms. One receiver takes 7/3 joule in one second and changes
+  carrier work by the same amount, with a changed held-ring reaction.
+  Two signed transformer pairs and a four-tap winding reproduce all four
+  terminal relations, including the planet receiver and physical return.
+  Independent work integrals and endpoint stores establish the ideal account;
+  joint, return, supply and material observations delimit its physical test.
+  The appendices retain the full operating families, finite correspondence,
+  switching, preparation and shared-output results with their proof status.
+  No apparatus measurements are reported.
 keywords:
   - epicyclic gearing
   - signed port work
@@ -48,77 +46,33 @@ citecolor: MidnightBlue
 
 \begingroup\scriptsize\noindent PDF created: \pdfbuildtimestamp\par\noindent Latest on GitHub: \url{https://github.com/hobnilre/physics-gear}\par\endgroup
 
-# Four shafts and a loaded planet
-\label{sec:construction}
+# The physical question
 
-In the specified ideal layout, bring the rotation of a planet gear to the
-centre of a planetary train through two correctly phased universal joints.
-The sun, carrier, ring and planet output have four separately accessible
-shafts. Which motions and loads
-can those shafts sustain, and which electrical connections reproduce their
-signed powers? This construction organizes the article. The two meshes leave
-two independent speeds; attached free bodies determine two independent steady
-load coordinates. An ideal four-tap winding and a two-transformer network
-realize those same terminal relations, including a loaded planet output.
+When a changed frame, connection, load or preparation changes an apparent
+work or energy account, what physically changes, and does an unexplained
+remainder survive a complete observation of the apparatus? A four-shaft
+planetary mechanism gives this question a concrete starting point. Bring
+the rotating planet stub through two correctly phased universal joints to
+a separate central output. Attaching a receiver there changes the train's
+reactions. The resulting work comparison can then be constructed electrically,
+with a receiver and a physical return at every corresponding port.
 
-Figure \ref{fig:four-shafts} fixes the physical meaning of the fourth shaft.
-The rotating planet body is keyed to a stub that turns in a bearing carried
-by the carrier. Its support pin and the stub are different parts. Two joint
-centres connect that orbiting stub to a separate central output, $o$; the
-output shares the sun's axis without being connected to the sun. Throughout,
-$p$ denotes the orbiting body. The equality $\omega_o=\omega_p$ follows from
-the specified joint geometry and phasing.
-
-![Schematic four-shaft construction, shown in a carrier-dependent axial plane. Separate sun, carrier and ring sleeves terminate before the illustrated joint sweep; their connections continue to their respective gear members. The planet stub rotates in a carrier-mounted bearing. Crosses and paired yoke marks show the two joints and the relative phasing fixed by the intermediate shaft. Dashed lines bound the swept centreline; real yokes, shaft radii, bearing loads and collision clearances require a separate design.](figures/four-shafts.pdf){#fig:four-shafts width=100%}
-
-\FloatBarrier
-
-For the reference teeth $(Z_s,Z_p,Z_r)=(24,18,60)$ and module
-$m_0=1/500\,\mathrm m$, the pitch radii are
-$(3/125,9/500,3/50)\,\mathrm m$ and the offset is $a=21/500\,\mathrm m$.
-With carrier angle $\phi$, take joint centres
-$J_1=(a\cos\phi,a\sin\phi,z_1)$ and
-$J_2=(0,0,z_1+L)$, where $L=3/25\,\mathrm m$.
-The intermediate member has length $\sqrt{a^2+L^2}$ and equal joint angles
-$\beta=\arctan(a/L)$. Its centreline sweeps radius $a(1-\lambda)$ at fraction
-$\lambda$ along the member. These dimensions specify a kinematic layout;
-the drawing does not establish a manufacturing clearance or a spatial
-joint-force solution. Equal operating angles and correct relative phasing
-are also requirements in ordinary double-joint practice [Belden][joints].
-Here the joint plane turns with the carrier, and the rigid intermediate
-shaft fixes the yokes relative to that plane.
-
-The central worked comparison holds the ring and uses shaft speeds
-$(7/2,1,0,-7/3)\,\mathrm{rad/s}$. Adding a $+1\,\mathrm{N\,m}$ receiver
-torque at the negative-running planet output changes carrier work by
-$+7/3\,\mathrm J$ over one second and delivers $7/3\,\mathrm J$ to that
-receiver. The held-ring reaction changes as well, although its ground work
-remains zero. Both changes follow from the attached free bodies, before
-any work balance is formed.
-
-The companion, [*Finite Transfers and Open Energy Balances*][companion],
-develops the corresponding physical questions: loaded joint forces, support
-and phase supplies, winding commutation, prepared cell states, and calibrated
-observations of each transfer. It includes a separate switched tapped-secondary
-apparatus motivated by SERPS. The main derivations below establish the
-four-shaft construction and its electrical realization; finite state models
-and exact controls state what extends beyond the ideal terminal relation.
-Section \ref{sec:core-correspondence} gives the pitch constraints, loaded free
-bodies, both electrical constructions and an initialized finite extension in
-one sequence. The later count, frame, compound, reference and preparation
-treatments state where those correspondences change.
+The contribution is a derived four-port speed/load family, two ideal
+electrical realizations of its complete terminal relations, and an independent
+work/store comparison that identifies the physical questions left open.
+The first control delivers $7/3\,\mathrm J$ to one planet receiver and changes
+carrier work by the same amount. This value follows from contact constraints
+and attached free bodies. The physical investigation requires joint, support,
+return, supply and endpoint observations that the ideal equations do not provide.
 
 Planet-axis takeoffs using universal joints have earlier mechanical designs
-[Nakagawa et al. (2018)][planet-takeoff], and the role of relative phasing in
-double-Cardan kinematics is established [Fischer and Paul (1991)][cardan].
-The contribution here is the explicit four-port speed/load family, its two
-constructed electrical realizations and the independent work/store accounts
-that distinguish terminal matching from a dynamic state correspondence.
-The mathematical construction leaves the orbiting installation's clearances
-and spatial joint forces to identification.
-
-
-## Ports, states, and signed observations
+[Nakagawa et al. (2018)][planet-takeoff], and relative phasing in double-Cardan
+kinematics is established [Fischer and Paul (1991)][cardan]. Here the central
+argument follows the loaded mechanism through both electrical constructions
+to its measurement question. The appendices retain the operating families,
+finite models, alternative apparatuses and proofs that delimit this comparison.
+The companion, [*Finite Transfers and Open Energy Balances*][companion],
+develops physical identification and finite measurement decisions.
 
 All angular components are positive by the right-hand rule about the common
 $+z$ axis. We use angular rates $\omega$ in radians per second and
@@ -142,18 +96,6 @@ eligible outcomes. For a physical discrepancy, the interval, boundary, event
 states, signed magnitude, uncertainty, and completed checks must accompany
 the result. An absent measurement leaves the sign and magnitude unknown.
 
-| Symbol | Meaning |
-|-----------------------|-------------------------------------------------------|
-| $q$ | Number of planets |
-| $\chi=F'(x)$ | Instantaneous lead-out transmission factor |
-| $\mathcal T$ | Coupling torque in the lead-out |
-| $\tau_*$ | Applied torque scale in the compound train |
-| $T$ | Duration of an integration interval |
-| $\mathfrak p_j=V_jI_j$ | Single-terminal power contribution |
-| $W_j$, $\lvert W_j\rvert$, $\int\lvert P_j\rvert dt$ | Signed work, its magnitude, and integrated absolute power |
-
-: Notation used across the mechanical and electrical models. Subscripts distinguish local states from these scalar quantities.
-
 We distinguish a whole-system boundary from component boundaries. A mesh or
 pin has two sides; they are indispensable when examining a planet but internal
 to an enclosure containing both connected bodies. Similarly, winding powers
@@ -162,81 +104,43 @@ and heat powers of a complete circuit. Ideal constraints below have no energy
 coordinates; their empty store is zero by definition. Finite bodies and
 windings have explicit nonempty stores evaluated at both endpoints.
 
-Signed sums also differ from absolute observations. For oriented coordinates
-$y_j$ and positive weights $w_j$, $\sum_j w_j\lvert y_j\rvert$ depends on the
-observation map, units, and weights. A linear constraint on the signed
-coordinates does not make their absolute sum conserved, nor make it energy.
-For example, if $E=x^T\mathsf Hx/2$ with positive definite $\mathsf H$ and
-$y=\mathsf Ox$,
-Cauchy–Schwarz gives the exact instantaneous geometric bound
-\begin{equation}
- \sum_j w_j\lvert y_j\rvert\leq
- \sqrt{2E(x)\max_{\sigma_j=\pm1}
- (w\mathbin{\odot}\sigma)^T\mathsf O\mathsf H^{-1}\mathsf O^T
- (w\mathbin{\odot}\sigma)}.
- \label{eq:geometry}
-\end{equation}
-It uses the current state energy, not a presumption that the initial energy
-persists. Extra conserved linear functionals restrict the admissible set only
-when actually derived. Neither a gear turn count nor a raw winding-linkage sum
-is automatically eligible for a conserved-sum growth claim.
-
-## Resolving a transfer and resolving a remainder
-
-Let measured effort and flow be $\widehat e,\widehat f$, with independently
-established pointwise errors $|e-\widehat e|\leq u_e$ and
-$|f-\widehat f|\leq u_f$ on the declared interval. Expanding their product,
-then integrating its three error terms, gives the exact bound
-\begin{equation}
- |W-\widehat W|\leq
- \int_{t_0}^{t_1}
- (|\widehat e|u_f+|\widehat f|u_e+u_eu_f)\,dt,
- \qquad \widehat W=\int_{t_0}^{t_1}\widehat e\widehat f\,dt.
- \label{eq:product-uncertainty}
-\end{equation}
-The errors must refer to the actual conjugate port quantities at common times.
-Additional bounds cover channel timing, finite bandwidth, integration of
-recorded signals, and interval endpoints. For example, if a time displacement
-is at most $u_t$ and the displaced flow satisfies $|\dot f|\leq L_f$, the
-additional product error with an aligned effort bounded by $E_*$ is at most
-$E_*L_fu_t(t_1-t_0)$. This follows by integrating
-$|f(t+\delta t)-f(t)|\leq L_fu_t$; it does not bound an unobserved fast
-transient without such a derivative bound. Endpoint-time errors also need
-bounds on the omitted terminal intervals. Count a timing contribution only
-once if it is already included in the pointwise errors.
-
-For a complete measured balance, a conservative enclosure is
-\begin{equation}
- u_r=u_{E,0}+u_{E,1}+\sum_j u_{W,j}+\sum_e u_{{\rm imp},e},
- \qquad r_E\in[\widehat r_E-u_r,\widehat r_E+u_r].
- \label{eq:residual-uncertainty}
-\end{equation}
-Here each work bound includes its justified observation errors; resolved
-finite edges and ideal impulses describe disjoint transfers. Endpoint
-correlation can reduce this enclosure only when established independently.
-An unknown thermal state, magnetic state, or missing port is an undetermined
-physical contribution, not an uncertainty allowance. All evaluated model
-integrals in this article are exact, so their numerical integration residual
-is zero. This says nothing about the uncertainty of physical observations.
-
-# The four-shaft correspondence
+# Four shafts under load
+\label{sec:construction}
 \label{sec:core-correspondence}
 
-The first model uses rigid pitch constraints and a correctly phased massless
-axial lead-out. Its finite extension has additional elastic states. The
-following map fixes which comparison each construction establishes.
+Figure \ref{fig:four-shafts} fixes the physical meaning of the fourth shaft.
+The rotating planet body is keyed to a stub that turns in a bearing carried
+by the carrier. Its support pin and the stub are different parts. Two joint
+centres connect that orbiting stub to a separate central output, $o$; the
+output shares the sun's axis without being connected to the sun. Throughout,
+$p$ denotes the orbiting body. The equality $\omega_o=\omega_p$ follows from
+the specified joint geometry and phasing.
 
-| Models or observations | Correspondence and domain |
-|--------------------------------|--------------------------------------------------------|
-| Four shafts and either ideal winding realization | Two speed and two steady load coordinates; all four signed port products; no internal ideal winding store |
-| Initialized compliant and finite electrical models | Inverse state map, independent stores and matching drives; positive finite matrices and continuous event states |
-| Axial U-joint and spatial Oldham lead-outs | Distinct apparatus; their equal-ratio kinematics do not identify the same reaction forces |
-| Switched return, cell bank and shared output | Separate graphs, preparations, supplies and observations; each has its own finite laws |
-| Full state and terminal observation | An observation can lose information about stored energy; equal scalar endpoints do not establish state/history reset |
+For the reference teeth $(Z_s,Z_p,Z_r)=(24,18,60)$ and module
+$m_0=1/500\,\mathrm m$, the planet-axis offset is $a=21/500\,\mathrm m$.
+The planet and output axes are parallel. Their joint centres have radial
+separation $a$ and axial separation $L=3/25\,\mathrm m$, giving equal
+joint angles $\beta=\arctan(a/L)$. The rigid intermediate shaft fixes the
+relative yoke phase in the plane that turns with carrier angle $\phi$.
+Equal angles and correct phasing are the double-joint conditions
+[Belden][joints]. Appendix \ref{sec:axial-dimensions} gives the pitch radii,
+joint-centre coordinates and swept centreline. This kinematic layout does
+not establish manufacturing clearances or a spatial joint-force solution.
 
-: Model relations. The local equations define the maps; the table transfers no result between different physical graphs.
+![Schematic four-shaft construction, shown in a carrier-dependent axial plane. Separate sun, carrier and ring sleeves terminate before the illustrated joint sweep; their connections continue to their respective gear members. The planet stub rotates in a carrier-mounted bearing. Crosses and paired yoke marks show the two joints and the relative phasing fixed by the intermediate shaft. Dashed lines bound the swept centreline; real yokes, shaft radii, bearing loads and collision clearances require a separate design.](figures/four-shafts.pdf){#fig:four-shafts width=100%}
 
-## A parallel-axis train
+\FloatBarrier
+
+For a continuous joint lift $H_\beta$ with
+$\tan H_\beta(x)=\tan x/\cos\beta$, equal angles and quarter-turn relative
+yoke phasing give
+$H_\beta(H_\beta(x)+\pi/2)-\pi/2=x$ on the continuous lift.
+Indeed the tangent after the two maps is $\tan x$, and the chosen initial
+phase fixes the integer multiple of $\pi$. With $x=\theta_p-\phi$,
+$\theta_o=\phi+x=\theta_p$. This is the specified axial kinematic model;
+the complete phase cases are in Appendix \ref{app:kinematics}.
+
+## Contact constraints
 
 Expressing mesh motion relative to the carrier is the standard kinematic
 construction illustrated by [Culpepper (2002)][gears]. Here the two contact
@@ -264,22 +168,7 @@ Eliminating $\omega_p$ yields the division-free Willis relation
 The ratio form is valid only when its denominator is nonzero. Equation
 \eqref{eq:willis} also covers the locked train.
 
-![Schematic pitch geometry and forces on one planet. Blue identifies the sun, orange the planet, green the carrier, and purple the ring. Tangential mesh forces on the planet have signed components $F_s,F_r$; its pin force is $R_t\mathbf e_\theta+R_r\mathbf e_r$. Only one of the three planets is drawn.](figures/gear-ports.pdf){#fig:gear width=87%}
-
-\FloatBarrier
-
-The geometry of Figure \ref{fig:gear} permits scalar subtraction of rates
-because all rotation axes are parallel. Helical thrust, bevel geometry, and
-frames rotating about other axes require vector kinematics and additional
-force components. Positive pitch radii alone do not establish manufacturability:
-equally spaced multiple planets also require compatible tooth phasing and
-clearance. For the simple train with $q$ equally spaced planets, a familiar
-phase condition follows by advancing adjacent mesh phases through $2\pi/q$:
-$(Z_s+Z_r)/q$ must be an integer. All algebra below can instead describe a
-single planet or a stipulated equal-load assembly; it is not proof that every
-integer pair admits three equally spaced, noninterfering planets.
-
-## The four-shaft operating family
+## Two speed freedoms and two steady loads
 \label{sec:four-shaft}
 
 For the correctly phased axial model, write $u=\omega_c$ and
@@ -327,35 +216,29 @@ $\boldsymbol\tau^T\boldsymbol\omega=0$ follow. The operating family has
 coordinates $(u,d,\tau_s,\tau_o)$ before source and load laws select a subset.
 A passive receiver must satisfy $\tau_o\omega_o\leq0$ at its actual reference.
 
-For $(24,18,60)$ teeth, the following exact controls use $[0,1]\,\mathrm s$.
-Each displayed work is its own constant torque--rate integral.
+For $(Z_s,Z_p,Z_r)=(24,18,60)$, hold the ring and maintain
+$(\omega_s,\omega_c,\omega_r,\omega_o)=(7/2,1,0,-7/3)\,\mathrm{rad/s}$
+on $[0,1]\,\mathrm s$, with $\tau_s=2\,\mathrm{N\,m}$.
+The unloaded output has $(\tau_c,\tau_r)=(-7,5)\,\mathrm{N\,m}$.
+Adding $\tau_o=1\,\mathrm{N\,m}$ gives
+$(\tau_c,\tau_r)=(-14/3,5/3)\,\mathrm{N\,m}$ by the free-body equations.
+Each signed work is its own constant torque--rate integral:
 
-\begingroup\small
+| One-second work into the assembly | Unloaded output, J | Loaded output, J |
+|---------------------------------|-------------------:|-----------------:|
+| Sun | $7$ | $7$ |
+| Carrier | $-7$ | $-14/3$ |
+| Held ring | $0$ | $0$ |
+| Planet output | $0$ | $-7/3$ |
 
-| State | $(\omega_s,\omega_c,\omega_r,\omega_o)$, rad/s | $(\tau_s,\tau_c,\tau_r,\tau_o)$, N m | $(W_s,W_c,W_r,W_o)$, J |
-|------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| Carrier held | $(1,0,-2/5,-4/3)$ | $(2,-14/3,5/3,1)$ | $(2,0,-2/3,-4/3)$ |
-| Ring held, $\tau_o=0$ | $(7/2,1,0,-7/3)$ | $(2,-7,5,0)$ | $(7,-7,0,0)$ |
-| Ring held, $\tau_o=1$ | $(7/2,1,0,-7/3)$ | $(2,-14/3,5/3,1)$ | $(7,-14/3,0,-7/3)$ |
-| Ring held, $\tau_o=3$ | $(7/2,1,0,-7/3)$ | $(2,0,-5,3)$ | $(7,0,0,-7)$ |
-| Sun held | $(0,1,7/5,7/3)$ | $(2,-14/3,5/3,1)$ | $(0,-14/3,7/3,7/3)$ |
-| Output held | $(7/4,1,7/10,0)$ | $(2,-14/3,5/3,1)$ | $(7/2,-14/3,7/6,0)$ |
-| Co-rotation | $(1,1,1,1)$ | $(2,-14/3,5/3,1)$ | $(2,-14/3,5/3,1)$ |
-| Opposed rates | $(-2,1,11/5,5)$ | $(2,-14/3,5/3,1)$ | $(-4,-14/3,11/3,5)$ |
-| Planet supplies work | $(7/2,1,0,-7/3)$ | $(2,-28/3,25/3,-1)$ | $(7,-28/3,0,7/3)$ |
+: The single-receiver comparison at the same motion and sun torque.
 
-: Four complete external ports. Positive work enters the assembly; a held port can carry a nonzero reaction.
-
-\endgroup
-
-The zero-torque control at the ring-held speeds has four zero works.
-Reversing every speed reverses every work while preserving the torque
-solution. Zero speeds with the displayed reaction set give an all-held
-zero-work control. With $\tau_o=3\tau_s/4$, the ring torque vanishes;
-with $\tau_o=3\tau_s/2$, the carrier torque vanishes. These are ordinary
-load boundaries. A throughput ratio with
-$D=\sum_j\max(\tau_j\omega_j,0)=0$ is undefined, including moving
-zero-torque states.
+The receiver takes $7/3\,\mathrm J$ and the carrier work changes by
+$+7/3\,\mathrm J$. The ring reaction changes while its ground work stays
+zero. Holding these motions under the changed load requires the corresponding
+drive reactions. The operating family and multiple-output controls in
+Appendices \ref{app:kinematics} and \ref{app:forces} retain their own loads
+and force-sharing assumptions.
 
 Choose four effective inertias of $1\,\mathrm{kg\,m^2}$, with the carrier
 entry including planet orbit and the last entry combining planet and output
@@ -367,39 +250,8 @@ $1/2\,\mathrm{kg\,m^2}$ inertias. No preparation work is assigned to these
 initialized states. The separately integrated works and independently
 evaluated endpoints give $r_E=0$ with no event or impulse.
 
-For $q$ planets the steady equations determine $\sum_iF_{si}$ and each
-$F_{ri}-F_{si}$, leaving $q-1$ force-sharing freedoms. A declared equal
-bilateral stiffness and equal total contact deflection give
-\begin{equation}
- F_{si}=\frac{\tau_s}{qr_s}
-       +\frac{\tau_{oi}-\bar\tau_o}{2r_p},\quad
- F_{ri}=F_{si}-\frac{\tau_{oi}}{r_p},\quad
- \bar\tau_o=\frac1q\sum_i\tau_{oi}.
- \label{eq:unequal-four}
-\end{equation}
-Indeed $F_{si}+F_{ri}$ is then common, and summing the first equation
-recovers the sun force. This is a bilateral or preloaded-contact selection,
-with zero tooth error. At $q=3,\tau_s=2$, loads $(3,0,0)\,\mathrm{N\,m}$
-give $F_s=(250/3,0,0)\,\mathrm N$ and $F_r=-F_s$.
-Loads $(1,1,1)$ give $F_s=(250/9,250/9,250/9)\,\mathrm N$.
-Both have $\tau_c=0,\tau_r=-5\,\mathrm{N\,m}$; their individual forces
-and takeoffs differ. A common output combining three takeoffs needs its own
-phase offsets, load sharing and support model.
+# Two electrical realizations
 
-For acceleration the equation is
-$B^T\boldsymbol\tau=B^TMB(\dot u,\dot d)^T$.
-With $M=I$, $u=1+t$, $d=5/2+60t/11$, and zero constraint force,
-$\boldsymbol\tau=\dot{\boldsymbol\omega}=(71/11,1,-13/11,-69/11)$
-in SI units on $[0,1]\,\mathrm s$.
-Their sum vanishes although all four accelerations are nonzero.
-Each work is
-$\tau_j\omega_j(0)+\tau_j\dot\omega_j/2$; each endpoint is
-$\sum_j\omega_j(t)^2/2$. Substitution gives the same total increase.
-The steady torque law must therefore remain attached to its zero-acceleration
-assumption.
-
-
-## Four electrical connections and a loaded planet terminal
 \label{sec:four-terminal}
 
 Assign $(S,C,R,P)$ to the mechanical $(s,c,r,o)$.
@@ -478,7 +330,7 @@ matching the effective unit inertias. Every work follows its own integral;
 ideal winding constraints add no magnetic state. Removing the planet load
 gives $(7,-7,0,0)\,\mathrm J$; setting $I_P=3\,\mathrm A$ gives
 $(7,0,0,-7)\,\mathrm J$. All operating controls in
-Section \ref{sec:four-shaft} map in the same way.
+Appendix \ref{app:kinematics} map in the same way.
 
 The finite turn count, leakage, copper resistance and core law are additional
 parameters. Neither ideal realization establishes their equality, or sustained
@@ -486,72 +338,246 @@ DC operation within a finite core's flux range. A phase-dependent joint ratio
 $\chi$ requires a specified variable electrical coupling and its control
 work. A voltage coordinate shift does not implement that coupling.
 
-## An initialized finite receiver at P
-\label{sec:finite-planet}
+# From the model to the physical comparison
+\label{sec:physical-decisions}
 
-A specified finite model retains three nodes $(S,C,P)$ relative to a ring
-clamped at $O=0$, three unit capacitors, and four winding currents. In order
-sun primary/secondary, ring primary/secondary, use
-\begin{align}
- B_f&=\begin{pmatrix}1&0&0&0\\-1&-1&-1&-1\\0&1&0&1\end{pmatrix},\\
- L_f&=\operatorname{diag}\left[
- \begin{pmatrix}9/16&-3/8\\-3/8&1\end{pmatrix},
- \begin{pmatrix}9/100&3/20\\3/20&1\end{pmatrix}\right]\mathrm H,\\
- R_f&=\operatorname{diag}(9/160,1/10,9/1000,1/10)\,\Omega .
- \label{eq:finite-planet-data}
-\end{align}
-Both inductance blocks are positive definite, with coupling magnitude $1/2$.
-A $1\,\Omega$ source resistance connects $U(t)$ to $S$; receivers
-$G_C=1/2\,\mathrm S$ and $G_P(t)>0$ connect $C,P$ to $O$.
-KCL and the winding laws give
+
+The ideal constructions fix complete terminal relations. Finite state
+correspondence also requires independent stores and compatible dynamics.
+The table locates the assumptions needed to carry these comparisons into
+the physical questions below.
+
+| Comparison and treatment | Established relation and limits |
+|--------------------------------|--------------------------------------------------------|
+| Four-port terminals (Section \ref{sec:four-terminal}) | Two speed and two steady load coordinates; four signed port products; no ideal winding store |
+| Finite stored states (Appendices \ref{app:windings}, \ref{app:correspondence}) | Invertible state map, independent stores, matched drives, positive finite matrices and continuous event states |
+| Lead-out forces (Appendix \ref{app:forces}) | Axial U-joint and spatial Oldham models have distinct reactions despite equal speed ratios |
+| Switched circuits (Appendices \ref{app:switching}, \ref{app:preparation}, \ref{app:shared}) | Return switching, cell banks and shared output have separate graphs, finite laws, preparations, supplies and observations |
+| Terminal observations (Appendices \ref{app:preparation}, \ref{app:shared}) | Equal terminal histories can hide stored energy; equal scalar endpoints do not establish state or history reset |
+
+: Scope of each comparison. The local equations establish each map within its own physical graph.
+
+## Loaded motion and reaction work
+
+Does an actual orbiting lead-out reproduce the predicted motion relative to
+its measured stator under a small load [OP-EPI-05]? For output angle
+$\theta_o$ and stator angle $\theta_{\rm st}$, the observed turn count is
+$(\Delta\theta_o-\Delta\theta_{\rm st})/(2\pi)$. A ground-fixed stator
+and a carrier-fixed stator therefore differ by the carrier's turn count on
+the same trajectory. Output and carrier encoders can resolve that distinction
+at low speed. Appendix \ref{app:kinematics} develops the separate phase,
+ripple and finite-endpoint corrections for other specified lead-outs.
+
+Does the train with its attached lead-out retain an unexplained energy change
+after its drive, receiver, moving supports, and endpoint states have all been
+included [OP-EPI-33]? The separate torque-path balances do not yet determine
+that physical result. Its signed magnitude is unknown. In particular, the
+transverse joint forces, bending couples, and the actuator that holds a
+ground-referenced phase require their own mechanical constraints and ports.
+
+The first work comparison holds the ring, maintains the stated sun/carrier
+motion, and records synchronized torque and unwrapped angle at the sun,
+carrier and loaded output. Record the held-ring reaction and actual endpoint
+speeds as well. A full low-speed revolution must first establish clearance
+and phase for the real yokes and sleeves. The predicted carrier-work change
+is $7/3\,\mathrm J$; the companion develops a conditional $1/10\,\mathrm J$
+total difference budget [Nilre and Herlin (2026)][companion]. That budget
+is an acquisition requirement, not an achieved instrument specification.
+Appendix \ref{app:forces} develops the complete loaded axial account and
+the force--motion products needed for additional support contributions.
+
+## Physical returns and complete cycles
+
+A common electrical zero preserves complete port voltages. A receiver
+connected to a different return follows a different circuit. Appendix
+\ref{app:windings} proves the common-zero control, including its separately
+integrated return work, and the two ideal receiving experiments.
+
+Physical grounding remains different: a real bond, probe common-mode branch,
+or chassis capacitance adds a path and potentially a store [OP-TRF-01]. A
+low-voltage isolated winding, known shunt conductance $G_b$, and ordinary
+differential voltage and current readings can distinguish an added dissipative
+return from a mere coordinate shift. If the attachment is held at constant
+voltage difference $V_b$ for duration $T$, its separate heat delivery is
+$G_bV_b^2T$ exactly; without that held-voltage assumption the measured
+instantaneous product must be integrated on its actual path. Floating and
+bonded arrangements can therefore be distinguished at ordinary voltage and
+current levels. Stray capacitance adds $C_bV_b^2/2$ endpoint storage; its
+unknown magnitude is not determined by the gauge identity.
+
+What remains of the receiving-work difference between two physical return
+choices when both circuits are prepared,
+operated, physically switched, relaxed, and reset with every controller supply
+included is an open energy question [OP-TRF-05]. In the separate one-second
+tapped-winding control of Appendix \ref{app:windings}, receiver deliveries
+of $16$ and $9$ J accompany source inputs of $16$ and $9$ J, each independently
+integrated. Its $7$ J difference is distinct from the planet-receiver control.
+The complete finite-cycle difference, and any
+unexplained energy remainder within either physical apparatus, have unknown
+magnitudes and signs.
+
+The full comparison in Appendix \ref{app:windings} includes preparation,
+operation, switching, relaxation and reset, each with its own signed
+integrals and actual endpoints. The finite switched apparatus in Appendix
+\ref{app:switching} is a separate graph from either ideal four-terminal
+realization. Thermal conversion inside the boundary enters a store;
+only heat actually exported crosses an external port.
+
+Two series cells show why endpoint observation needs its own argument.
+Unit-farad preparations $(1,1)$ and $(3,-1)\,\mathrm V$ have the same
+sum voltage but independently contain $1$ and $5\,\mathrm J$.
+Appendix \ref{app:preparation} derives the equal terminal histories and
+the consequences of reconnection. Receiver work depends on the loaded path;
+the difference in prepared stores alone does not determine its ordering.
+
+## Resolving a transfer and resolving a remainder
+
+Let measured effort and flow be $\widehat e,\widehat f$, with independently
+established pointwise errors $|e-\widehat e|\leq u_e$ and
+$|f-\widehat f|\leq u_f$ on the declared interval. Expanding their product,
+then integrating its three error terms, gives the exact bound
 \begin{equation}
- C_f\dot v=b-Gv-B_fi,\qquad L_f\dot i=B_f^Tv-R_fi,\quad
- b=(U,0,0)^T,\quad G=\operatorname{diag}(1,1/2,G_P).
- \label{eq:finite-planet-laws}
+ |W-\widehat W|\leq
+ \int_{t_0}^{t_1}
+ (|\widehat e|u_f+|\widehat f|u_e+u_eu_f)\,dt,
+ \qquad \widehat W=\int_{t_0}^{t_1}\widehat e\widehat f\,dt.
+ \label{eq:product-uncertainty}
 \end{equation}
-Here and below matrix coefficients carry the indicated SI units.
-Start with $v=i=0$. On successive intervals $[0,1]$, $[1,2]$, $[2,3]$,
-and $[3,5]\,\mathrm s$, take $(U,G_P)=(1,1/4),(1,1/2),(1,1),(0,1)$
-in volts and siemens. Finite resistance preserves every current path;
-all constitutive states are continuous at the load and source steps.
-Power can jump, while store jumps and model impulses are zero.
+The errors must refer to the actual conjugate port quantities at common times.
+Additional bounds cover channel timing, finite bandwidth, integration of
+recorded signals, and interval endpoints. For example, if a time displacement
+is at most $u_t$ and the displaced flow satisfies $|\dot f|\leq L_f$, the
+additional product error with an aligned effort bounded by $E_*$ is at most
+$E_*L_fu_t(t_1-t_0)$. This follows by integrating
+$|f(t+\delta t)-f(t)|\leq L_fu_t$; it does not bound an unobserved fast
+transient without such a derivative bound. Endpoint-time errors also need
+bounds on the omitted terminal intervals. Count a timing contribution only
+once if it is already included in the pointwise errors.
 
-For the reactive boundary, separately integrate source
-$U(U-V_S)$, source-resistor export $-(U-V_S)^2$,
-each copper export $-R_{f,j}i_j^2$, carrier receipt
-$-V_C^2/2$, and planet receipt $-G_PV_P^2$.
-Their quadratic-form integrals are the exact matrix functions developed
-below. Evaluate $E=(v^TC_fv+i^TL_fi)/2$ directly at every endpoint.
-The winding/node terms cancel only after both sides are calculated, giving
-$r_E=0$. A thermally insulated boundary instead adds
-$\dot H=(U-V_S)^2+i^TR_fi$ and includes $H$ at the endpoints.
-It omits those two heat-export terms. The retained source resistance during
-relaxation permits asymptotic decay; finite relaxation is not an exact reset.
+For a complete measured balance, a conservative enclosure is
+\begin{equation}
+ u_r=u_{E,0}+u_{E,1}+\sum_j u_{W,j}+\sum_e u_{{\rm imp},e},
+ \qquad r_E\in[\widehat r_E-u_r,\widehat r_E+u_r].
+ \label{eq:residual-uncertainty}
+\end{equation}
+Here each work bound includes its justified observation errors; resolved
+finite edges and ideal impulses describe disjoint transfers. Endpoint
+correlation can reduce this enclosure only when established independently.
+An unknown thermal state, magnetic state, or missing port is an undetermined
+physical contribution, not an uncertainty allowance. All evaluated model
+integrals in this article are exact, so their numerical integration residual
+is zero. This says nothing about the uncertainty of physical observations.
 
-A compliant mechanical counterpart has $J=\alpha^2 C_f$,
-$z=L_fi/\alpha$ and $K=\alpha^2L_f^{-1}$.
-At $\alpha=1$, its independent laws are
-$J\dot\omega=b-G\omega-B_fKz$ and
-$\dot z=B_f^T\omega-R_fKz$.
-For each signed ratio $h=-3/4,3/10$, the positive elastic energy
-$(z_1/h+z_2)^2/6+(z_1/h-z_2)^2/2$ has the corresponding inverse-inductance
-Hessian. A speed source connected through a unit viscous element supplies
-$\Omega_d(\Omega_d-\omega_s)$ and exports
-$-(\Omega_d-\omega_s)^2$; its source rotor is outside the boundary.
-The carrier and planet dashpots are separate receivers.
-This construction maps actual elastic and inertial states as well as
-port powers. It adds compliant coordinates to the rigid four-shaft relation.
-For constant $\alpha\ne0$, the inverse is
-$\omega=v/\alpha$, $i=\alpha L_f^{-1}z$; thus
-$i^TL_fi/2=z^TKz/2$ and $v^TC_fv/2=\omega^TJ\omega/2$.
-Use those maps also at initialization and on both sides of each event.
-Taking a singular leakage limit or commanding a changing $\alpha$ requires
-new consistency conditions and, for modulation, an actuator power law.
-The companion develops finite winding, material and support observations
-needed to identify a physical realization [Nilre and Herlin (2026)][companion].
+# Results and remaining measurements
 
+The four-shaft axial construction has two speed freedoms and two independent
+steady loads. Attached free bodies give the one-receiver work comparison;
+both ideal electrical constructions reproduce all four signed port products,
+including the receiving planet terminal and its physical return. Their
+independently evaluated works and endpoints close the specified ideal account.
 
-# Rolling constraints and three kinds of count
+The remaining physical questions concern actual load response, return and
+switching paths, and independently identified stores. The first measurement
+is the loaded carrier-work change, after verifying the full-turn geometry
+and phase. A complete energy residual then requires every included support,
+supply, thermal and endpoint contribution with its own observation bound.
+An unexplained signed remainder retains its measured magnitude, conditions
+and uncertainty; an unknown contribution is not assigned that remainder.
+
+The appendices retain the full operating and frame families, finite receivers,
+supplied references, preparation limits and event proofs. The shared-output
+extension in Appendix \ref{app:shared} separates a prepared transfer from
+full-state repetition under insulation. These are results within distinct
+models. The companion's staged comparisons develop the observations needed
+to test their physical applicability [Nilre and Herlin (2026)][companion].
+
+# Guide to the appendices {-}
+
+The appendices retain the complete derivations, operating cases and physical
+accounts behind the main argument. The guide gives a direct route to each
+treatment and its local questions.
+
+| Appendix | Complete treatment |
+|:------------------|:------------------------------------------------------------|
+| Appendix \ref{app:kinematics} | Gear geometry, operating families, turn counts and lead-out phase |
+| Appendix \ref{app:forces} | Attached free bodies, support reactions, frame-dependent work and preparation |
+| Appendix \ref{app:windings} | Winding connections, physical returns, complete cycles and finite receivers |
+| Appendix \ref{app:switching} | Finite switching, separate return circuits and event-by-event work |
+| Appendix \ref{app:correspondence} | Compound mechanisms, finite state correspondence and matched limits |
+| Appendix \ref{app:references} | Supplied references, sensing, actuation and their independent stores |
+| Appendix \ref{app:preparation} | Prepared states, reconnection, hidden energy and limiting stores |
+| Appendix \ref{app:shared} | Shared-output compatibility, prepared transitions and full-state return |
+| Appendix \ref{app:accuracy} | Events, exact residuals, observation uncertainty and physical scope |
+
+\clearpage
+\appendix
+
+# Kinematics, counts and lead-out geometry
+\label{app:kinematics}
+
+This appendix develops the geometry, operating controls and observation frames of the four-shaft construction.
+
+## Pitch geometry and assembly
+\label{sec:axial-dimensions}
+
+For the reference teeth $(Z_s,Z_p,Z_r)=(24,18,60)$ and module
+$m_0=1/500\,\mathrm m$, the pitch radii are
+$(3/125,9/500,3/50)\,\mathrm m$ and the offset is $a=21/500\,\mathrm m$.
+With carrier angle $\phi$, the axial lead-out in Figure \ref{fig:four-shafts}
+has joint centres $J_1=(a\cos\phi,a\sin\phi,z_1)$ and
+$J_2=(0,0,z_1+L)$, where $L=3/25\,\mathrm m$.
+The intermediate member has length $\sqrt{a^2+L^2}$ and equal joint angles
+$\beta=\arctan(a/L)$. Its centreline sweeps radius $a(1-\lambda)$ at fraction
+$\lambda$ along the member. This envelope describes the centreline;
+finite yokes, shaft radii and bearing supports require their own clearance
+and spatial force analysis.
+
+![Schematic pitch geometry and forces on one planet. Blue identifies the sun, orange the planet, green the carrier, and purple the ring. Tangential mesh forces on the planet have signed components $F_s,F_r$; its pin force is $R_t\mathbf e_\theta+R_r\mathbf e_r$. Only one of the three planets is drawn.](figures/gear-ports.pdf){#fig:gear width=87%}
+
+\FloatBarrier
+
+The geometry of Figure \ref{fig:gear} permits scalar subtraction of rates
+because all rotation axes are parallel. Helical thrust, bevel geometry, and
+frames rotating about other axes require vector kinematics and additional
+force components. Positive pitch radii alone do not establish manufacturability:
+equally spaced multiple planets also require compatible tooth phasing and
+clearance. For the simple train with $q$ equally spaced planets, a familiar
+phase condition follows by advancing adjacent mesh phases through $2\pi/q$:
+$(Z_s+Z_r)/q$ must be an integer. All algebra below can instead describe a
+single planet or a stipulated equal-load assembly; it is not proof that every
+integer pair admits three equally spaced, noninterfering planets.
+
+## Complete steady operating controls
+
+For $(24,18,60)$ teeth, the following exact controls use $[0,1]\,\mathrm s$.
+Each displayed work is its own constant torque--rate integral.
+
+\begingroup\small
+
+| State | $(\omega_s,\omega_c,\omega_r,\omega_o)$, rad/s | $(\tau_s,\tau_c,\tau_r,\tau_o)$, N m | $(W_s,W_c,W_r,W_o)$, J |
+|------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+| Carrier held | $(1,0,-2/5,-4/3)$ | $(2,-14/3,5/3,1)$ | $(2,0,-2/3,-4/3)$ |
+| Ring held, $\tau_o=0$ | $(7/2,1,0,-7/3)$ | $(2,-7,5,0)$ | $(7,-7,0,0)$ |
+| Ring held, $\tau_o=1$ | $(7/2,1,0,-7/3)$ | $(2,-14/3,5/3,1)$ | $(7,-14/3,0,-7/3)$ |
+| Ring held, $\tau_o=3$ | $(7/2,1,0,-7/3)$ | $(2,0,-5,3)$ | $(7,0,0,-7)$ |
+| Sun held | $(0,1,7/5,7/3)$ | $(2,-14/3,5/3,1)$ | $(0,-14/3,7/3,7/3)$ |
+| Output held | $(7/4,1,7/10,0)$ | $(2,-14/3,5/3,1)$ | $(7/2,-14/3,7/6,0)$ |
+| Co-rotation | $(1,1,1,1)$ | $(2,-14/3,5/3,1)$ | $(2,-14/3,5/3,1)$ |
+| Opposed rates | $(-2,1,11/5,5)$ | $(2,-14/3,5/3,1)$ | $(-4,-14/3,11/3,5)$ |
+| Planet supplies work | $(7/2,1,0,-7/3)$ | $(2,-28/3,25/3,-1)$ | $(7,-28/3,0,7/3)$ |
+
+: Four complete external ports. Positive work enters the assembly; a held port can carry a nonzero reaction.
+
+\endgroup
+
+The zero-torque control at the ring-held speeds has four zero works.
+Reversing every speed reverses every work while preserving the torque
+solution. Zero speeds with the displayed reaction set give an all-held
+zero-work control. With $\tau_o=3\tau_s/4$, the ring torque vanishes;
+with $\tau_o=3\tau_s/2$, the carrier torque vanishes. These are ordinary
+load boundaries. A throughput ratio with
+$D=\sum_j\max(\tau_j\omega_j,0)=0$ is undefined, including moving
+zero-torque states.
 
 ## A coin, a spoke, and an independently loaded output
 \label{sec:coin}
@@ -694,8 +720,128 @@ and only if $d=0$. In the full $(\omega_s,\omega_c)$ plane, the four
 absolute-rate zeros and this relative-rate zero are **five lines** through
 the origin, not five rays. A transverse passage through a nontrivial linear
 zero reverses sign; a tangency or the identically zero path does not.
+## Stator, phase reference, and finite-interval ripple
 
-# Forces, torques, and moving-frame work
+A lead-out connects the planet axle to a parallel output axis offset by $a$;
+it does not connect that output to the sun. Denote the planet and carrier
+angles by $\theta_p,\phi$, and the output and stator angles by
+$\theta_o,\theta_\sigma$. The reported count is
+$N_o^\sigma=\Delta(\theta_o-\theta_\sigma)/(2\pi)$.
+For the **same output motion**, subtraction gives
+\begin{equation}
+ N_o^0-N_o^c=\Delta\phi/(2\pi).
+ \label{eq:stator}
+\end{equation}
+With finite loading, physically remounting the stator may change that motion;
+then \eqref{eq:stator} must be applied separately to each trajectory.
+
+For a Hooke joint of angle $\beta<\pi/2$, let $c_\beta=\cos\beta>0$ and
+let $H_\beta(x)$ be the continuous lift of
+$\operatorname{atan2}(\sin x,c_\beta\cos x)$, with $H_\beta(0)=0$.
+Then $H_\beta(x+\pi)=H_\beta(x)+\pi$ and
+$\tan H_\beta(x)=\tan x/c_\beta$.
+The joint plane in a parallel-offset Z arrangement is carried by the carrier.
+Writing $x=\theta_p-\phi$, a declared two-joint kinematic map is
+\begin{equation}
+ \theta_o=\phi+H_\beta\!\left(H_\beta(x)+\gamma+\frac\pi2\right)
+                    +\frac\pi2,
+ \label{eq:hooke-map}
+\end{equation}
+where constant additive angles have no effect on displacement. With correct
+carrier-fixed phasing $\gamma=0$, this reduces to $\theta_o=\theta_p$
+up to a constant. A rigid intermediate shaft supplies that fixed relative
+phasing. With carrier-fixed quarter-turn error $\gamma=\pi/2$, write the
+output as $\phi+F_\beta(x)$ up to a constant; then
+\begin{equation}
+ \tan F_\beta(x)=\frac{\tan x}{c_\beta^2},\qquad
+ \chi_\beta(x)=F_\beta'(x)=
+ \frac{c_\beta^2}{c_\beta^4\cos^2x+\sin^2x},\qquad
+ c_\beta^2\leq \chi_\beta\leq c_\beta^{-2}.
+ \label{eq:ripple}
+\end{equation}
+This is a twice-per-relative-revolution ripple. Since
+$F_\beta(x)-x$ is bounded and $\pi$-periodic, the mean count agrees with the
+planet count, but an arbitrary finite interval has the endpoint correction
+$\delta=[F_\beta(x)-x]_{t_0}^{t_1}/(2\pi)$. It is exactly zero over complete
+ripple periods. It must not be dropped merely because the mean ratio is one.
+
+Holding the phase in ground instead prescribes $\gamma=-\phi$.
+Equation \eqref{eq:hooke-map} then gives
+$\theta_o=\theta_p-\phi+$ a bounded phase-dependent term.
+A grounded stator has the carrier-relative **mean** count, with an endpoint
+ripple correction $\delta_g$ determined by that equation. An exact claim for
+all finite intervals would be false. The device that enforces this drifting
+phase has not been specified dynamically; its required effort and supply work
+remain unknown.
+
+| Coupling and phase | Ground stator count | Carrier stator count |
+|--------------------------------------|-------------------------------|-------------------------------|
+| Correct double Hooke, carrier phase | $N_p^0$ | $N_p^c$ |
+| Quarter-turn double Hooke, carrier phase | $N_p^0+\delta$ | $N_p^c+\delta$ |
+| Double Hooke, ground phase | $N_p^c+\delta_g$ | Not assigned a physical mounting here |
+| Ideal Oldham or equivalent constant-ratio offset path | $N_p^0$ | $N_p^c$ |
+| Bevel path, $\kappa=1$ | $N_p^0$ | $N_p^c$ |
+| Bevel path, $\kappa=2$ | $N_c^0+2N_p^c$ | $2N_p^c$ |
+
+: Eleven mountings, with finite-interval phase corrections retained. Coincidence with a particular body count in a special state is not an identity for all states.
+
+The ideal Oldham constraint is $\theta_o=\theta_p$ even as the offset
+precesses. Orthogonal sliding coordinates are $a\cos x$ and $a\sin x$;
+each has excursion amplitude $a$ (full stroke $2a$), and their maximum
+absolute value never exceeds $a$. This kinematic statement can also represent
+an ideal constant-velocity Schmidt path; it does not make their detailed
+force systems identical. The bevel path obeys
+$\theta_o=\phi+\kappa(\theta_p-\phi)$, which proves the last two cases.
+
+The physical phase question also concerns the twice-per-relative-revolution
+ripple of the alternative linkages. A carrier encoder and an output encoder
+can resolve the predicted full-turn count and ripple at low speed; changing
+the phase datum distinguishes a carrier-fixed joint plane from a
+ground-referenced actuator. Their finite-interval differences must include
+$\delta$ or $\delta_g$. These are ordinary angle observations, without
+exceptional energy sensitivity. Equation \eqref{eq:stator} rules out a single
+unchanged rotor angle having equal readings against two differently rotating
+stators. It does not prove that no differential device can encode relative
+tooth passage, or that no device of any kind can produce an invariant output.
+
+# Forces, supports and frame-dependent work
+\label{app:forces}
+
+The following free bodies and stores extend the axial comparison. Phase laws are defined in Appendix \ref{app:kinematics}; each support model retains its own constraints.
+
+## Multiple takeoffs and acceleration
+
+For $q$ planets the steady equations determine $\sum_iF_{si}$ and each
+$F_{ri}-F_{si}$, leaving $q-1$ force-sharing freedoms. A declared equal
+bilateral stiffness and equal total contact deflection give
+\begin{equation}
+ F_{si}=\frac{\tau_s}{qr_s}
+       +\frac{\tau_{oi}-\bar\tau_o}{2r_p},\quad
+ F_{ri}=F_{si}-\frac{\tau_{oi}}{r_p},\quad
+ \bar\tau_o=\frac1q\sum_i\tau_{oi}.
+ \label{eq:unequal-four}
+\end{equation}
+Indeed $F_{si}+F_{ri}$ is then common, and summing the first equation
+recovers the sun force. This is a bilateral or preloaded-contact selection,
+with zero tooth error. At $q=3,\tau_s=2$, loads $(3,0,0)\,\mathrm{N\,m}$
+give $F_s=(250/3,0,0)\,\mathrm N$ and $F_r=-F_s$.
+Loads $(1,1,1)$ give $F_s=(250/9,250/9,250/9)\,\mathrm N$.
+Both have $\tau_c=0,\tau_r=-5\,\mathrm{N\,m}$; their individual forces
+and takeoffs differ. A common output combining three takeoffs needs its own
+phase offsets, load sharing and support model.
+
+For acceleration the equation is
+$B^T\boldsymbol\tau=B^TMB(\dot u,\dot d)^T$.
+With $M=I$, $u=1+t$, $d=5/2+60t/11$, and zero constraint force,
+$\boldsymbol\tau=\dot{\boldsymbol\omega}=(71/11,1,-13/11,-69/11)$
+in SI units on $[0,1]\,\mathrm s$.
+Their sum vanishes although all four accelerations are nonzero.
+Each work is
+$\tau_j\omega_j(0)+\tau_j\dot\omega_j/2$; each endpoint is
+$\sum_j\omega_j(t)^2/2$. Substitution gives the same total increase.
+The steady torque law must therefore remain attached to its zero-acceleration
+assumption.
+
 
 ## Free bodies before power
 
@@ -980,94 +1126,6 @@ that maximum is constant on the portion where the carrier port dominates.
 Scaling the drive to zero with $\varepsilon$ makes every port work approach
 zero. Both paths are continuous, but only the latter reaches the zero-drive
 null. The varying counts alone imply neither result about work.
-
-# What a physical lead-out reports
-
-## Stator, phase reference, and finite-interval ripple
-
-A lead-out connects the planet axle to a parallel output axis offset by $a$;
-it does not connect that output to the sun. Denote the planet and carrier
-angles by $\theta_p,\phi$, and the output and stator angles by
-$\theta_o,\theta_\sigma$. The reported count is
-$N_o^\sigma=\Delta(\theta_o-\theta_\sigma)/(2\pi)$.
-For the **same output motion**, subtraction gives
-\begin{equation}
- N_o^0-N_o^c=\Delta\phi/(2\pi).
- \label{eq:stator}
-\end{equation}
-With finite loading, physically remounting the stator may change that motion;
-then \eqref{eq:stator} must be applied separately to each trajectory.
-
-For a Hooke joint of angle $\beta<\pi/2$, let $c_\beta=\cos\beta>0$ and
-let $H_\beta(x)$ be the continuous lift of
-$\operatorname{atan2}(\sin x,c_\beta\cos x)$, with $H_\beta(0)=0$.
-Then $H_\beta(x+\pi)=H_\beta(x)+\pi$ and
-$\tan H_\beta(x)=\tan x/c_\beta$.
-The joint plane in a parallel-offset Z arrangement is carried by the carrier.
-Writing $x=\theta_p-\phi$, a declared two-joint kinematic map is
-\begin{equation}
- \theta_o=\phi+H_\beta\!\left(H_\beta(x)+\gamma+\frac\pi2\right)
-                    +\frac\pi2,
- \label{eq:hooke-map}
-\end{equation}
-where constant additive angles have no effect on displacement. With correct
-carrier-fixed phasing $\gamma=0$, this reduces to $\theta_o=\theta_p$
-up to a constant. A rigid intermediate shaft supplies that fixed relative
-phasing. With carrier-fixed quarter-turn error $\gamma=\pi/2$, write the
-output as $\phi+F_\beta(x)$ up to a constant; then
-\begin{equation}
- \tan F_\beta(x)=\frac{\tan x}{c_\beta^2},\qquad
- \chi_\beta(x)=F_\beta'(x)=
- \frac{c_\beta^2}{c_\beta^4\cos^2x+\sin^2x},\qquad
- c_\beta^2\leq \chi_\beta\leq c_\beta^{-2}.
- \label{eq:ripple}
-\end{equation}
-This is a twice-per-relative-revolution ripple. Since
-$F_\beta(x)-x$ is bounded and $\pi$-periodic, the mean count agrees with the
-planet count, but an arbitrary finite interval has the endpoint correction
-$\delta=[F_\beta(x)-x]_{t_0}^{t_1}/(2\pi)$. It is exactly zero over complete
-ripple periods. It must not be dropped merely because the mean ratio is one.
-
-Holding the phase in ground instead prescribes $\gamma=-\phi$.
-Equation \eqref{eq:hooke-map} then gives
-$\theta_o=\theta_p-\phi+$ a bounded phase-dependent term.
-A grounded stator has the carrier-relative **mean** count, with an endpoint
-ripple correction $\delta_g$ determined by that equation. An exact claim for
-all finite intervals would be false. The device that enforces this drifting
-phase has not been specified dynamically; its required effort and supply work
-remain unknown.
-
-| Coupling and phase | Ground stator count | Carrier stator count |
-|--------------------------------------|-------------------------------|-------------------------------|
-| Correct double Hooke, carrier phase | $N_p^0$ | $N_p^c$ |
-| Quarter-turn double Hooke, carrier phase | $N_p^0+\delta$ | $N_p^c+\delta$ |
-| Double Hooke, ground phase | $N_p^c+\delta_g$ | Not assigned a physical mounting here |
-| Ideal Oldham or equivalent constant-ratio offset path | $N_p^0$ | $N_p^c$ |
-| Bevel path, $\kappa=1$ | $N_p^0$ | $N_p^c$ |
-| Bevel path, $\kappa=2$ | $N_c^0+2N_p^c$ | $2N_p^c$ |
-
-: Eleven mountings, with finite-interval phase corrections retained. Coincidence with a particular body count in a special state is not an identity for all states.
-
-The ideal Oldham constraint is $\theta_o=\theta_p$ even as the offset
-precesses. Orthogonal sliding coordinates are $a\cos x$ and $a\sin x$;
-each has excursion amplitude $a$ (full stroke $2a$), and their maximum
-absolute value never exceeds $a$. This kinematic statement can also represent
-an ideal constant-velocity Schmidt path; it does not make their detailed
-force systems identical. The bevel path obeys
-$\theta_o=\phi+\kappa(\theta_p-\phi)$, which proves the last two cases.
-
-Whether an actual orbiting lead-out follows these phase and stator predictions
-under a small load remains a measurement question [OP-EPI-05]. A carrier
-encoder and an output encoder can resolve the predicted full-turn count
-and the twice-per-relative-revolution ripple at low speed; changing the
-phase datum distinguishes a carrier-fixed joint plane from a ground-referenced
-actuator. Their finite-interval differences must include $\delta$ or
-$\delta_g$. These are ordinary angle observations, without exceptional
-energy sensitivity. Equation \eqref{eq:stator} rules out a single unchanged
-rotor angle having equal readings against two differently rotating stators.
-It does not prove that no differential device can encode relative tooth
-passage, or that no device of any kind can produce an invariant output.
-
 ## Load, support, and cycle work
 
 For the carrier-fixed map $\theta_o=\phi+F(x)$, put
@@ -1202,14 +1260,12 @@ The other integrals in \eqref{eq:linkage-work} balance it with unchanged
 endpoint stores. This signed support transfer is the comparison for a loaded
 apparatus; the combined physical energy remainder is a separate quantity.
 
-## The loaded train and its unresolved reaction work
+## The loaded train and reaction work
 
-Does the train with its attached lead-out retain an unexplained energy change
-after its drive, receiver, moving supports, and endpoint states have all been
-included [OP-EPI-33]? The separate torque-path balances do not yet determine
-that physical result. Its signed magnitude is unknown. In particular, the
-transverse joint forces, bending couples, and the actuator that holds a
-ground-referenced phase require their own mechanical constraints and ports.
+The physical question in Section \ref{sec:physical-decisions} requires
+the attached train and its lead-outs to be evaluated on a common trajectory.
+The following axial model determines its own reactions and stores; transverse
+joint and ground-phase actuator contributions still need their own laws.
 
 An exact axial extension makes the change caused by attachment explicit.
 Take $q$ identical, equally phased lead-outs, one on each planet, with stators
@@ -1346,7 +1402,10 @@ No missing reaction is assigned that remainder. A rotating-frame account then
 adds its separately integrated effective terms to its own evaluated stores;
 it does not add them to the ground physical balance.
 
-# Windings, returns, and the electrical observation
+# Winding connections, returns and finite receivers
+\label{app:windings}
+
+These models develop the physical-return and complete-cycle questions of Section \ref{sec:physical-decisions}. The initialized finite receiver adds independent stores to the ideal terminal construction.
 
 ## The tapped and isolated connections
 
@@ -1496,20 +1555,6 @@ offsets such as $g=3+(7/10)\cos(5t)\,\mathrm V$ by \eqref{eq:gauge}.
 The ideal endpoint store is an empty sum, not a claim that a real core
 contains no energy.
 
-Physical grounding remains different: a real bond, probe common-mode branch,
-or chassis capacitance adds a path and potentially a store [OP-TRF-01]. A
-low-voltage isolated winding, known shunt conductance $G_b$, and ordinary
-differential voltage and current readings can distinguish an added dissipative
-return from a mere coordinate shift. If the attachment is held at constant
-voltage difference $V_b$ for duration $T$, its separate heat delivery is
-$G_bV_b^2T$ exactly; without that held-voltage assumption the measured
-instantaneous product must be integrated on its actual path. Floating and
-bonded arrangements can therefore be distinguished at ordinary voltage and
-current levels. Stray capacitance adds $C_bV_b^2/2$ endpoint storage; its
-unknown magnitude is not determined by the gauge identity.
-
-# Loaded readouts and finite stores
-
 ## Two exact receiving experiments
 
 Moving a negligible-loading probe return from $a$ to $c$ selects a different
@@ -1576,13 +1621,10 @@ not automatically inherit this ideal null.
 
 ## The unresolved complete-cycle comparison
 
-What remains of the receiving-work difference when both circuits are prepared,
-operated, physically switched, relaxed, and reset with every controller supply
-included is an open energy question [OP-TRF-05]. The exact $7$ J difference
-in the one-second ideal control already accompanies an independently integrated
-$7$ J source-input difference. The complete finite-cycle difference, and any
-unexplained energy remainder within either physical apparatus, have unknown
-magnitudes and signs.
+For the complete-cycle question in Section \ref{sec:physical-decisions},
+retain both preparations and every controller supply on their actual histories.
+The following definition separates the delivered-work difference from each
+apparatus's unexplained energy remainder.
 
 For each return choice $\ell\in\{a,c\}$, take the boundary to contain the
 windings, capacitor, resistors, and the switching and controller stores.
@@ -1733,6 +1775,76 @@ temperature observations a specific task. The core comparison needs its
 additional magnetic-state information before it can claim a complete
 physical remainder. The numerical integration residual of the caloric control
 is zero; no value is assigned to an unmeasured material discrepancy.
+
+## An initialized finite receiver at P
+\label{sec:finite-planet}
+
+A specified finite model retains three nodes $(S,C,P)$ relative to a ring
+clamped at $O=0$, three unit capacitors, and four winding currents. In order
+sun primary/secondary, ring primary/secondary, use
+\begin{align}
+ B_f&=\begin{pmatrix}1&0&0&0\\-1&-1&-1&-1\\0&1&0&1\end{pmatrix},\\
+ L_f&=\operatorname{diag}\left[
+ \begin{pmatrix}9/16&-3/8\\-3/8&1\end{pmatrix},
+ \begin{pmatrix}9/100&3/20\\3/20&1\end{pmatrix}\right]\mathrm H,\\
+ R_f&=\operatorname{diag}(9/160,1/10,9/1000,1/10)\,\Omega .
+ \label{eq:finite-planet-data}
+\end{align}
+Both inductance blocks are positive definite, with coupling magnitude $1/2$.
+A $1\,\Omega$ source resistance connects $U(t)$ to $S$; receivers
+$G_C=1/2\,\mathrm S$ and $G_P(t)>0$ connect $C,P$ to $O$.
+KCL and the winding laws give
+\begin{equation}
+ C_f\dot v=b-Gv-B_fi,\qquad L_f\dot i=B_f^Tv-R_fi,\quad
+ b=(U,0,0)^T,\quad G=\operatorname{diag}(1,1/2,G_P).
+ \label{eq:finite-planet-laws}
+\end{equation}
+Here and below matrix coefficients carry the indicated SI units.
+Start with $v=i=0$. On successive intervals $[0,1]$, $[1,2]$, $[2,3]$,
+and $[3,5]\,\mathrm s$, take $(U,G_P)=(1,1/4),(1,1/2),(1,1),(0,1)$
+in volts and siemens. Finite resistance preserves every current path;
+all constitutive states are continuous at the load and source steps.
+Power can jump, while store jumps and model impulses are zero.
+
+For the reactive boundary, separately integrate source
+$U(U-V_S)$, source-resistor export $-(U-V_S)^2$,
+each copper export $-R_{f,j}i_j^2$, carrier receipt
+$-V_C^2/2$, and planet receipt $-G_PV_P^2$.
+Their quadratic-form integrals use the exact matrix functions
+\eqref{eq:matrix-work} in Appendix \ref{app:switching}.
+Evaluate $E=(v^TC_fv+i^TL_fi)/2$ directly at every endpoint.
+The winding/node terms cancel only after both sides are calculated, giving
+$r_E=0$. A thermally insulated boundary instead adds
+$\dot H=(U-V_S)^2+i^TR_fi$ and includes $H$ at the endpoints.
+It omits those two heat-export terms. The retained source resistance during
+relaxation permits asymptotic decay; finite relaxation is not an exact reset.
+
+A compliant mechanical counterpart has $J=\alpha^2 C_f$,
+$z=L_fi/\alpha$ and $K=\alpha^2L_f^{-1}$.
+At $\alpha=1$, its independent laws are
+$J\dot\omega=b-G\omega-B_fKz$ and
+$\dot z=B_f^T\omega-R_fKz$.
+For each signed ratio $h=-3/4,3/10$, the positive elastic energy
+$(z_1/h+z_2)^2/6+(z_1/h-z_2)^2/2$ has the corresponding inverse-inductance
+Hessian. A speed source connected through a unit viscous element supplies
+$\Omega_d(\Omega_d-\omega_s)$ and exports
+$-(\Omega_d-\omega_s)^2$; its source rotor is outside the boundary.
+The carrier and planet dashpots are separate receivers.
+This construction maps actual elastic and inertial states as well as
+port powers. It adds compliant coordinates to the rigid four-shaft relation.
+For constant $\alpha\ne0$, the inverse is
+$\omega=v/\alpha$, $i=\alpha L_f^{-1}z$; thus
+$i^TL_fi/2=z^TKz/2$ and $v^TC_fv/2=\omega^TJ\omega/2$.
+Use those maps also at initialization and on both sides of each event.
+Taking a singular leakage limit or commanding a changing $\alpha$ requires
+new consistency conditions and, for modulation, an actuator power law.
+The companion develops finite winding, material and support observations
+needed to identify a physical realization [Nilre and Herlin (2026)][companion].
+
+# Finite switching and distinct return apparatuses
+\label{app:switching}
+
+The regular winding and switched-return models below specify their own finite graphs, events, supplies and stored states.
 
 ## The regular coupled-winding model
 
@@ -2209,7 +2321,10 @@ distributed capacitance, chassis returns, and thermal evolution are absent
 from \eqref{eq:finite}. Their model residual has unknown sign and magnitude.
 No equality of ideal balances estimates that discrepancy.
 
-# Compound circulation and a transformer network
+# Compound mechanisms and finite correspondence
+\label{app:correspondence}
+
+Compound terminal relations and initialized state correspondences require the separate constraints proved here.
 
 ## Two meshes and a common stepped planet
 
@@ -2382,8 +2497,6 @@ products; undefined zero-throughput ratios must be retained. Arbitrary
 constant and linear common offsets, including the earlier nine choices,
 change terminal products according to \eqref{eq:gauge} while leaving the
 complete-port works fixed.
-
-# Finite correspondence, active references, and limiting models
 
 ## Magnetic elasticity and capacitive inertia
 
@@ -2610,497 +2723,147 @@ state and individual powers there, not by reusing \eqref{eq:carrier-ratio}.
 Inertia, compliance, resistance, loading, and excitation all change them.
 No ordering or extremum over those stages follows from the rigid table.
 
-The active-reference, finite-controller and prepared-limit constructions are
-proved in Appendix \ref{sec:reference-appendix}. They retain the full sensor,
-actuator, converter and rail states, distinguish physical moving returns from
-coordinate changes, and include both passive and imposed-clamp limits.
+The active-reference and finite-controller constructions are proved in
+Appendix \ref{sec:reference-appendix}. They retain the full sensor, actuator,
+converter and rail states and distinguish physical moving returns from
+coordinate changes. The joint limit below and the prepared limits in
+Appendix \ref{app:preparation} include the separate passive and imposed-clamp
+cases.
 The finite actuator has an exact endpoint departure; the proof and its
 separate supplies remain with equation \eqref{eq:lag-discrepancy}.
 
-# Physical reconnection and prepared states
-\label{sec:reconnection}
+## A joint finite-to-rigid limit with matched drives
 
-The four-tap construction fixes an ideal terminal relation. Selecting another
-terminal for a charged receiving branch changes the physical equations.
-Murray's SERPS patent illustrates an isolated primary and a tapped secondary
-with two switched capacitor--resistor branches [Murray (2017)][serps].
-The positive branch charges from the full secondary and returns through its
-lower section; the negative branch uses the opposite full and tapped
-connections. If the lower fraction is $f$, the upper return fraction is
-$1-f$; they coincide only at a central tap.
-The companion develops that graph, both polarities, finite
-commutation, controller and material states. It is a separate apparatus from
-the conductive common-flux four-tap realization.
-
-For one ideal positive interval, write $v_s=Ri+v_C$, $C\dot v_C=i$
-during charging, and $v_C=Rj+fv_s$, $C\dot v_C=-j$ during return.
-The tap fraction is $0<f<1$. Thus $fv_s<v_C<v_s$ allows both positive
-charging current at the full winding and positive return current at the tap.
-The independent powers give
+Unity coupling at fixed inductance, resistance, and inertia is not the rigid
+algebraic network. A different, explicitly matched family does have that
+limit. For $0<\epsilon\leq1$, choose
 \begin{equation}
- v_si=Ri^2+\frac{d}{dt}\frac{Cv_C^2}{2},\qquad
- -fv_sj=Rj^2+\frac{d}{dt}\frac{Cv_C^2}{2}.
- \label{eq:tap-return}
+ L_0=\frac3{25\epsilon}\,\mathrm H,\quad k=1-\epsilon^2,\quad
+ r_\epsilon=\frac{2\epsilon^2}{25}\,\Omega,\quad
+ \mathsf R_X=r_\epsilon\operatorname{diag}(h_X^2,1),\quad
+ C_{X,\epsilon}=\epsilon C_{X,0}.
+ \label{eq:joint-limit}
 \end{equation}
-Integrate each source and resistor product on its own interval and evaluate
-the capacitor endpoints. The resulting source draw minus return equals
-receiver delivery plus store change. The intended quarter-cycle command does
-not establish the current direction throughout that interval.
+Scale every inertia counterpart, including the orbit and added receiver and
+carrier capacitances. The boundary contains all four node capacitors and both
+winding pairs. Four ideal voltage clamps prescribe the constant values
+$\bar v_X=\alpha\omega_X$ from \eqref{eq:compound-rates}; their currents
+are obtained from KCL. Four winding heat exports complete the boundary.
+The additional planet clamp is retained even though its limiting current is
+zero. These imposed drives are different from a passive load supplied through
+the original source resistor.
 
-For any complete source port with positive-inward power $p_s$, define
+For either pair abbreviate $h=h_X$, and put
+$s=h i_1+i_2$, $d=h i_1-i_2$. With winding voltages $u_1,u_2$, the two
+independent voltage laws become
 \begin{equation}
- W_+=\int\max(p_s,0)dt,\quad W_-=-\int\min(p_s,0)dt,\quad
- W_s=W_+-W_-,\quad W_{\rm traffic}=W_++W_- .
- \label{eq:source-return}
+ \ell_+\dot s=u_1/h+u_2-r_\epsilon s,\qquad
+ \ell_-\dot d=u_1/h-u_2-r_\epsilon d,\qquad
+ \ell_+=\frac{3(2-\epsilon^2)}{25\epsilon}\,\mathrm H,\quad
+ \ell_-=\frac{3\epsilon}{25}\,\mathrm H.
+ \label{eq:limit-modes}
 \end{equation}
-Gross draw, return, net input and absolute throughput have distinct meanings.
-When a generator is enclosed with the capacitor and switches, its electrical
-return is internal. Prime-mover, excitation and controller works remain
-external; the rotor and field stores join the endpoint inventory.
+If $s(0)=0$ and $u_1/h+u_2$ is uniformly bounded on $[0,T]$, its exact
+convolution implies $\lvert s(t)\rvert\leq
+T\sup\lvert u_1/h+u_2\rvert/\ell_+$. If additionally $d,\dot d$ remain
+bounded, the second equation implies
+$\lvert u_1/h-u_2\rvert\leq\ell_-\sup\lvert\dot d\rvert+
+r_\epsilon\sup\lvert d\rvert\to0$. These are conditional constitutive
+limits, not a claim that arbitrary initial data avoid a singular transient.
 
-The optional series/parallel bank also retains each cell's state.
-Two ideal cells of capacitance $C$, both at voltage $V$, have store $CV^2$.
-Their parallel terminals have $(V,2C)$, their series-aiding terminals
-$(2V,C/2)$. Equivalent capacitance describes the connection, while the
-individual cell voltages determine the store. For unequal preparations,
-actual exchange paths determine receiver and switch work.
-
-A terminal may also conceal a prepared state. For two equal series cells
-with an isolated floating midpoint and resistor $R_L$, put
-$s=V_1+V_2$, $\delta=V_1-V_2$. The cell laws give
+For the constant clamps, $u_1=hu_2$ and
+$u_2=\bar v_P-\bar v_C=:V_2$. Choose compatible initial ideal currents
+$i_1(0)=i_{1*}$, $i_2(0)=-h i_{1*}$, hence $s(0)=0$ and
+$d(0)=d_*=2h i_{1*}$. The exact solution on $[0,T]$ is
 \begin{equation}
- \dot s=-\frac{2s}{R_LC},\quad \dot\delta=0,\quad
- E_C=\frac C4(s^2+\delta^2),\quad
- W_L(T)=\frac{Cs(0)^2}{4}(1-e^{-4T/(R_LC)}).
- \label{eq:hidden-series}
+ s(t)=A_s(1-e^{-\beta_+t}),\qquad d(t)=d_*e^{-\beta_-t},\qquad
+ A_s=2V_2/r_\epsilon,\quad \beta_\pm=r_\epsilon/\ell_\pm.
+ \label{eq:limit-state}
 \end{equation}
-The last expression is the separately integrated positive receiver delivery.
-With $C=1\,\mathrm F$, preparations $(1,1)$ and $(3,-1)\,\mathrm V$
-produce identical entire load-terminal histories and cell stores differing
-by $4\,\mathrm J$. Later isolated parallel equalization can expose that
-difference, but its division among useful receiver, switch and probe requires
-their actual paths. A finite observation can distinguish only the states
-covered by its observation map and calibrated error.
-
-Conserved oriented state, absolute magnitude, stored energy, and work are
-also different objects. Isolated resistive exchange conserves $q_1+q_2$
-and makes $|q_1|+|q_2|$ nonincreasing. Inductive exchange can create opposite
-charge signs with equal initial and final total reactive energy.
-Changing the connection requires testing conservation again. For
-$\dot\lambda=B^Tv+e_pU-Ri$, a putative winding invariant $h^T\lambda$
-obeys $\dot c=(Bh)^Tv+h^Te_pU-h^TRi$. With independent states and
-strictly positive winding resistance, conservation for every state and
-drive forces $h=0$. An isolated two-store invariant cannot be assigned to
-this driven lossy winding by analogy.
-
-The companion gives the exact contraction and reversal controls, an
-all-time certificate through one finite shunt interval, and physical
-reconnection observation and work contracts. Those results clarify which
-states the selected terminal sees and which paths receive work. Preparation,
-operation and reset still require separate histories for a complete
-performance comparison.
-
-## Shared output windings and loaded combination
-\label{sec:shared-output}
-
-Replacing each receiving resistor by a winding on a shared output core
-changes the connected equations. Consider first one ideal common flux
-$\Phi$, constant positive reluctance $\mathcal R$, signed input turns
-$N_j\ne0$ and output turns $N_o\ne0$. Input currents enter dotted
-terminals; output current $i_o$ leaves its dotted terminal. Neglect copper
-and leakage in this control. Faraday's and magnetic-circuit laws give
+No expansion in $\epsilon$ is used. The inequality
+$0\leq1-e^{-x}\leq x$ for $x\geq0$ proves the uniform bounds
 \begin{equation}
- v_j=N_j\dot\Phi,\qquad v_o=N_o\dot\Phi,\qquad
- \sum_jN_ji_j-N_oi_o=\mathcal R\Phi .
- \label{eq:shared-flux}
+ \lvert s(t)\rvert\leq\frac{2\lvert V_2\rvert T}{\ell_+},\qquad
+ \lvert d(t)-d_*\rvert\leq\lvert d_*\rvert\beta_-T,
+ \qquad 0\leq t\leq T.
+ \label{eq:limit-bounds}
 \end{equation}
-All $v_j/N_j$ must therefore agree. Prescribing incompatible pulse voltages
-at two ideal coupled windings gives no solution under these assumptions.
-Multiplying the last equation by $\dot\Phi$ and integrating each actual
-terminal product separately on $[t_a,t_b]$ proves
-\begin{equation}
- \sum_j W_j-W_o=\frac{\mathcal R}{2}
-       [\Phi(t_b)^2-\Phi(t_a)^2],\qquad
- W_j=\int_{t_a}^{t_b}v_ji_jdt,\quad W_o=\int_{t_a}^{t_b}v_oi_odt.
- \label{eq:shared-flux-work}
-\end{equation}
-The endpoint expression follows independently from the declared magnetic
-law. For $N=(1,2)$, $N_o=1$, $\mathcal R=1\,\mathrm{A/Wb}$,
-$\Phi=t\,\mathrm{Wb/s}$, $i_1=(1+t/(1\,\mathrm s))\,\mathrm A$,
-$i_2=0$ and $i_o=1\,\mathrm A$ on $[0,1]\,\mathrm s$, the two input
-works are $3/2$ and $0\,\mathrm J$, output work is $1\,\mathrm J$,
-and the stores are $0$ and $1/2\,\mathrm J$. There is no switching event.
+Both right sides tend to zero. Independently, the mechanical modal strains
+$a_z=z_1/h+z_2$ and $b_z=z_1/h-z_2$ obey
+$\dot a_z=2\omega_{PC}-r_\epsilon a_z/\ell_+$ and
+$\dot b_z=-r_\epsilon b_z/\ell_-$ at $\alpha=1$ in the stated units.
+Their compatible solutions satisfy $a_z=\ell_+s$, $b_z=\ell_-d$,
+recovering the same forces from elastic constitutive laws.
 
-Finite leakage permits additional modes. With every winding current now
-oriented inward, including the output, take
-\begin{equation}
- L=\operatorname{diag}(\ell_j)+\frac{NN^T}{\mathcal R},\quad
- \ell_j>0,\qquad v_j=R_ji_j+\ell_j\dot i_j+N_j\dot\Phi,
- \quad E_m=\tfrac12i^TLi.
- \label{eq:shared-leakage}
-\end{equation}
-Here $\Phi=N^Ti/\mathcal R$; the mutual terms belong to the joint store.
-For two equal-turn branches with equal $\ell,R>0$, subtraction gives
-$\ell\,d(i_1-i_2)/dt+R(i_1-i_2)=v_1-v_2$.
-In the exact control $\ell=1\,\mathrm H$, $R=1\,\Omega$,
-$v_1=-v_2=1/2\,\mathrm V$, zero currents initially and an open output,
-write $u=t/(1\,\mathrm s)$ and $\vartheta=T/(1\,\mathrm s)$.
-Then $i_1=-i_2=(1-e^{-u})/2\,\mathrm A$ and the common flux is zero.
-Separate integration on $[0,T]$ gives
+Every signed operation work can be integrated before taking a limit.
+Define $F_\beta(T)=T\varphi_1(-\beta T)$, equal to
+$(1-e^{-\beta T})/\beta$ for $\beta\ne0$ and $T$ at zero. The five
+separate primitives needed for one pair are
 \begin{align}
- W_1=W_2&=\tfrac14(\vartheta-1+e^{-\vartheta})\,\mathrm J,\\
- Q_R&=\tfrac12[\vartheta-2(1-e^{-\vartheta})
-                      +(1-e^{-2\vartheta})/2]\,\mathrm J,\\
- E_m(0)&=0,\qquad E_m(T)=\tfrac14(1-e^{-\vartheta})^2\,\mathrm J.
- \label{eq:leakage-control}
+ S_1&=\int_0^T s\,dt=A_s(T-F_{\beta_+}),&
+ D_1&=\int_0^T d\,dt=d_*F_{\beta_-},\\
+ S_2&=\int_0^T s^2dt=A_s^2(T-2F_{\beta_+}+F_{2\beta_+}),&
+ D_2&=\int_0^T d^2dt=d_*^2F_{2\beta_-},\\
+ S_D&=\int_0^T s d\,dt
+     =A_sd_*(F_{\beta_-}-F_{\beta_++\beta_-}).
+ \label{eq:limit-primitives}
 \end{align}
-Thus $E_m(T)-E_m(0)-W_1-W_2+Q_R=0$ exactly. The forced difference
-current occupies leakage storage even though the common flux vanishes.
+All $F$ terms in \eqref{eq:limit-primitives} have argument $T$.
+The primary and secondary current integrals are
+$(S_1+D_1)/(2h)$ and $(S_1-D_1)/2$. Their heat works are individually
+$-r_\epsilon(S_2+D_2+2S_D)/4$ and
+$-r_\epsilon(S_2+D_2-2S_D)/4$.
+For the two pairs assemble the four current integrals into $\mathcal I$.
+Each node clamp has work $W_X=\bar v_X(B\mathcal I)_X$ since
+$\dot v=0$. Thus the planet clamp's work is included explicitly. The nine
+diagnostic products have their own constant velocity factors times these
+same independently integrated effort functions; they are not extra inputs.
 
-Separate transformers with additive series secondaries are a different
-connection. For ideal ratios $r_j$, source voltages $U_j$ and resistor
-$R_L$, their component and connection laws give
-$v_L=\sum_jr_jU_j$, $i_L=v_L/R_L$ and $i_{pj}=r_ji_L$.
-Each input work is $\int U_jr_ji_Ldt$. Two unit ratios with constant
-$(U_1,U_2)=(1,2)\,\mathrm V$, $R_L=1\,\Omega$ and duration
-$1\,\mathrm s$ give source works $(3,6)\,\mathrm J$ and receiver
-work $9\,\mathrm J$. An open receiver retains the $3\,\mathrm V$
-terminal difference with zero currents and works. Both endpoint stores
-are zero by this ideal element's stated law. Six maintained equal
-secondary voltages $V(t)$ instead give $i_L=6V/R_L$; each source's
-reflected current contributes to the resulting $36V^2/R_L$ receiver
-power. Maintaining those voltages under load is part of the drive model.
-Parallel ideal secondaries require equal voltages and a separate sharing
-law; unequal imposed voltages are incompatible. None of these connections
-inherits a single isolated channel's current history unchanged.
-
-## What a finite transition certificate establishes
-
-A useful finite assertion concerns a declared graph, initial-state family
-and interval. Normalize its currents and voltages with specified positive
-scales and suppose that, while all clamps are inactive,
-$\dot x=A(t)x+b(t)$, $\|A(t)\|_\infty\leq K$ and
-$\|b(t)\|_\infty\leq\beta$. Both bounds include the entire finite
-selector edge. Let $\|x(0)-x_0\|_\infty\leq\rho$.
-For $KT<1$, the integral equation and Gronwall's inequality give
+At each endpoint evaluate
 \begin{equation}
- \|x(t)-x_0\|_\infty\leq
- \rho+\frac{[K(\|x_0\|_\infty+\rho)+\beta]T}{1-KT},
- \qquad 0\leq t\leq T .
- \label{eq:finite-transition-box}
+ E_{m,X}(t)=\frac{\ell_+s(t)^2+\ell_-d(t)^2}{4},\quad
+ U_X(t)=\frac{a_z(t)^2}{4\ell_+}+\frac{b_z(t)^2}{4\ell_-},\quad
+ E_C(t)=\frac\epsilon2\sum_XC_{X,0}\bar v_X^2.
+ \label{eq:limit-stores}
 \end{equation}
-Indeed, the displacement from $x(0)$ is at most
-$(K\|x(0)\|_\infty+\beta)\int_0^t e^{Ks}ds$, and
-$\int_0^t e^{Ks}ds\leq T/(1-KT)$. These are inequalities for the exact
-solution, with no small-parameter approximation. If the resulting box
-excludes a first clamp crossing, continuation verifies its assumed domain.
-It can certify current signs and, when $v_o\geq v_*>0$, the independently
-defined receiver work $\int_0^T v_o^2/R_L\,dt\geq Tv_*^2/R_L$.
-Capacitor-current limits additionally require derivative bounds from KCL.
+For example the bound on $s$ gives
+$\ell_+s^2/4\leq V_2^2T^2/\ell_+$, while
+$\ell_-d^2/4\leq\ell_-d_*^2/4$. Each store tends to zero, but is
+retained at every positive $\epsilon$. Bounded currents and
+$r_\epsilon\to0$ make each heat work tend to zero. The planet-clamp
+current tends to zero because the two ideal secondary currents cancel.
+Uniform effort convergence makes every signed diagnostic work converge to
+its own rigid value on $[0,3/2]\,\mathrm s$, for every configuration,
+held member, and fixed frame in the compound table. This follows directly
+from \eqref{eq:limit-bounds} and the finite number of constant port factors.
 
-[*Finite Transfers and Open Energy Balances*][companion] supplies a complete
-six-input graph with twelve branch windings and one receiver winding on a
-shared output core, and proves such a finite prepared return certificate.
-That circuit has independent winding, cell, probe and gate states. Its
-supplied gate transition and energized initial receiver are part of the
-boundary account. A feasible interval does not supply a preparation cost,
-reset, attracting cycle or complete-service input ordering.
-
-## Insulated timing and full-state return
-\label{sec:insulated-return}
-
-A physical timing shaft adds a state and a supply absent from a prescribed
-clock. Take an insulated assembly with thermal state $H$, timing rate
-$\Omega$, viscous bearing coefficient $b_t>0$, and the independently
-declared caloric law $\dot H=b_t\Omega^2+D_{\rm other}$, where
-$D_{\rm other}\geq0$ contains the other specified internal dissipations.
-Receiver heat lies outside this boundary. A timing-shaft revolution obeys
-$\int_0^T\Omega dt=2\pi$.
-
-\begin{lemma}[Insulated return obstruction]
-No full-state cycle containing that revolution can return $H$ to its
-initial value in finite $T>0$.
-\end{lemma}
-\noindent\textit{Proof.}
-Integrating the bearing's torque--rate product separately and applying
-Cauchy--Schwarz gives
+Preparation is another explicit interval, $[-T_p,0]$ with $T_p=1/10$ s.
+Before reconnecting the network, independently prescribe linear current
+ramps $i=fi_*$ in each coupled pair and voltage ramps $v_X=f\bar v_X$
+on each capacitor, where $f=(t+T_p)/T_p$. Each winding source has voltage
+$(\mathsf L\dot i+\mathsf Ri)_j$ and current $i_j$. Its work, its separate
+heat export, and each capacitor charging work are
 \begin{equation}
- H(T)-H(0)\geq\int_0^T b_t\Omega^2dt
- \geq\frac{b_t}{T}\left(\int_0^T\Omega dt\right)^2
- =\frac{4\pi^2b_t}{T}>0.
- \label{eq:insulated-return}
+ W_{s,j}=\tfrac12i_{j*}(\mathsf Li_*)_j
+             +\frac{T_p}{3}R_ji_{j*}^2,\quad
+ W_{h,j}=-\frac{T_p}{3}R_ji_{j*}^2,\quad
+ W_{C,X}=\tfrac12 C_{X,\epsilon}\bar v_X^2.
+ \label{eq:limit-preparation}
 \end{equation}
-This contradicts the full-state endpoint requirement. $\square$
+These follow separately from the products and $\int f\dot fdt=1/2$,
+$\int f^2dt=T_p/3$. Independent initial stores are zero; final stores are
+$i_*^T\mathsf Li_*/2$ and the charged-capacitor values. Reconnection retains
+these voltages and fluxes, with compatible cancelling secondary currents,
+so this ideal event has zero state jump and zero impulse. Real reconnection
+transients require additional ports. A fixed nonzero initial $s$ would
+instead give $\ell_+s^2/4\to\infty$ and falls outside this result.
 
-For $b_t=1/10\,\mathrm{N\,m\,s/rad}$ and
-$T\in[1/2,2]\,\mathrm s$, the lower bound is $\pi^2/5\,\mathrm J$.
-The theorem concerns the caloric law and thermal endpoint, not the stability
-of electrical or shaft coordinates alone. A heat-rejecting law
-$\dot H=D-H/\tau_h$ instead gives
-$H(T)=e^{-T/\tau_h}H(0)+\int_0^T e^{-(T-t)/\tau_h}D(t)dt$ and needs
-its own return analysis. Neither result changes the earlier fixed-clock
-electrical contraction theorem's hypotheses.
+# Supplied references, sensing and actuation
+\label{app:references}
 
-With generators enclosed, capacitor return is internal and the external
-inputs are prime-mover, field, timing, gate and sensor supplies. Each has
-its own signed integral; rotor, field, cam, controller and thermal states
-are independent endpoints. Equal observed output does not establish equality
-of those stores. If a measurement record admits initial energies in an
-interval of width $d_E$, every scalar estimate has worst-case error at
-least $d_E/2$, since its two endpoint errors cannot both be smaller. The
-interval midpoint attains that bound. The companion's finite loaded-probe
-example applies this criterion to complete electrical-port histories;
-its finite-error obstruction and the conditional finite cell-probe
-experiment have different preparations and observation laws.
-
-
-# Events, uncertainty, and limits of the conclusions
-
-## Discontinuities and impulses
-
-A mesh separation or re-engagement with finite force can have continuous
-positions and velocities and hence zero store jump, while its force–velocity
-product jumps. The exact work is the sum of integrals on both event sides;
-no additional impulse is inserted. A compliant contact example is an overlap
-$\delta$ with spring force $k_m\max(\delta,0)$ and stored energy
-$k_m\max(\delta,0)^2/2$. Adding a dashpot requires its own nonnegative
-relative-motion heat export. Switching a finite contact or damping force does
-not itself establish a jump in momentum.
-
-Rigid impact with restitution is different: momenta and kinetic energy may
-jump. Its signed impulse work requires a declared impact law or finite
-regularization. Backlash during an accelerating carrier, unequal planet load
-sharing, nonzero pin couples, and radial centre motion cannot be certified
-by the simpler event or steady-state formulas. Likewise, physically opening
-an energized winding can produce clamp, arc, and displacement-current paths;
-changing a tap or moving a capacitor can involve charge sharing. Every
-switch, clamp, controller, and preparation path must then be explicit.
-A finite resistive receiver selector does not settle these reactive events.
-
-## Exact residuals and unresolved accuracy questions
-
-The evaluated polynomial and trigonometric controls and the stated
-matrix-function primitives are exact in their declared models. For
-symbolically evaluated work accounts the numerical integration residual is
-**exactly zero**. A proved identity or bound is distinguished from an
-unevaluated finite-history integral, a sufficient condition with unchecked
-hypotheses, and an unmeasured physical quantity. The constitutive substitutions
-prove equation and energy identities only for their specified complete
-boundaries, initial conditions and effective-frame conventions. Independent
-evaluation of works and endpoints under those common laws establishes model
-consistency, not independent physical validation.
-The physical model residual remains unquantified: it comprises omitted mesh,
-bearing, windage, churning, joint, magnetic, dielectric, switch, controller,
-and thermal physics. No apparatus measurements are reported.
-
-It is useful to retain the mathematical limitations of approximate audits
-without turning their outcomes into physical theorems. Three distinct
-failure mechanisms illustrate why an apparently small balance is insufficient.
-First, a quadrature error estimate can vanish for a constant integrand while
-roundoff in a nonzero work sum remains. Second, an accumulation estimate
-proportional to the computed power can miss cancellation error when forming
-$\omega-\Omega$ near an exact zero. If the represented rates have errors
-$\delta\omega,\delta\Omega$, the port-power error at the exact held condition
-is exactly $\tau(\delta\omega-\delta\Omega)$ for exact $\tau$; its work
-can have either sign. Reducing an integration step cannot remove that input
-error. Zeroing the torque removes it for a different reason and is a useful
-but distinct null control.
-
-For $N$ contributions combined by a balanced addition tree of depth
-$d=\lceil\log_2N\rceil$, the standard elementary relative-error model
-$\lvert\delta\rvert\leq u$, without underflow or overflow, gives the
-conservative exact bound
-$[(1+u)^d-1]\sum_{j=1}^N\lvert a_j\rvert$ for summation error.
-This follows by bounding each leaf's product of at most $d$ relative factors.
-It still bounds summation of the given $a_j$, not the error in constructing
-them. A first-order $du$ replacement is unnecessary here. Completing a missing
-error component must be justified independently; changing a criterion only
-to admit a residual provides no validation.
-
-Third, a boolean statement $\lvert r_E\rvert\leq b$ is unstable when its
-uncertainty spans the threshold. With certified residual uncertainty $u_r$,
-only $\lvert r_E\rvert+u_r\leq b$ establishes acceptance; when
-$\lvert r_E\rvert-u_r>b$ it establishes failure; the intervening case is
-unresolved. Comparing a small positive bound with a much larger absolute
-comparison tolerance can be vacuous even if nothing is known to disagree.
-These questions concern classification and detection, not necessarily energy
-transfer. The exact nulls in \eqref{eq:locked} and \eqref{eq:ideal} settle
-those ideal equations but do not retrospectively certify any approximate
-calculation or unknown implementation.
-
-Three unresolved accuracy questions must retain their own conditions. At a
-held or locked port with nonzero applied torque, a formation-error bound must
-cover the work error caused by subtracting nominally equal rates; a bound
-proportional only to the resulting power can collapse to zero. For the regular
-finite circuit, the uncertainty of each work integral must be established
-independently of cancellation in the summed residual. For the two separately
-loaded returns, the work uncertainties and the voltage-integral uncertainties
-require separate statements on their own prepared trajectories. Exact
-expressions supplied here determine the model quantities; they do not supply
-a missing uncertainty enclosure for another evaluation or measurement.
-
-Complete power-zero information also leaves short transfers to be resolved.
-In \eqref{eq:reset}, $V_0\ne0$ gives negative power throughout every finite
-interval, with no finite power zero. Nevertheless its signed work is
-$-CV_0^2(1-e^{-2T/(RC)})/2$, which remains substantial when $T$ exceeds
-the relaxation scale. A brief, same-sign startup transfer can therefore be
-missed even if every sign-changing root is known. Independently checking the
-port integrals and their fastest time dependence remains necessary.
-
-Endpoint accuracy is a separate issue when a small change is obtained from
-two large stores. For a capacitor with true endpoint voltage $V$ and voltage
-error $\delta V$, its exact energy error is
-\begin{equation}
- \delta E_C=CV\,\delta V+\tfrac12C(\delta V)^2.
- \label{eq:endpoint-error}
-\end{equation}
-The error in the interval change is the final value of this expression minus
-its initial value. It can change the signed residual even when every work
-integral barely changes. Both endpoint states and each port work require
-independent accuracy statements. Improving one calculation does not erase
-the earlier signed discrepancy or certify a physical model error.
-
-For the illustrative $C_s=1$ F rail, $V_s=100$ V and a positive voltage
-error $\delta V_s=1/100$ V give the single-endpoint error
-\begin{equation}
- \delta E_s=100\frac1{100}
-             +\frac12\left(\frac1{100}\right)^2
-          =\frac{20001}{20000}\,\mathrm J.
- \label{eq:rail-endpoint-error}
-\end{equation}
-It exceeds the finite-actuator departure in \eqref{eq:lag-discrepancy}.
-Cancellation between initial and final rail errors requires established
-correlation; it cannot be inferred from similar displayed voltages.
-The complete supply voltage–current product at an external port and the
-difference of two internal rail stores are different measurement choices.
-Each retains its actual boundary and all preparation work. The finite
-budgets in \eqref{eq:drag-uncertainty}, \eqref{eq:thermal-uncertainty},
-and \eqref{eq:lag-endpoint-uncertainty} connect specific signals to required
-error scales; the general remainder uses \eqref{eq:residual-uncertainty}.
-
-Finite-circuit work uncertainty, finite voltage-integral uncertainty, and
-finite compound ratio uncertainty remain separate. As explicit illustrative
-engineering decision limits, one may declare
-\begin{align}
- b_W&=\frac{1}{5000000}\,\mathrm J
-          +\frac{1}{500000}\sum_j\lvert W_j\rvert,\\
- b_\Psi&=\frac{1}{50000000}\,\mathrm{V\,s}
-          +\frac{1}{500000}\sum_l\lvert\Psi_l\rvert.
- \label{eq:decision-limits}
-\end{align}
-The second sum covers the three readouts and the two separately defined
-copper-drop voltage integrals. These fixed criteria are not error enclosures.
-Uncertainty for a fixed-output circuit and for two separately loaded returns
-are separate questions; checking one cannot certify the other. A joule discrepancy must
-not be added to a volt-second discrepancy. Different integration estimates
-may disagree while an equation-based energy residual is small through
-cancellation. Power-zero locations and maximum-port switches require complete
-root reasoning for the continuous functions; a collection of sign brackets
-alone is not such a proof, and an identically zero interval is not a set of
-isolated crossings. Sensitivity evidence is not a rigorous enclosure or a
-hardware model-error estimate. An uncertainty interval for a denominator
-that contains zero leaves its ratio unresolved. None of these unresolved
-accuracy questions is closed merely by the exact identities of a different
-idealization.
-
-## Physical scope
-
-The mechanical derivation assumes parallel-axis rigid pitch geometry,
-compatible assembly, constant centre radius, equal loading, and zero pin
-couple. Ravigneaux arrangements require further independent mesh equations;
-helical or nonparallel-axis motion requires additional degrees of freedom.
-Bodies with flexure, true restitution, combined backlash and Euler forcing,
-and rate reversals in frictional mechanisms require their own constitutive
-and event treatments. The kinematic count identities themselves remain valid
-through reversals, while absolute counts and friction signs need interval
-splits. Tooth counts are integers; irrational rate ratios are allowed by the
-linear constraints and are not a new energy law.
-
-The lead-out model uses massless coupling members and a resolved axial torque
-path only. It omits clearance, compliance, encoder quantization and direction
-ambiguity, bearing friction, joint-force and bending work, and the energetic
-cost of the ground-phase device. Its illustrative large articulation is not
-a buildability claim. A combined train and readout must recompute the forces
-and trajectory under the actual load. Conditions such as a zero pin flow
-follow from geometry; force and work magnitudes depend on the selected
-inertias and torques. Inertial contributions scale linearly with their mass
-coefficient for a fixed prescribed trajectory, and quasistatic terms scale
-linearly with applied torque; a loaded trajectory need not retain either
-scaling when those parameters change.
-
-A first physical lead-out comparison should establish clearance and phase over
-a full low-speed carrier revolution, with sleeves, finite yokes and bearings
-in their actual positions. Observe output and carrier angle, support motion
-and the changed reactions under one declared receiver load. Equal-angle
-kinematics alone supplies neither the spatial joint forces nor their work.
-
-For the windings, physical ground paths, nonlinear core and thermal behavior,
-reactive switching supplies, and the complete preparation and reset cycle
-retain their local open energy questions. The finite-reference equations add
-explicit sensor and actuator stores, conversion loss, holding error, and supply
-cutoff. Their effective feedback and nonloading transduction remain assumptions;
-the signed physical model discrepancy is unmeasured. The passive limit and
-the clamped limit retain their distinct drives and preparation conditions.
-A calibrated comparison includes the source, receiver, probe, all returns,
-each energy store, and instrument loading on the same event-split interval.
-The terminal voltage/current reference planes must enclose the same nearby
-fields and return paths as the declared stores. Field flux and terminal
-power describing one interface are alternative accounts of that transfer.
-Unresolved displacement, propagation, radiation or common-mode coupling
-requires identification using apparatus dimensions and switching-edge
-bandwidth; nominal cycle frequency alone does not bound those omissions.
-Any unexplained positive or negative remainder remains an open result with its
-magnitude, conditions, uncertainty, and completed checks. An expected balance
-does not determine the outcome of that investigation.
-
-# Conclusion
-
-The two-U-joint planet connection gives a four-shaft apparatus with two
-independent speeds and two independent steady loads. Contact constraints and
-attached free bodies determine its complete operating family. In the
-ring-held one-receiver control, the four signed one-second works are
-$(7,-14/3,0,-7/3)\,\mathrm J$; the ring carries a nonzero reaction and the
-receiver changes the carrier's work by $7/3\,\mathrm J$.
-The ideal two-transformer and four-tap constructions reproduce all four
-voltage/current products with the same loaded planet terminal.
-
-The construction identifies what a correspondence must preserve. Correct
-joint phasing concerns an actual moving plane; a grounded phase actuator
-requires its own supply. A common electrical zero leaves complete port
-voltages unchanged; a moved receiver return changes the connected circuit.
-Finite magnetic storage maps to an elastic state and capacitance to inertia.
-The specified compliant models preserve the corresponding powers and stores,
-while rank and preparation conditions limit reduction to the rigid train.
-
-Coin and spoke controls make fixed and relative counts accessible without
-assigning work from a count. The dimensioned support comparison and finite
-locking controls give bounded physical models. Switched tap and capacitor
-connections expose a further distinction: the same terminal history can hide
-different prepared stores, and equal endpoints need not fix individual work
-destinations. Receiver work follows the actual path and its source, switch,
-probe and controller products.
-
-Shared output windings add voltage compatibility and finite leakage modes.
-The companion distinguishes prepared source return from full-state repetition
-and energy identification. Retained timing-bearing heat excludes a full-state
-cycle under insulation; cooled operation requires its own analysis.
-
-The appendices retain the compound ratios, supplied references, singular
-preparations and complete event arguments that establish the scope of these
-results. Their finite actuator control gives the stated exact departure from
-an ideal receiver endpoint; their prepared limits can retain energy while a
-terminal current tends to zero. Each is a result for its declared equations.
-[*Finite Transfers and Open Energy Balances*][companion] develops the
-joint, winding, material and observation questions needed to test physical
-realizations. Independent work and endpoint uncertainty determine whether a
-measured signed residual is resolved; its physical magnitude and sign remain
-unassigned until those observations exist.
-
-
-\appendix
-
-# Supplied references, prepared limits, and event proofs
 \label{sec:reference-appendix}
+
+A physical reference and its controller have supply and endpoint accounts. The finite examples below state those laws explicitly.
 
 ## An accelerating reference is not a voltage coordinate shift
 
@@ -3589,135 +3352,99 @@ tracking, holding, and limiter paths may have either sign and need their own
 evaluation. Hardware discrepancies remain open with unknown signs and
 magnitudes until the local reference experiment is performed.
 
-## A joint finite-to-rigid limit with matched drives
+# Preparation, reconnection and limiting stores
+\label{app:preparation}
 
-Unity coupling at fixed inductance, resistance, and inertia is not the rigid
-algebraic network. A different, explicitly matched family does have that
-limit. For $0<\epsilon\leq1$, choose
-\begin{equation}
- L_0=\frac3{25\epsilon}\,\mathrm H,\quad k=1-\epsilon^2,\quad
- r_\epsilon=\frac{2\epsilon^2}{25}\,\Omega,\quad
- \mathsf R_X=r_\epsilon\operatorname{diag}(h_X^2,1),\quad
- C_{X,\epsilon}=\epsilon C_{X,0}.
- \label{eq:joint-limit}
-\end{equation}
-Scale every inertia counterpart, including the orbit and added receiver and
-carrier capacitances. The boundary contains all four node capacitors and both
-winding pairs. Four ideal voltage clamps prescribe the constant values
-$\bar v_X=\alpha\omega_X$ from \eqref{eq:compound-rates}; their currents
-are obtained from KCL. Four winding heat exports complete the boundary.
-The additional planet clamp is retained even though its limiting current is
-zero. These imposed drives are different from a passive load supplied through
-the original source resistor.
+These preparations distinguish terminal observations, retained stores and the separate destinations of work.
 
-For either pair abbreviate $h=h_X$, and put
-$s=h i_1+i_2$, $d=h i_1-i_2$. With winding voltages $u_1,u_2$, the two
-independent voltage laws become
-\begin{equation}
- \ell_+\dot s=u_1/h+u_2-r_\epsilon s,\qquad
- \ell_-\dot d=u_1/h-u_2-r_\epsilon d,\qquad
- \ell_+=\frac{3(2-\epsilon^2)}{25\epsilon}\,\mathrm H,\quad
- \ell_-=\frac{3\epsilon}{25}\,\mathrm H.
- \label{eq:limit-modes}
-\end{equation}
-If $s(0)=0$ and $u_1/h+u_2$ is uniformly bounded on $[0,T]$, its exact
-convolution implies $\lvert s(t)\rvert\leq
-T\sup\lvert u_1/h+u_2\rvert/\ell_+$. If additionally $d,\dot d$ remain
-bounded, the second equation implies
-$\lvert u_1/h-u_2\rvert\leq\ell_-\sup\lvert\dot d\rvert+
-r_\epsilon\sup\lvert d\rvert\to0$. These are conditional constitutive
-limits, not a claim that arbitrary initial data avoid a singular transient.
+## Physical reconnection and prepared states
 
-For the constant clamps, $u_1=hu_2$ and
-$u_2=\bar v_P-\bar v_C=:V_2$. Choose compatible initial ideal currents
-$i_1(0)=i_{1*}$, $i_2(0)=-h i_{1*}$, hence $s(0)=0$ and
-$d(0)=d_*=2h i_{1*}$. The exact solution on $[0,T]$ is
-\begin{equation}
- s(t)=A_s(1-e^{-\beta_+t}),\qquad d(t)=d_*e^{-\beta_-t},\qquad
- A_s=2V_2/r_\epsilon,\quad \beta_\pm=r_\epsilon/\ell_\pm.
- \label{eq:limit-state}
-\end{equation}
-No expansion in $\epsilon$ is used. The inequality
-$0\leq1-e^{-x}\leq x$ for $x\geq0$ proves the uniform bounds
-\begin{equation}
- \lvert s(t)\rvert\leq\frac{2\lvert V_2\rvert T}{\ell_+},\qquad
- \lvert d(t)-d_*\rvert\leq\lvert d_*\rvert\beta_-T,
- \qquad 0\leq t\leq T.
- \label{eq:limit-bounds}
-\end{equation}
-Both right sides tend to zero. Independently, the mechanical modal strains
-$a_z=z_1/h+z_2$ and $b_z=z_1/h-z_2$ obey
-$\dot a_z=2\omega_{PC}-r_\epsilon a_z/\ell_+$ and
-$\dot b_z=-r_\epsilon b_z/\ell_-$ at $\alpha=1$ in the stated units.
-Their compatible solutions satisfy $a_z=\ell_+s$, $b_z=\ell_-d$,
-recovering the same forces from elastic constitutive laws.
+\label{sec:reconnection}
 
-Every signed operation work can be integrated before taking a limit.
-Define $F_\beta(T)=T\varphi_1(-\beta T)$, equal to
-$(1-e^{-\beta T})/\beta$ for $\beta\ne0$ and $T$ at zero. The five
-separate primitives needed for one pair are
-\begin{align}
- S_1&=\int_0^T s\,dt=A_s(T-F_{\beta_+}),&
- D_1&=\int_0^T d\,dt=d_*F_{\beta_-},\\
- S_2&=\int_0^T s^2dt=A_s^2(T-2F_{\beta_+}+F_{2\beta_+}),&
- D_2&=\int_0^T d^2dt=d_*^2F_{2\beta_-},\\
- S_D&=\int_0^T s d\,dt
-     =A_sd_*(F_{\beta_-}-F_{\beta_++\beta_-}).
- \label{eq:limit-primitives}
-\end{align}
-All $F$ terms in \eqref{eq:limit-primitives} have argument $T$.
-The primary and secondary current integrals are
-$(S_1+D_1)/(2h)$ and $(S_1-D_1)/2$. Their heat works are individually
-$-r_\epsilon(S_2+D_2+2S_D)/4$ and
-$-r_\epsilon(S_2+D_2-2S_D)/4$.
-For the two pairs assemble the four current integrals into $\mathcal I$.
-Each node clamp has work $W_X=\bar v_X(B\mathcal I)_X$ since
-$\dot v=0$. Thus the planet clamp's work is included explicitly. The nine
-diagnostic products have their own constant velocity factors times these
-same independently integrated effort functions; they are not extra inputs.
+The four-tap construction fixes an ideal terminal relation. Selecting another
+terminal for a charged receiving branch changes the physical equations.
+Murray's SERPS patent illustrates an isolated primary and a tapped secondary
+with two switched capacitor--resistor branches [Murray (2017)][serps].
+The positive branch charges from the full secondary and returns through its
+lower section; the negative branch uses the opposite full and tapped
+connections. If the lower fraction is $f$, the upper return fraction is
+$1-f$; they coincide only at a central tap.
+The companion develops that graph, both polarities, finite
+commutation, controller and material states. It is a separate apparatus from
+the conductive common-flux four-tap realization.
 
-At each endpoint evaluate
+For one ideal positive interval, write $v_s=Ri+v_C$, $C\dot v_C=i$
+during charging, and $v_C=Rj+fv_s$, $C\dot v_C=-j$ during return.
+The tap fraction is $0<f<1$. Thus $fv_s<v_C<v_s$ allows both positive
+charging current at the full winding and positive return current at the tap.
+The independent powers give
 \begin{equation}
- E_{m,X}(t)=\frac{\ell_+s(t)^2+\ell_-d(t)^2}{4},\quad
- U_X(t)=\frac{a_z(t)^2}{4\ell_+}+\frac{b_z(t)^2}{4\ell_-},\quad
- E_C(t)=\frac\epsilon2\sum_XC_{X,0}\bar v_X^2.
- \label{eq:limit-stores}
+ v_si=Ri^2+\frac{d}{dt}\frac{Cv_C^2}{2},\qquad
+ -fv_sj=Rj^2+\frac{d}{dt}\frac{Cv_C^2}{2}.
+ \label{eq:tap-return}
 \end{equation}
-For example the bound on $s$ gives
-$\ell_+s^2/4\leq V_2^2T^2/\ell_+$, while
-$\ell_-d^2/4\leq\ell_-d_*^2/4$. Each store tends to zero, but is
-retained at every positive $\epsilon$. Bounded currents and
-$r_\epsilon\to0$ make each heat work tend to zero. The planet-clamp
-current tends to zero because the two ideal secondary currents cancel.
-Uniform effort convergence makes every signed diagnostic work converge to
-its own rigid value on $[0,3/2]\,\mathrm s$, for every configuration,
-held member, and fixed frame in the compound table. This follows directly
-from \eqref{eq:limit-bounds} and the finite number of constant port factors.
+Integrate each source and resistor product on its own interval and evaluate
+the capacitor endpoints. The resulting source draw minus return equals
+receiver delivery plus store change. The intended quarter-cycle command does
+not establish the current direction throughout that interval.
 
-Preparation is another explicit interval, $[-T_p,0]$ with $T_p=1/10$ s.
-Before reconnecting the network, independently prescribe linear current
-ramps $i=fi_*$ in each coupled pair and voltage ramps $v_X=f\bar v_X$
-on each capacitor, where $f=(t+T_p)/T_p$. Each winding source has voltage
-$(\mathsf L\dot i+\mathsf Ri)_j$ and current $i_j$. Its work, its separate
-heat export, and each capacitor charging work are
+For any complete source port with positive-inward power $p_s$, define
 \begin{equation}
- W_{s,j}=\tfrac12i_{j*}(\mathsf Li_*)_j
-             +\frac{T_p}{3}R_ji_{j*}^2,\quad
- W_{h,j}=-\frac{T_p}{3}R_ji_{j*}^2,\quad
- W_{C,X}=\tfrac12 C_{X,\epsilon}\bar v_X^2.
- \label{eq:limit-preparation}
+ W_+=\int\max(p_s,0)dt,\quad W_-=-\int\min(p_s,0)dt,\quad
+ W_s=W_+-W_-,\quad W_{\rm traffic}=W_++W_- .
+ \label{eq:source-return}
 \end{equation}
-These follow separately from the products and $\int f\dot fdt=1/2$,
-$\int f^2dt=T_p/3$. Independent initial stores are zero; final stores are
-$i_*^T\mathsf Li_*/2$ and the charged-capacitor values. Reconnection retains
-these voltages and fluxes, with compatible cancelling secondary currents,
-so this ideal event has zero state jump and zero impulse. Real reconnection
-transients require additional ports. A fixed nonzero initial $s$ would
-instead give $\ell_+s^2/4\to\infty$ and falls outside this result.
+Gross draw, return, net input and absolute throughput have distinct meanings.
+When a generator is enclosed with the capacitor and switches, its electrical
+return is internal. Prime-mover, excitation and controller works remain
+external; the rotor and field stores join the endpoint inventory.
+
+The optional series/parallel bank also retains each cell's state.
+Two ideal cells of capacitance $C$, both at voltage $V$, have store $CV^2$.
+Their parallel terminals have $(V,2C)$, their series-aiding terminals
+$(2V,C/2)$. Equivalent capacitance describes the connection, while the
+individual cell voltages determine the store. For unequal preparations,
+actual exchange paths determine receiver and switch work.
+
+A terminal may also conceal a prepared state. For two equal series cells
+with an isolated floating midpoint and resistor $R_L$, put
+$s=V_1+V_2$, $\delta=V_1-V_2$. The cell laws give
+\begin{equation}
+ \dot s=-\frac{2s}{R_LC},\quad \dot\delta=0,\quad
+ E_C=\frac C4(s^2+\delta^2),\quad
+ W_L(T)=\frac{Cs(0)^2}{4}(1-e^{-4T/(R_LC)}).
+ \label{eq:hidden-series}
+\end{equation}
+The last expression is the separately integrated positive receiver delivery.
+With $C=1\,\mathrm F$, preparations $(1,1)$ and $(3,-1)\,\mathrm V$
+produce identical entire load-terminal histories and cell stores differing
+by $4\,\mathrm J$. Later isolated parallel equalization can expose that
+difference, but its division among useful receiver, switch and probe requires
+their actual paths. A finite observation can distinguish only the states
+covered by its observation map and calibrated error.
+
+Conserved oriented state, absolute magnitude, stored energy, and work are
+also different objects. Isolated resistive exchange conserves $q_1+q_2$
+and makes $|q_1|+|q_2|$ nonincreasing. Inductive exchange can create opposite
+charge signs with equal initial and final total reactive energy.
+Changing the connection requires testing conservation again. For
+$\dot\lambda=B^Tv+e_pU-Ri$, a putative winding invariant $h^T\lambda$
+obeys $\dot c=(Bh)^Tv+h^Te_pU-h^TRi$. With independent states and
+strictly positive winding resistance, conservation for every state and
+drive forces $h=0$. An isolated two-store invariant cannot be assigned to
+this driven lossy winding by analogy.
+
+The companion gives the exact contraction and reversal controls, an
+all-time certificate through one finite shunt interval, and physical
+reconnection observation and work contracts. Those results clarify which
+states the selected terminal sees and which paths receive work. Preparation,
+operation and reset still require separate histories for a complete
+performance comparison.
 
 ## Vanishing currents with finite prepared energy
 
-The compatible-data restriction above leaves an important energy question:
+The compatible-data restriction of \eqref{eq:limit-preparation} in
+Appendix \ref{app:correspondence} leaves an important energy question:
 which stores survive when the observed currents or work differences approach
 zero? The following exact controls determine several alternatives within the
 finite constitutive family. Their physical realization retains the open
@@ -4139,6 +3866,398 @@ efforts give nonzero indicated powers in a rotating observer frame. Such a
 ratio remains undefined nonzero-over-zero; the clamp reaction belongs to the
 actual boundary, beyond the original nine diagnostics.
 
+# Shared output and full-state return
+\label{app:shared}
+
+Common-flux compatibility, finite leakage and insulated timing belong to the separate shared-output apparatus developed here.
+
+## Shared output windings and loaded combination
+\label{sec:shared-output}
+
+Replacing each receiving resistor by a winding on a shared output core
+changes the connected equations. Consider first one ideal common flux
+$\Phi$, constant positive reluctance $\mathcal R$, signed input turns
+$N_j\ne0$ and output turns $N_o\ne0$. Input currents enter dotted
+terminals; output current $i_o$ leaves its dotted terminal. Neglect copper
+and leakage in this control. Faraday's and magnetic-circuit laws give
+\begin{equation}
+ v_j=N_j\dot\Phi,\qquad v_o=N_o\dot\Phi,\qquad
+ \sum_jN_ji_j-N_oi_o=\mathcal R\Phi .
+ \label{eq:shared-flux}
+\end{equation}
+All $v_j/N_j$ must therefore agree. Prescribing incompatible pulse voltages
+at two ideal coupled windings gives no solution under these assumptions.
+Multiplying the last equation by $\dot\Phi$ and integrating each actual
+terminal product separately on $[t_a,t_b]$ proves
+\begin{equation}
+ \sum_j W_j-W_o=\frac{\mathcal R}{2}
+       [\Phi(t_b)^2-\Phi(t_a)^2],\qquad
+ W_j=\int_{t_a}^{t_b}v_ji_jdt,\quad W_o=\int_{t_a}^{t_b}v_oi_odt.
+ \label{eq:shared-flux-work}
+\end{equation}
+The endpoint expression follows independently from the declared magnetic
+law. For $N=(1,2)$, $N_o=1$, $\mathcal R=1\,\mathrm{A/Wb}$,
+$\Phi=t\,\mathrm{Wb/s}$, $i_1=(1+t/(1\,\mathrm s))\,\mathrm A$,
+$i_2=0$ and $i_o=1\,\mathrm A$ on $[0,1]\,\mathrm s$, the two input
+works are $3/2$ and $0\,\mathrm J$, output work is $1\,\mathrm J$,
+and the stores are $0$ and $1/2\,\mathrm J$. There is no switching event.
+
+Finite leakage permits additional modes. With every winding current now
+oriented inward, including the output, take
+\begin{equation}
+ L=\operatorname{diag}(\ell_j)+\frac{NN^T}{\mathcal R},\quad
+ \ell_j>0,\qquad v_j=R_ji_j+\ell_j\dot i_j+N_j\dot\Phi,
+ \quad E_m=\tfrac12i^TLi.
+ \label{eq:shared-leakage}
+\end{equation}
+Here $\Phi=N^Ti/\mathcal R$; the mutual terms belong to the joint store.
+For two equal-turn branches with equal $\ell,R>0$, subtraction gives
+$\ell\,d(i_1-i_2)/dt+R(i_1-i_2)=v_1-v_2$.
+In the exact control $\ell=1\,\mathrm H$, $R=1\,\Omega$,
+$v_1=-v_2=1/2\,\mathrm V$, zero currents initially and an open output,
+write $u=t/(1\,\mathrm s)$ and $\vartheta=T/(1\,\mathrm s)$.
+Then $i_1=-i_2=(1-e^{-u})/2\,\mathrm A$ and the common flux is zero.
+Separate integration on $[0,T]$ gives
+\begin{align}
+ W_1=W_2&=\tfrac14(\vartheta-1+e^{-\vartheta})\,\mathrm J,\\
+ Q_R&=\tfrac12[\vartheta-2(1-e^{-\vartheta})
+                      +(1-e^{-2\vartheta})/2]\,\mathrm J,\\
+ E_m(0)&=0,\qquad E_m(T)=\tfrac14(1-e^{-\vartheta})^2\,\mathrm J.
+ \label{eq:leakage-control}
+\end{align}
+Thus $E_m(T)-E_m(0)-W_1-W_2+Q_R=0$ exactly. The forced difference
+current occupies leakage storage even though the common flux vanishes.
+
+Separate transformers with additive series secondaries are a different
+connection. For ideal ratios $r_j$, source voltages $U_j$ and resistor
+$R_L$, their component and connection laws give
+$v_L=\sum_jr_jU_j$, $i_L=v_L/R_L$ and $i_{pj}=r_ji_L$.
+Each input work is $\int U_jr_ji_Ldt$. Two unit ratios with constant
+$(U_1,U_2)=(1,2)\,\mathrm V$, $R_L=1\,\Omega$ and duration
+$1\,\mathrm s$ give source works $(3,6)\,\mathrm J$ and receiver
+work $9\,\mathrm J$. An open receiver retains the $3\,\mathrm V$
+terminal difference with zero currents and works. Both endpoint stores
+are zero by this ideal element's stated law. Six maintained equal
+secondary voltages $V(t)$ instead give $i_L=6V/R_L$; each source's
+reflected current contributes to the resulting $36V^2/R_L$ receiver
+power. Maintaining those voltages under load is part of the drive model.
+Parallel ideal secondaries require equal voltages and a separate sharing
+law; unequal imposed voltages are incompatible. None of these connections
+inherits a single isolated channel's current history unchanged.
+
+## What a finite transition certificate establishes
+
+A useful finite assertion concerns a declared graph, initial-state family
+and interval. Normalize its currents and voltages with specified positive
+scales and suppose that, while all clamps are inactive,
+$\dot x=A(t)x+b(t)$, $\|A(t)\|_\infty\leq K$ and
+$\|b(t)\|_\infty\leq\beta$. Both bounds include the entire finite
+selector edge. Let $\|x(0)-x_0\|_\infty\leq\rho$.
+For $KT<1$, the integral equation and Gronwall's inequality give
+\begin{equation}
+ \|x(t)-x_0\|_\infty\leq
+ \rho+\frac{[K(\|x_0\|_\infty+\rho)+\beta]T}{1-KT},
+ \qquad 0\leq t\leq T .
+ \label{eq:finite-transition-box}
+\end{equation}
+Indeed, the displacement from $x(0)$ is at most
+$(K\|x(0)\|_\infty+\beta)\int_0^t e^{Ks}ds$, and
+$\int_0^t e^{Ks}ds\leq T/(1-KT)$. These are inequalities for the exact
+solution, with no small-parameter approximation. If the resulting box
+excludes a first clamp crossing, continuation verifies its assumed domain.
+It can certify current signs and, when $v_o\geq v_*>0$, the independently
+defined receiver work $\int_0^T v_o^2/R_L\,dt\geq Tv_*^2/R_L$.
+Capacitor-current limits additionally require derivative bounds from KCL.
+
+[*Finite Transfers and Open Energy Balances*][companion] supplies a complete
+six-input graph with twelve branch windings and one receiver winding on a
+shared output core, and proves such a finite prepared return certificate.
+That circuit has independent winding, cell, probe and gate states. Its
+supplied gate transition and energized initial receiver are part of the
+boundary account. A feasible interval does not supply a preparation cost,
+reset, attracting cycle or complete-service input ordering.
+
+## Insulated timing and full-state return
+\label{sec:insulated-return}
+
+A physical timing shaft adds a state and a supply absent from a prescribed
+clock. Take an insulated assembly with thermal state $H$, timing rate
+$\Omega$, viscous bearing coefficient $b_t>0$, and the independently
+declared caloric law $\dot H=b_t\Omega^2+D_{\rm other}$, where
+$D_{\rm other}\geq0$ contains the other specified internal dissipations.
+Receiver heat lies outside this boundary. A timing-shaft revolution obeys
+$\int_0^T\Omega dt=2\pi$.
+
+\begin{lemma}[Insulated return obstruction]
+No full-state cycle containing that revolution can return $H$ to its
+initial value in finite $T>0$.
+\end{lemma}
+\noindent\textit{Proof.}
+Integrating the bearing's torque--rate product separately and applying
+Cauchy--Schwarz gives
+\begin{equation}
+ H(T)-H(0)\geq\int_0^T b_t\Omega^2dt
+ \geq\frac{b_t}{T}\left(\int_0^T\Omega dt\right)^2
+ =\frac{4\pi^2b_t}{T}>0.
+ \label{eq:insulated-return}
+\end{equation}
+This contradicts the full-state endpoint requirement. $\square$
+
+For $b_t=1/10\,\mathrm{N\,m\,s/rad}$ and
+$T\in[1/2,2]\,\mathrm s$, the lower bound is $\pi^2/5\,\mathrm J$.
+The theorem concerns the caloric law and thermal endpoint, not the stability
+of electrical or shaft coordinates alone. A heat-rejecting law
+$\dot H=D-H/\tau_h$ instead gives
+$H(T)=e^{-T/\tau_h}H(0)+\int_0^T e^{-(T-t)/\tau_h}D(t)dt$ and needs
+its own return analysis. Neither result changes the earlier fixed-clock
+electrical contraction theorem's hypotheses.
+
+With generators enclosed, capacitor return is internal and the external
+inputs are prime-mover, field, timing, gate and sensor supplies. Each has
+its own signed integral; rotor, field, cam, controller and thermal states
+are independent endpoints. Equal observed output does not establish equality
+of those stores. If a measurement record admits initial energies in an
+interval of width $d_E$, every scalar estimate has worst-case error at
+least $d_E/2$, since its two endpoint errors cannot both be smaller. The
+interval midpoint attains that bound. The companion's finite loaded-probe
+example applies this criterion to complete electrical-port histories;
+its finite-error obstruction and the conditional finite cell-probe
+experiment have different preparations and observation laws.
+
+# Events, uncertainty and physical scope
+\label{app:accuracy}
+
+The extended observation and event arguments below qualify exact accounts and physical comparisons without assigning unobserved contributions.
+
+## Notation and absolute observations
+
+| Symbol | Meaning |
+|-----------------------|-------------------------------------------------------|
+| $q$ | Number of planets |
+| $\chi=F'(x)$ | Instantaneous lead-out transmission factor |
+| $\mathcal T$ | Coupling torque in the lead-out |
+| $\tau_*$ | Applied torque scale in the compound train |
+| $T$ | Duration of an integration interval |
+| $\mathfrak p_j=V_jI_j$ | Single-terminal power contribution |
+| $W_j$, $\lvert W_j\rvert$, $\int\lvert P_j\rvert dt$ | Signed work, its magnitude, and integrated absolute power |
+
+: Notation used across the mechanical and electrical models. Subscripts distinguish local states from these scalar quantities.
+
+Signed sums also differ from absolute observations. For oriented coordinates
+$y_j$ and positive weights $w_j$, $\sum_j w_j\lvert y_j\rvert$ depends on the
+observation map, units, and weights. A linear constraint on the signed
+coordinates does not make their absolute sum conserved, nor make it energy.
+For example, if $E=x^T\mathsf Hx/2$ with positive definite $\mathsf H$ and
+$y=\mathsf Ox$,
+Cauchy–Schwarz gives the exact instantaneous geometric bound
+\begin{equation}
+ \sum_j w_j\lvert y_j\rvert\leq
+ \sqrt{2E(x)\max_{\sigma_j=\pm1}
+ (w\mathbin{\odot}\sigma)^T\mathsf O\mathsf H^{-1}\mathsf O^T
+ (w\mathbin{\odot}\sigma)}.
+ \label{eq:geometry}
+\end{equation}
+It uses the current state energy, not a presumption that the initial energy
+persists. Extra conserved linear functionals restrict the admissible set only
+when actually derived. Neither a gear turn count nor a raw winding-linkage sum
+is automatically eligible for a conserved-sum growth claim.
+
+## Discontinuities and impulses
+
+A mesh separation or re-engagement with finite force can have continuous
+positions and velocities and hence zero store jump, while its force–velocity
+product jumps. The exact work is the sum of integrals on both event sides;
+no additional impulse is inserted. A compliant contact example is an overlap
+$\delta$ with spring force $k_m\max(\delta,0)$ and stored energy
+$k_m\max(\delta,0)^2/2$. Adding a dashpot requires its own nonnegative
+relative-motion heat export. Switching a finite contact or damping force does
+not itself establish a jump in momentum.
+
+Rigid impact with restitution is different: momenta and kinetic energy may
+jump. Its signed impulse work requires a declared impact law or finite
+regularization. Backlash during an accelerating carrier, unequal planet load
+sharing, nonzero pin couples, and radial centre motion cannot be certified
+by the simpler event or steady-state formulas. Likewise, physically opening
+an energized winding can produce clamp, arc, and displacement-current paths;
+changing a tap or moving a capacitor can involve charge sharing. Every
+switch, clamp, controller, and preparation path must then be explicit.
+A finite resistive receiver selector does not settle these reactive events.
+
+## Exact residuals and unresolved accuracy questions
+
+The evaluated polynomial and trigonometric controls and the stated
+matrix-function primitives are exact in their declared models. For
+symbolically evaluated work accounts the numerical integration residual is
+**exactly zero**. A proved identity or bound is distinguished from an
+unevaluated finite-history integral, a sufficient condition with unchecked
+hypotheses, and an unmeasured physical quantity. The constitutive substitutions
+prove equation and energy identities only for their specified complete
+boundaries, initial conditions and effective-frame conventions. Independent
+evaluation of works and endpoints under those common laws establishes model
+consistency, not independent physical validation.
+The physical model residual remains unquantified: it comprises omitted mesh,
+bearing, windage, churning, joint, magnetic, dielectric, switch, controller,
+and thermal physics. No apparatus measurements are reported.
+
+It is useful to retain the mathematical limitations of approximate audits
+without turning their outcomes into physical theorems. Three distinct
+failure mechanisms illustrate why an apparently small balance is insufficient.
+First, a quadrature error estimate can vanish for a constant integrand while
+roundoff in a nonzero work sum remains. Second, an accumulation estimate
+proportional to the computed power can miss cancellation error when forming
+$\omega-\Omega$ near an exact zero. If the represented rates have errors
+$\delta\omega,\delta\Omega$, the port-power error at the exact held condition
+is exactly $\tau(\delta\omega-\delta\Omega)$ for exact $\tau$; its work
+can have either sign. Reducing an integration step cannot remove that input
+error. Zeroing the torque removes it for a different reason and is a useful
+but distinct null control.
+
+For $N$ contributions combined by a balanced addition tree of depth
+$d=\lceil\log_2N\rceil$, the standard elementary relative-error model
+$\lvert\delta\rvert\leq u$, without underflow or overflow, gives the
+conservative exact bound
+$[(1+u)^d-1]\sum_{j=1}^N\lvert a_j\rvert$ for summation error.
+This follows by bounding each leaf's product of at most $d$ relative factors.
+It still bounds summation of the given $a_j$, not the error in constructing
+them. A first-order $du$ replacement is unnecessary here. Completing a missing
+error component must be justified independently; changing a criterion only
+to admit a residual provides no validation.
+
+Third, a boolean statement $\lvert r_E\rvert\leq b$ is unstable when its
+uncertainty spans the threshold. With certified residual uncertainty $u_r$,
+only $\lvert r_E\rvert+u_r\leq b$ establishes acceptance; when
+$\lvert r_E\rvert-u_r>b$ it establishes failure; the intervening case is
+unresolved. Comparing a small positive bound with a much larger absolute
+comparison tolerance can be vacuous even if nothing is known to disagree.
+These questions concern classification and detection, not necessarily energy
+transfer. The exact nulls in \eqref{eq:locked} and \eqref{eq:ideal} settle
+those ideal equations but do not retrospectively certify any approximate
+calculation or unknown implementation.
+
+Three unresolved accuracy questions must retain their own conditions. At a
+held or locked port with nonzero applied torque, a formation-error bound must
+cover the work error caused by subtracting nominally equal rates; a bound
+proportional only to the resulting power can collapse to zero. For the regular
+finite circuit, the uncertainty of each work integral must be established
+independently of cancellation in the summed residual. For the two separately
+loaded returns, the work uncertainties and the voltage-integral uncertainties
+require separate statements on their own prepared trajectories. Exact
+expressions supplied here determine the model quantities; they do not supply
+a missing uncertainty enclosure for another evaluation or measurement.
+
+Complete power-zero information also leaves short transfers to be resolved.
+In \eqref{eq:reset}, $V_0\ne0$ gives negative power throughout every finite
+interval, with no finite power zero. Nevertheless its signed work is
+$-CV_0^2(1-e^{-2T/(RC)})/2$, which remains substantial when $T$ exceeds
+the relaxation scale. A brief, same-sign startup transfer can therefore be
+missed even if every sign-changing root is known. Independently checking the
+port integrals and their fastest time dependence remains necessary.
+
+Endpoint accuracy is a separate issue when a small change is obtained from
+two large stores. For a capacitor with true endpoint voltage $V$ and voltage
+error $\delta V$, its exact energy error is
+\begin{equation}
+ \delta E_C=CV\,\delta V+\tfrac12C(\delta V)^2.
+ \label{eq:endpoint-error}
+\end{equation}
+The error in the interval change is the final value of this expression minus
+its initial value. It can change the signed residual even when every work
+integral barely changes. Both endpoint states and each port work require
+independent accuracy statements. Improving one calculation does not erase
+the earlier signed discrepancy or certify a physical model error.
+
+For the illustrative $C_s=1$ F rail, $V_s=100$ V and a positive voltage
+error $\delta V_s=1/100$ V give the single-endpoint error
+\begin{equation}
+ \delta E_s=100\frac1{100}
+             +\frac12\left(\frac1{100}\right)^2
+          =\frac{20001}{20000}\,\mathrm J.
+ \label{eq:rail-endpoint-error}
+\end{equation}
+It exceeds the finite-actuator departure in \eqref{eq:lag-discrepancy}.
+Cancellation between initial and final rail errors requires established
+correlation; it cannot be inferred from similar displayed voltages.
+The complete supply voltage–current product at an external port and the
+difference of two internal rail stores are different measurement choices.
+Each retains its actual boundary and all preparation work. The finite
+budgets in \eqref{eq:drag-uncertainty}, \eqref{eq:thermal-uncertainty},
+and \eqref{eq:lag-endpoint-uncertainty} connect specific signals to required
+error scales; the general remainder uses \eqref{eq:residual-uncertainty}.
+
+Finite-circuit work uncertainty, finite voltage-integral uncertainty, and
+finite compound ratio uncertainty remain separate. As explicit illustrative
+engineering decision limits, one may declare
+\begin{align}
+ b_W&=\frac{1}{5000000}\,\mathrm J
+          +\frac{1}{500000}\sum_j\lvert W_j\rvert,\\
+ b_\Psi&=\frac{1}{50000000}\,\mathrm{V\,s}
+          +\frac{1}{500000}\sum_l\lvert\Psi_l\rvert.
+ \label{eq:decision-limits}
+\end{align}
+The second sum covers the three readouts and the two separately defined
+copper-drop voltage integrals. These fixed criteria are not error enclosures.
+Uncertainty for a fixed-output circuit and for two separately loaded returns
+are separate questions; checking one cannot certify the other. A joule discrepancy must
+not be added to a volt-second discrepancy. Different integration estimates
+may disagree while an equation-based energy residual is small through
+cancellation. Power-zero locations and maximum-port switches require complete
+root reasoning for the continuous functions; a collection of sign brackets
+alone is not such a proof, and an identically zero interval is not a set of
+isolated crossings. Sensitivity evidence is not a rigorous enclosure or a
+hardware model-error estimate. An uncertainty interval for a denominator
+that contains zero leaves its ratio unresolved. None of these unresolved
+accuracy questions is closed merely by the exact identities of a different
+idealization.
+
+## Physical scope
+
+The mechanical derivation assumes parallel-axis rigid pitch geometry,
+compatible assembly, constant centre radius, equal loading, and zero pin
+couple. Ravigneaux arrangements require further independent mesh equations;
+helical or nonparallel-axis motion requires additional degrees of freedom.
+Bodies with flexure, true restitution, combined backlash and Euler forcing,
+and rate reversals in frictional mechanisms require their own constitutive
+and event treatments. The kinematic count identities themselves remain valid
+through reversals, while absolute counts and friction signs need interval
+splits. Tooth counts are integers; irrational rate ratios are allowed by the
+linear constraints and are not a new energy law.
+
+The lead-out model uses massless coupling members and a resolved axial torque
+path only. It omits clearance, compliance, encoder quantization and direction
+ambiguity, bearing friction, joint-force and bending work, and the energetic
+cost of the ground-phase device. Its illustrative large articulation is not
+a buildability claim. A combined train and readout must recompute the forces
+and trajectory under the actual load. Conditions such as a zero pin flow
+follow from geometry; force and work magnitudes depend on the selected
+inertias and torques. Inertial contributions scale linearly with their mass
+coefficient for a fixed prescribed trajectory, and quasistatic terms scale
+linearly with applied torque; a loaded trajectory need not retain either
+scaling when those parameters change.
+
+A first physical lead-out comparison should establish clearance and phase over
+a full low-speed carrier revolution, with sleeves, finite yokes and bearings
+in their actual positions. Observe output and carrier angle, support motion
+and the changed reactions under one declared receiver load. Equal-angle
+kinematics alone supplies neither the spatial joint forces nor their work.
+
+For the windings, physical ground paths, nonlinear core and thermal behavior,
+reactive switching supplies, and the complete preparation and reset cycle
+retain their local open energy questions. The finite-reference equations add
+explicit sensor and actuator stores, conversion loss, holding error, and supply
+cutoff. Their effective feedback and nonloading transduction remain assumptions;
+the signed physical model discrepancy is unmeasured. The passive limit and
+the clamped limit retain their distinct drives and preparation conditions.
+A calibrated comparison includes the source, receiver, probe, all returns,
+each energy store, and instrument loading on the same event-split interval.
+The terminal voltage/current reference planes must enclose the same nearby
+fields and return paths as the declared stores. Field flux and terminal
+power describing one interface are alternative accounts of that transfer.
+Unresolved displacement, propagation, radiation or common-mode coupling
+requires identification using apparatus dimensions and switching-edge
+bandwidth; nominal cycle frequency alone does not bound those omissions.
+Any unexplained positive or negative remainder remains an open result with its
+magnitude, conditions, uncertainty, and completed checks. An expected balance
+does not determine the outcome of that investigation.
 ## Finite reversible histories and complete polynomial event sets
 
 A finite circuit can return to zero state after nonzero transfers without
@@ -4347,8 +4466,6 @@ conditions for the dissipative case; no unevaluated nonlinear event set is
 claimed complete. Observational roots introduce no physical switch, impulse,
 or omitted interval of work. Each interval retains its full signed integrals
 and independent stores.
-
-\clearpage
 
 # References {-}
 
